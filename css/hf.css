@@ -1,0 +1,263 @@
+
+body {background-color: #fcfcfc !important;}
+
+.jumbotron {
+    /*background-image: url('../img/indices.png');*/
+}
+.table td, .table th {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+div[tabulator-field='typ'] {
+    color: #007bff;
+}
+div[tabulator-field='typ']:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.modal-header {
+    padding:16px 16px;
+    color:#FFF;
+}
+ .modal-dialog {
+    width: 800px;
+}
+.modal-title{
+    text-align: left;
+}
+.logo-modal{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.logo-modal-M{ 
+    content: url('../img/hombre.png');
+}
+.logo-modal-F{
+    content: url('../img/mujer.png');   
+}
+
+.modal-woman {
+    background-color: #ff6ca5;
+    border-bottom:2px dashed #ff6ca5;
+}
+.modal-man{
+    background-color: #6ca5ff;
+    border-bottom:2px dashed #6ca5ff;
+}
+.tabulator {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    background-color: #f8f9fa !important;
+}
+.tabulator .tabulator-header {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    font-weight: 600;
+    background-color: #e6e6e6;
+}
+.tabulator .tabulator-header .tabulator-col {
+    background: #e6e6e6;
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+
+.tabulator-row .tabulator-cell {
+    border-right: 1px solid rgba(0,0,0,.125);
+}
+.tabulator .tabulator-footer {
+    border-top: 1px solid rgba(0,0,0,.125);
+    background-color: #e6e6e6;
+    font-weight: 600;
+}
+
+#aside {
+    margin-top: 20px;
+}
+
+.card_bot {
+    margin-bottom: 20px;
+}
+#example-table{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+#title {
+ text-align: center;
+ margin: 15px 0;
+ background-color: #EFFBFB !important
+}
+h5 {
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/*Theme the Tabulator element*/
+#example-table-theme{
+    background-color:#ccc;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+/*Theme the header*/
+#example-table-theme .tabulator-header {
+    background-color:#333;
+    color:#fff;
+}
+
+/*Allow column header names to wrap lines*/
+#example-table-theme .tabulator-header .tabulator-col,
+#example-table-theme .tabulator-header .tabulator-col-row-handle {
+    white-space: normal;
+}
+
+/*Color the table rows*/
+#example-table-theme .tabulator-tableHolder .tabulator-table .tabulator-row{
+    color:#fff;
+    background-color: #666;
+}
+
+/*Color even rows*/
+    #example-table-theme .tabulator-tableHolder .tabulator-table .tabulator-row:nth-child(even) {
+    background-color: #444;
+}
+
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-parentsF {
+    background: #EFFBFB !important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-parentsM {
+    background: #cdcdcd !important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-parentsM:hover {
+    background: #ffff99 !important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-parentsF:hover {
+    background: #ffff99 !important
+}
+
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-daughter {
+    background: #f8ecf2 !important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-daughter:hover {
+    background: #f1dae6 !important
+}
+
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-son {
+    background: #cce6ff !important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-son:hover {
+    background: #b3daff !important
+}
+.tabulator .tabulator-header .tabulator-col .tabulator-header-filter {
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-father {
+    background:  #e6e6e6!important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-mother {
+    background:  #fafbfb!important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-mother:hover {
+    background: #ffffd6 !important
+}
+.tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-father:hover {
+    background: #ffffd6 !important
+}
+#facebook {
+    display: none;     
+}
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 20em) {
+         /*body {background-color: purple;}*/
+     
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 36em) {
+        /*body {background-color: orange;}*/
+        
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 48em) {
+        /*body {background-color: red;}*/
+        .twoColumns{
+                -webkit-column-gap: 20px !important;
+                   -moz-column-gap: 20px !important;
+                        column-gap: 20px !important;
+                -webkit-column-count: 2 !important;
+                   -moz-column-count: 2 !important;
+                        column-count: 2 !important;
+
+        }
+        
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 62em) {
+        /*body {background-color: blue;}*/
+        #facebook {
+            display: block;     
+        }
+     
+     
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 75em) {
+        /*body {background-color: green;}*/
+     
+}
+
+    /* Xtra Large Devices, Wide Screens */
+    @media only screen and (min-width : 87.5em) {
+        /*body {background-color: black;}*/
+     
+}
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}

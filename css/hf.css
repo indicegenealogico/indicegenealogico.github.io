@@ -1,9 +1,6 @@
 
 body {background-color: #fcfcfc !important;}
 
-.jumbotron {
-    /*background-image: url('../img/indices.png');*/
-}
 .table td, .table th {
     padding-top: 2px;
     padding-bottom: 2px;
@@ -150,8 +147,6 @@ h5 {
 }
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-son:hover {
     background: #b3daff !important
-}
-.tabulator .tabulator-header .tabulator-col .tabulator-header-filter {
 }
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-father {
     background:  #e6e6e6!important

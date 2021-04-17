@@ -27,6 +27,7 @@ var recordset = [
 	{ id: '28', locat: '5355', type: 'Bautizo', rmsID: 'TH-1961-29382-15266-44', title: 'Curiapo - Santa Barbara Ene 1910', size: 0 },
 	{ id: '29', locat: '5355', type: 'Bautizo', rmsID: 'TH-1961-29382-15266-44', title: 'Amacuro - San Jose Ene 1910', size: 0 },
 	{ id: '30', locat: '5355', type: 'Bautizo', rmsID: 'TH-1961-29382-15266-44', title: 'La Horqueta - Caserio Jul 1910', size: 0 },
+	{ id: '31', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJM', title: 'Guiria - Inmaculada Concepción 1850-1862', size: 0 },
 ];
 
 var localidades = [

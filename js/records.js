@@ -29,6 +29,8 @@ var recordset = [
 	{ id:'30', locat: '5355', type: 'Bautizo', rmsID: 'TH-1961-29382-15266-44', title: 'La Horqueta - Caserio Jul 1910', size: 0 },
   { id:'31', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJM', title: 'Guiria - Inmaculada Concepción 1850-1862', size: 0 },
   { id:'32', locat: '2115315', type: 'Matrimonio', rmsID: 'M99Y-2PT', title: 'Carúpano - Santa Rosa 1835-1836, 1842-1847', size: 0 },
+	{ id:'34', locat: '5366', type: 'Sin Imagen', rmsID: '', title: 'Caicara - Todas las Parroquias ', size: 0 },
+	{ id:'35', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ9', title: 'Guiria - Inmaculada Concepción 1881-1898', size: 0 },
 ];
 
 var localidades = [ 

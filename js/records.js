@@ -31,6 +31,8 @@ var recordset = [
   { id:'32', locat: '2115315', type: 'Matrimonio', rmsID: 'M99Y-2PT', title: 'Carúpano - Santa Rosa 1835-1836, 1842-1847', size: 0 },
 	{ id:'34', locat: '5366', type: 'Sin Imagen', rmsID: '', title: 'Caicara - Todas las Parroquias ', size: 0 },
 	{ id:'35', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ9', title: 'Guiria - Inmaculada Concepción 1881-1898', size: 0 },
+	{ id:'36', locat: '5368', type: 'Bautizo', rmsID: 'M99R-59M', title: 'Porlamar - Santisima Trinidad 1971-1975', size: 0 },
+  { id:'37', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2PL', title: 'Carúpano - Santa Rosa 1929-1933', size: 200 },
 ];
 
 var localidades = [ 
@@ -66,6 +68,7 @@ var localidades = [
       code:295, 
       cities : [
         {city:'La Asuncion', code:10},
+        {city:'Porlamar', code:12},
       ]
     },
     // { estado:'Estado', 

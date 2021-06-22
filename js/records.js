@@ -34,6 +34,7 @@ var recordset = [
 	{ id:'36', locat: '5368', type: 'Bautizo', rmsID: 'M99R-59M', title: 'Porlamar - Santisima Trinidad 1971-1975', size: 0 },
   { id:'37', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2PL', title: 'Carúpano - Santa Rosa 1929-1933', size: 200 },
   { id:'38', locat: '2115315', type: 'Bautizo', rmsID: 'M99B-7H3', title: 'Carúpano - Santa Rosa 1925-1928', size: 200 },
+  { id:'39', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJS', title: 'Guiria - Inmaculada Concpción 1872-1881', size: 200 },
 ];
 
 var localidades = [ 

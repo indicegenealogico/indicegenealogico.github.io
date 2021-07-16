@@ -35,6 +35,11 @@ var recordset = [
   { id:'37', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2PL', title: 'Carúpano - Santa Rosa 1929-1933', size: 200 },
   { id:'38', locat: '2115315', type: 'Bautizo', rmsID: 'M99B-7H3', title: 'Carúpano - Santa Rosa 1925-1928', size: 200 },
   { id:'39', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJS', title: 'Guiria - Inmaculada Concpción 1872-1881', size: 200 },
+  { id:'40', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2P2', title: 'Carúpano - Santa Rosa 1928-1929', size: 107 },
+  { id:'41', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJQ', title: 'Guiria - Inmaculada Concepción 1885-1893', size: 192 },
+  { id:'42', locat: '2115315', type: 'Bautizo', rmsID: 'M99B-7HQ', title: 'Carúpano - Santa Catalina 1928-1931', size: 200 },
+  { id:'43', locat: '2115315', type: 'Bautizo', rmsID: 'M99B-7HS', title: 'Carúpano - Santa Catalina 1921-1925', size: 205 },
+  { id:'44', locat: '2117896', type: 'Matrimonio', rmsID: 'M99Y-JC9', title: 'Punta de Piedras - San Simon 1890-1891', size: 6 },
 ];
 
 var localidades = [ 
@@ -71,6 +76,7 @@ var localidades = [
       cities : [
         {city:'La Asuncion', code:10},
         {city:'Porlamar', code:12},
+        {city:'Punta de Piedras', code:19},
       ]
     },
     // { estado:'Estado', 

@@ -49,6 +49,7 @@ var localidades = [
       	{city:'Carúpano', code:1}, 
       	{city:'El Pilar', code:7}, 
       	{city:'Guiria', code:2},
+        {city:'Macuro', code:21},
         {city:'Río Caribe', code:3},
       ]
   	},

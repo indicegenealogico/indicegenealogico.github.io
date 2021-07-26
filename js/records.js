@@ -40,6 +40,9 @@ var recordset = [
   { id:'42', locat: '2115315', type: 'Bautizo', rmsID: 'M99B-7HQ', title: 'Carúpano - Santa Catalina 1928-1931', size: 200 },
   { id:'43', locat: '2115315', type: 'Bautizo', rmsID: 'M99B-7HS', title: 'Carúpano - Santa Catalina 1921-1925', size: 205 },
   { id:'44', locat: '2117896', type: 'Matrimonio', rmsID: 'M99Y-JC9', title: 'Punta de Piedras - San Simon 1890-1891', size: 6 },
+  { id:'45', locat: '2111147', type: 'Matrimonio', rmsID: 'M99Y-74H', title: 'Macuro - San Cristobal 1931-1940', size: 9 },
+  { id:'46', locat: '2111147', type: 'Bautizo', rmsID: 'M99Y-744', title: 'Macuro - San Cristobal 1931-1942', size: 95 },
+  { id:'47', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2PV', title: 'Carúpano - Santa Rosa 1920-1925', size: 180 },
 ];
 
 var localidades = [ 

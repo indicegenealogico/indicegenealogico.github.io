@@ -44,6 +44,7 @@ var recordset = [
   { id:'46', locat: '2111147', type: 'Bautizo', rmsID: 'M99Y-744', title: 'Macuro - San Cristobal 1931-1942', size: 95 },
   { id:'47', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2PV', title: 'Carúpano - Santa Rosa 1920-1925', size: 180 },
   { id:'48', locat: '2115315', type: 'Matrimonio', rmsID: 'M9SF-PZL', title: 'Carúpano - Santa Rosa 1913-1940', size: 200 },
+  { id:'49', locat: '2115315', type: 'Defuncion', rmsID: 'M9SM-W5G', title: 'Carúpano - Santa Rosa 1918-1954', size: 165 },
 ];
 
 var localidades = [ 

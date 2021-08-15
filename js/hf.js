@@ -57,17 +57,24 @@ window.onload = function() {
 
 // **********************Tabla****************************
   var table = new Tabulator("#example-table", {
-    height: "500px",
+    pagination:"local",
+    paginationSize:100,
+    paginationSizeSelector:[50, 100, 500, 1000, true],
+    height: "510px",
     data:data,
     dataTree:true,
+    dataTreeFilter:true,
+    dataTreeSort:true,
     dataTreeStartExpanded:true,
     dataTreeElementColumn:"ns",
-    dataTreeStartExpanded:[true, false],
+    dataTreeStartExpanded:[true, true],
     layout:"fitColumns",
     responsiveLayout:true,
     clipboard:true,    
     placeholder:"Esperando por datos a ser cargados...",
     headerSortTristate:true,
+    //movableColumns:false,
+    
     // persistence:{
     //   sort:true,
     //   filter:true,
@@ -75,9 +82,9 @@ window.onload = function() {
     // },
     // persistenceID:"examplePerststance", 
     columns: [ //Define Table Columns
-      { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55, visible:false, responsive:5, headerMenu:headerMenu},
-      { title:"ID Ind",field: "Id", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"ID", headerFilter:"input", visible:false,  width:60, maxWidth:60, responsive:4, headerMenu:headerMenu},
-      { title:"ID Padres",field: "pid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Padres", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu,
+      { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55, responsive:5, headerMenu:headerMenu, download:false},
+      { title:"ID Ind",field: "Id", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"ID", headerFilter:"input", visible:false,  width:60, maxWidth:60, responsive:4, headerMenu:headerMenu, download:false},
+      { title:"ID Padres",field: "pid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Padres", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false,
         cellClick:function(e, cell) {
           var celda = cell._cell.row.data;
           fieldST.value = "";
@@ -91,8 +98,8 @@ window.onload = function() {
           table.setFilter("fid", "=", celda.pid);
         }
       },
-      { title:"ID Fam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu},
-      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", width:63, maxWidth:75, responsive:3, headerMenu:headerMenu,
+      { title:"ID Fam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false},
+      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", width:63, maxWidth:75, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
        		tooltip:function(cell){
             	switch (cell.getValue()){
             		case 'M': tipo = "Matrimonio";
@@ -261,15 +268,15 @@ window.onload = function() {
 	            $("#recordModal").modal(); 	           
           	}
   	   },
-      { title:"Nombres",field: "ns", sorter: "string", align: "left", headerFilterPlaceholder:"Nombre(s)", minWidth:150, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
-      { title:"Apellidos",field: "lns", sorter: "string", bottomCalc: "count", headerFilterPlaceholder:"Apellido(s)", minWidth:150, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
+      { title:"Nombres",field: "ns", sorter: "string", align: "left", headerFilterPlaceholder:"Nombre(s)", minWidth:120, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
+      { title:"Apellidos",field: "lns", bottomCalc: "count", sorter: "string", headerFilterPlaceholder:"Apellido(s)", minWidth:150, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
       { title:"Sexo",field: "sex", sorter: "string", align: "center", editor:"select", headerFilterPlaceholder:"Sexo", headerFilter:"input", width:55, maxWidth:60, responsive:6, headerMenu:headerMenu },
-      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:85, headerMenu:headerMenu},
+      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:85, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
       { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:60, headerMenu:headerMenu },
       { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", visible:false, minWidth:50, headerMenu:headerMenu, responsive:4},
-      { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4},
-      { title:"Estado",field: "st", sorter: "number", hozAlign:"center",  headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4},
+      { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
+      { title:"Estado",field: "st", sorter: "number", hozAlign:"center",  headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
     ],
       
 
@@ -571,10 +578,15 @@ window.onload = function() {
 
   function clearAppend(){
     $("#hijos").remove();
-    $("#children").append('<table id="hijos" class="table table-striped"><thead><tr><th>Evento</th><th>Nombres</th><th>Notas</th></tr><thead><tbody></tbody></table>');
+    $("#children").append('<table id="hijos" class="table table-striped"><thead><tr><th>Evento</th><th>Nombres</th><th>Notas</th></tr id="hijosch"><thead><tbody></tbody></table>');
     $("#mama").html("Madre: <i>Información no disponible</i>" );
     $("#papa").html("Padre: <i>Información no disponible</i>" );
   };
+
+  //trigger download of data.csv file
+  document.getElementById("download-csv").addEventListener("click", function(){
+    table.download("csv", "data.csv");
+  });
 
 
 

@@ -44,7 +44,7 @@ window.onload = function() {
         var celda = cell._cell.row.data;
         var ark = celda.ark;
         if (ark !== ""){
-          return "<i class='fa fa-id-card'></i>";
+          return "<i class='fa fa-id-card-o'></i>";
         } else {
           return "<i class='fa fa-camera-retro'></i>";
         }
@@ -304,10 +304,18 @@ window.onload = function() {
         cellClick:function(e, cell){
           viewImage(cell);
             event.preventDefault();
-          // var celda = cell._cell.row.data;
-          // var ark = celda.ark;
-          //alert("Printing row data for: " + ark)
-        }
+        },
+        tooltip:function(cell){
+            var celda = cell._cell.row.data;;
+            var ark = celda.ark;
+            var tipo ="";
+              if (ark !== "") {
+                  tipo = "Ir al Registro";
+              } else{
+                tipo = "Ver Imagen del evento";
+               };
+              return  tipo; //return cells "field - value";
+          },
       },      
       { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", visible:false, minWidth:50, headerMenu:headerMenu, responsive:4},
       { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
@@ -317,16 +325,16 @@ window.onload = function() {
       
 
     //Al hacer clic boton derecho, abre la imagen en familisearch
-    rowContext:function(e, row){
-      seeImage(row);
-      event.preventDefault();
-    }, //rowContext
+    // rowContext:function(e, row){
+    //   seeImage(row);
+    //   event.preventDefault();
+    // }, //rowContext
       
-      //Al tocar dos veces la fila. abre la imagen en familisearch
-    rowDblTap:function(e, row){
-      seeImage(row);
-      event.preventDefault();
-    }, //rowTapHold
+    //   //Al tocar dos veces la fila. abre la imagen en familisearch
+    // rowDblTap:function(e, row){
+    //   seeImage(row);
+    //   event.preventDefault();
+    // }, //rowTapHold
 
     rowFormatter:function(row){
       if(row.getData().typ == "M"){
@@ -583,41 +591,41 @@ window.onload = function() {
   };
 
 
-  function seeImage(row){
-    var datos = row.getData();
-    var imagen = datos.img - 1;
-    var rms = datos.rms;
-    console.log(datos);
-    var ark = datos.ark;
-    if (datos.typ != "N") {
-    	var rms = recordset.map( function(record) {      
-	    	if( record.id == rms){
+  // function seeImage(row){
+  //   var datos = row.getData();
+  //   var imagen = datos.img - 1;
+  //   var rms = datos.rms;
+  //   console.log(datos);
+  //   var ark = datos.ark;
+  //   if (datos.typ != "N") {
+  //   	var rms = recordset.map( function(record) {      
+	 //    	if( record.id == rms){
 
-            if (ark !== "") {
-              var url = "https://www.familysearch.org/" + ark;
+  //           if (ark !== "") {
+  //             var url = "https://www.familysearch.org/" + ark;
 
-            } else {
-              var url = "https://www.familysearch.org/records/images/image-details?page=1&place=" + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
+  //           } else {
+  //             var url = "https://www.familysearch.org/records/images/image-details?page=1&place=" + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
             
-            };
+  //           };
 	        	
-            //console.log(url);
-            window.open(url);
-	        	// $("#btn_image").click( function(){
-	         //    	window.open(url);
-	        	// });
-      		}            
-    	});
-    }    
-    return;
-  };
+  //           //console.log(url);
+  //           window.open(url);
+	 //        	// $("#btn_image").click( function(){
+	 //         //    	window.open(url);
+	 //        	// });
+  //     		}            
+  //   	});
+  //   }    
+  //   return;
+  // };
 
 
   function viewImage(cell){
     var datos = cell._cell.row.data;;
     var imagen = datos.img - 1;
     var rms = datos.rms;
-    console.log(datos);
+    //console.log(datos);
     var ark = datos.ark;
     if (datos.typ != "N") {
       var rms = recordset.map( function(record) {      

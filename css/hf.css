@@ -1,6 +1,9 @@
 
 body {background-color: #fcfcfc !important;}
 
+.jumbotron {
+    /*background-image: url('../img/indices.png');*/
+}
 .table td, .table th {
     padding-top: 2px;
     padding-bottom: 2px;
@@ -81,6 +84,9 @@ div[tabulator-field='typ']:hover {
   margin-top: 5px;
   margin-bottom: 10px;
 }
+.icon_img {
+    padding-top: 4px;
+}
 #title_div {
  text-align: center;
  margin: 15px 0;
@@ -147,6 +153,8 @@ h5 {
 }
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-son:hover {
     background: #b3daff !important
+}
+.tabulator .tabulator-header .tabulator-col .tabulator-header-filter {
 }
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-father {
     background:  #e6e6e6!important

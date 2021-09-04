@@ -57,7 +57,7 @@ var localidades = [
       	{city:'Guiria', code:2},
         {city:'Macuro', code:21},
         {city:'Río Caribe', code:3},
-        {city:'San José de Aerocuar', code:9},
+        {city:'San José de Aerocuar', code:5},
       ]
   	},
     { estado:'Delta Amacuro', 
@@ -76,7 +76,7 @@ var localidades = [
     { estado:'Monagas', 
       code:291, 
       cities : [
-        {city:'Caicara', code:11},
+        {city:'Caicara', code:9},
       ]
     },
     { estado:'Nueva Esparta', 

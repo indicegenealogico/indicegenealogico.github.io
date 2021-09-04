@@ -76,7 +76,7 @@ var localidades = [
     { estado:'Monagas', 
       code:291, 
       cities : [
-        {city:'Caicara', code:9},
+        {city:'Caicara', code:11},
       ]
     },
     { estado:'Nueva Esparta', 

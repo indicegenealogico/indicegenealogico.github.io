@@ -44,11 +44,14 @@ window.onload = function() {
         var celda = cell._cell.row.data;
         var ark = celda.ark;
         if (ark !== ""){
-          return "<i class='fa fa-id-card-o'></i>";
+          return "<i class='icon_img fa fa-id-card-o'></i>";
         } else {
-          return "<i class='fa fa-camera-retro'></i>";
+          return "<i class='icon_img fa fa-camera-retro'></i>";
         }
     };
+
+    var urlpre = "https://www.familysearch.org/ark:/61903/1:1:";
+    var urlprelong = 'https://www.familysearch.org/records/images/image-details?page=1&place=';
 
 // **********************  Hojas  *************************
     // var tree = new ClassyLeaves({
@@ -165,13 +168,14 @@ window.onload = function() {
 	            if (type == "N") {
 	              $("#btn_image").hide();
 	            } else {
-		            var rms = recordset.map( function(record) {      
-		              if( record.id == rms){
+		            var rms = recordset.map( function(record) {
+                  //console.log(ark);
+                  if( record.id == rms){
                     if (ark !== "") {
-                        var url = "https://www.familysearch.org/" + ark;
+                        var url = urlpre + ark;
 
                     } else {
-                        var url = "https://www.familysearch.org/records/images/image-details?page=1&place=" + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
+                        var url = urlprelong + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
             
                     };
 
@@ -190,16 +194,15 @@ window.onload = function() {
 	                if (family.fid == conyg && family.typ == type && family.sex != gend){
                     var rms = family.rms;
                     var img = family.img - 1;
+                    var ark = family.ark;
                     var link = recordset.map(function (record) {
                       if (record.id == rms) {
-                        var myurl = 'https://www.familysearch.org/records/images/image-details?page=1&place=' + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
-            
-                        // if (ark !== "") {
-                        //   var myurl = "https://www.familysearch.org/" + ark;
+                        if (ark !== "") {
+                          var url = urlpre + ark;
 
-                        // };
-                        
-                        
+                        } else {
+                          var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
+                        };                                        
 
                         $('#cy').html('Cónyugue: <i><a href="' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
                       }
@@ -219,9 +222,16 @@ window.onload = function() {
 	                } else {
 	                  var rms = padre.rms;
 	                  var img = padre.img - 1;
+                    var ark = padres.ark;
 	                  var link = recordset.map( function(record) {      
 	                    if( record.id == rms){
-	                      var myurl = 'https://www.familysearch.org/records/images/image-details?page=1&place=' + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
+                        if (ark !== "") {
+                          var url = urlpre + ark;
+
+                        } else {
+	                         var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
+                        };
+
 	                      $('#papa').html('Padre: <i><a href="'+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
 	                    }                    
 	                  })              
@@ -236,9 +246,16 @@ window.onload = function() {
 	                } else {                  
 	                  var rms = madre.rms;
 	                  var img = madre.img - 1;
+                    var ark = madre.ark;
 	                  var link = recordset.map( function(record) {      
 	                    if( record.id == rms){
-	                      var myurl = 'https://www.familysearch.org/records/images/image-details?page=1&place=' + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';      
+                        if (ark !== "") {
+                          var url = urlpre + ark;
+
+                        } else {
+	                         var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
+                        };
+
 	                      $('#mama').html('Madre: <i><a href="'+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
 	                    }                    
 	                  })
@@ -251,10 +268,16 @@ window.onload = function() {
 		            var child = data.map (function(hijo){           	
 		            	if (hijo.pid == conyg){
 		            		var rms = hijo.rms;
-		                	var img = hijo.img;
-		                	var link = recordset.map( function (record){
+		                var img = hijo.img;
+                    var ark = hijo.ark;
+		                var link = recordset.map( function (record){
 		                  		if ( record.id == rms) {
-		                    		var myurl = 'https://www.familysearch.org/records/images/image-details?page=1&place=' + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
+                            if (ark !== "") {
+                              var url = urlpre + ark;
+
+                            } else {
+		                    		  var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
+                            };
 		                    		$('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href="'+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
 		                  		} 
 		                	})
@@ -630,12 +653,11 @@ window.onload = function() {
     if (datos.typ != "N") {
       var rms = recordset.map( function(record) {      
         if( record.id == rms){
-
             if (ark !== "") {
-              var url = "https://www.familysearch.org/" + ark;
+              var url = urlpre + ark;
 
             } else {
-              var url = "https://www.familysearch.org/records/images/image-details?page=1&place=" + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
+              var url = urlprelong + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
             
             };
             

@@ -39,34 +39,40 @@ window.onload = function() {
       }
       return menu;
     };
-    //Generate print icon
+//Generate print icon
     var viewIcon = function(cell, formatterParams){ //plain text value
         var celda = cell._cell.row.data;
         var ark = celda.ark;
-        if (ark !== ""){
-          return "<i class='icon_img fa fa-id-card-o'></i>";
-        } else {
-          return "<i class='icon_img fa fa-camera-retro'></i>";
+        var tipo = celda.typ;
+        console.log(tipo);
+        if (tipo == "N"){
+          return "<i class='icon_img fa fa-ban'></i>";
+         } else {
+          if (ark !== ""){
+            return "<i class='icon_img fa fa-id-card-o'></i>";
+          } else {
+            return "<i class='icon_img fa fa-camera-retro'></i>";
+          }
         }
     };
 
     var urlpre = "https://www.familysearch.org/ark:/61903/1:1:";
-    var urlprelong = 'https://www.familysearch.org/records/images/image-details?page=1&place=';
+    var urlprelong = "https://www.familysearch.org/records/images/image-details?page=1&place=";
 
 // **********************  Hojas  *************************
-    // var tree = new ClassyLeaves({
-    //   leaves: 20,
-    //   maxY: -10,
-    //   multiplyOnClick: true,
-    //   multiply: 2,
-    //   infinite: true,
-    //   speed: 4000
-    //     });
-    // $('body').on('click', '.addLeaf', function() {
-    //   console.log('8');
-    //   tree.add(8);
-    //   return false;
-    // });
+    var tree = new ClassyLeaves({
+      leaves: 20,
+      maxY: -10,
+      multiplyOnClick: true,
+      multiply: 2,
+      infinite: true,
+      speed: 4000
+        });
+    $('body').on('click', '.addLeaf', function() {
+      console.log('8');
+      tree.add(8);
+      return false;
+    });
 
 // **********************Tabla****************************
   var table = new Tabulator("#example-table", {
@@ -146,7 +152,7 @@ window.onload = function() {
 	            var sexo = "";
               var ark = celda.ark;
 
-	            //console.log(ark);
+	            //console.log(type);
 
 	            clearAppend();
 	            $(".hijos").show();
@@ -168,18 +174,14 @@ window.onload = function() {
 	            if (type == "N") {
 	              $("#btn_image").hide();
 	            } else {
-		            var rms = recordset.map( function(record) {
-                  //console.log(ark);
-                  if( record.id == rms){
+		            var rms = recordset.map( function(record) {      
+		              if( record.id == rms){
                     if (ark !== "") {
                         var url = urlpre + ark;
-
                     } else {
-                        var url = urlprelong + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
-            
-                    };
-
-		                $("#btn_image").html("Ver registro de " + nombre );
+                        var url = urlprelong + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"           
+                    }; 
+                    $("#btn_image").html("Ver registro de " + nombre );
 		                $("#btn_image").click( function(){
 		                  window.open(url);
 		                });
@@ -189,22 +191,19 @@ window.onload = function() {
 
 	            //$("#personal").append('<li id="cy"></li>');
 	            //*********   CONYUGUE  *********
-	            if (celda.typ == "M" || celda.typ == "P" || celda.typ == "N"){             
+	            if (celda.typ == "M" || celda.typ == "P" || celda.typ == "N"){  
 	              var conyuge = data.map( function(family){
 	                if (family.fid == conyg && family.typ == type && family.sex != gend){
                     var rms = family.rms;
                     var img = family.img - 1;
-                    var ark = family.ark;
                     var link = recordset.map(function (record) {
                       if (record.id == rms) {
                         if (ark !== "") {
-                          var url = urlpre + ark;
-
+                          var myurl = urlpre + ark;
                         } else {
-                          var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
-                        };                                        
-
-                        $('#cy').html('Cónyugue: <i><a href="' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
+                            var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
+                        }; 
+                        $('#cy').html('Cónyugue: <i><a href=' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
                       }
                     })
 	                };
@@ -222,17 +221,14 @@ window.onload = function() {
 	                } else {
 	                  var rms = padre.rms;
 	                  var img = padre.img - 1;
-                    var ark = padres.ark;
 	                  var link = recordset.map( function(record) {      
 	                    if( record.id == rms){
                         if (ark !== "") {
-                          var url = urlpre + ark;
-
+                          var myurl = urlpre + ark;
                         } else {
-	                         var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
-                        };
-
-	                      $('#papa').html('Padre: <i><a href="'+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
+                            var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
+                        }; 
+	                      $('#papa').html('Padre: <i><a href='+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
 	                    }                    
 	                  })              
 	                }
@@ -246,17 +242,14 @@ window.onload = function() {
 	                } else {                  
 	                  var rms = madre.rms;
 	                  var img = madre.img - 1;
-                    var ark = madre.ark;
 	                  var link = recordset.map( function(record) {      
 	                    if( record.id == rms){
                         if (ark !== "") {
-                          var url = urlpre + ark;
-
+                          var myurl = urlpre + ark;
                         } else {
-	                         var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
-                        };
-
-	                      $('#mama').html('Madre: <i><a href="'+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+                            var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
+                        };                         
+	                      $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
 	                    }                    
 	                  })
 	                }
@@ -271,15 +264,14 @@ window.onload = function() {
 		                var img = hijo.img;
                     var ark = hijo.ark;
 		                var link = recordset.map( function (record){
-		                  		if ( record.id == rms) {
-                            if (ark !== "") {
-                              var url = urlpre + ark;
-
-                            } else {
-		                    		  var myurl = urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';
-                            };
-		                    		$('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href="'+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
-		                  		} 
+		                 	if ( record.id == rms) {
+                        if (ark !== "") {
+                          var myurl = urlpre + ark;
+                        } else {
+                            var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
+                        };                             
+		                  	$('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href='+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
+		                  } 
 		                	})
 		                }                                
 		            })
@@ -322,7 +314,7 @@ window.onload = function() {
       { title:"Sexo",field: "sex", sorter: "string", align: "center", editor:"select", headerFilterPlaceholder:"Sexo", headerFilter:"input", width:55, maxWidth:60, responsive:6, headerMenu:headerMenu },
       { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:85, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
-      { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:60, headerMenu:headerMenu },      
+      { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:60, headerMenu:headerMenu },
       {formatter:viewIcon, width:40, hozAlign:"center", 
         cellClick:function(e, cell){
           viewImage(cell);
@@ -331,33 +323,37 @@ window.onload = function() {
         tooltip:function(cell){
             var celda = cell._cell.row.data;;
             var ark = celda.ark;
+            var ty = celda.typ;
             var tipo ="";
+            if (ty == "N") {
+              tipo = "Sin imagen para mostrar";
+            } else {
               if (ark !== "") {
                   tipo = "Ir al Registro";
               } else{
                 tipo = "Ver Imagen del evento";
-               };
+              };
+            }
               return  tipo; //return cells "field - value";
           },
-      },      
+      }, 
       { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", visible:false, minWidth:50, headerMenu:headerMenu, responsive:4},
       { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
       { title:"Estado",field: "st", sorter: "number", hozAlign:"center",  headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
-      { title:"arkId",field: "ark", sorter: "string", hozAlign:"center",  headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
     ],
       
 
     //Al hacer clic boton derecho, abre la imagen en familisearch
-    // rowContext:function(e, row){
-    //   seeImage(row);
-    //   event.preventDefault();
-    // }, //rowContext
+    rowContext:function(e, row){
+      seeImage(row);
+      event.preventDefault();
+    }, //rowContext
       
-    //   //Al tocar dos veces la fila. abre la imagen en familisearch
-    // rowDblTap:function(e, row){
-    //   seeImage(row);
-    //   event.preventDefault();
-    // }, //rowTapHold
+      //Al tocar dos veces la fila. abre la imagen en familisearch
+    rowDblTap:function(e, row){
+      seeImage(row);
+      event.preventDefault();
+    }, //rowTapHold
 
     rowFormatter:function(row){
       if(row.getData().typ == "M"){
@@ -614,37 +610,24 @@ window.onload = function() {
   };
 
 
-  // function seeImage(row){
-  //   var datos = row.getData();
-  //   var imagen = datos.img - 1;
-  //   var rms = datos.rms;
-  //   console.log(datos);
-  //   var ark = datos.ark;
-  //   if (datos.typ != "N") {
-  //   	var rms = recordset.map( function(record) {      
-	 //    	if( record.id == rms){
-
-  //           if (ark !== "") {
-  //             var url = "https://www.familysearch.org/" + ark;
-
-  //           } else {
-  //             var url = "https://www.familysearch.org/records/images/image-details?page=1&place=" + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
-            
-  //           };
-	        	
-  //           //console.log(url);
-  //           window.open(url);
-	 //        	// $("#btn_image").click( function(){
-	 //         //    	window.open(url);
-	 //        	// });
-  //     		}            
-  //   	});
-  //   }    
-  //   return;
-  // };
-
-
-  function viewImage(cell){
+  function seeImage(row){
+    var datos = row.getData();
+    var imagen = datos.img - 1;
+    var rms = datos.rms;
+    if (datos.typ != "N") {
+    	var rms = recordset.map( function(record) {      
+	    	if( record.id == rms){
+	        	var url = "https://www.familysearch.org/records/images/image-details?page=1&place=" + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
+	        	window.open(url);
+	        	// $("#btn_image").click( function(){
+	         //    	window.open(url);
+	        	// });
+      		}            
+    	});
+    }    
+    return;
+  };
+    function viewImage(cell){
     var datos = cell._cell.row.data;;
     var imagen = datos.img - 1;
     var rms = datos.rms;
@@ -671,7 +654,6 @@ window.onload = function() {
     }    
     return;
   };
-
 
   function gender(cell){
     switch (cell){

@@ -48,6 +48,7 @@ var recordset = [
   { id:'51', locat: '2104609', type: 'Defunción', rmsID: 'M99Y-25K', title: 'San José de Areocuar - San Jose 1909-1928', size: 61 },
   { id:'52', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ7', title: 'Guiria - Inmaculada Concepción 1893-1897', size: 147 },
   { id:'53', locat: '2104609', type: 'Bautizo', rmsID: 'M99Y-25H', title: 'San Jose de Aerocuar - San Jose 1893-1907', size: 0 },
+  { id:'54', locat: '2115491', type: 'Matrimonio', rmsID: 'M9SM-SYL', title: 'Cariaco - San Felipe 1915-1950', size: 74 },
 
 ];
 
@@ -55,6 +56,7 @@ var localidades = [
     { estado:'Sucre', 
       code:293, 
       cities : [
+        // {city:'Cariaco', code:6}, 
       	{city:'Carúpano', code:1}, 
       	{city:'El Pilar', code:7}, 
       	{city:'Güiria', code:2},

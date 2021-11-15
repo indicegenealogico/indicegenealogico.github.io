@@ -60,19 +60,19 @@ window.onload = function() {
     var urlprelong = "https://www.familysearch.org/records/images/image-details?page=1&place=";
 
 // **********************  Hojas  *************************
-    var tree = new ClassyLeaves({
-      leaves: 20,
-      maxY: -10,
-      multiplyOnClick: true,
-      multiply: 2,
-      infinite: true,
-      speed: 4000
-        });
-    $('body').on('click', '.addLeaf', function() {
-      console.log('8');
-      tree.add(8);
-      return false;
-    });
+    // var tree = new ClassyLeaves({
+    //   leaves: 20,
+    //   maxY: -10,
+    //   multiplyOnClick: true,
+    //   multiply: 2,
+    //   infinite: true,
+    //   speed: 4000
+    //     });
+    // $('body').on('click', '.addLeaf', function() {
+    //   console.log('8');
+    //   tree.add(8);
+    //   return false;
+    // });
 
 // **********************Tabla****************************
   var table = new Tabulator("#example-table", {
@@ -681,3 +681,6 @@ window.onload = function() {
 
 
 };
+
+
+  

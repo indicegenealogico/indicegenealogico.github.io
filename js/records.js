@@ -56,7 +56,7 @@ var localidades = [
     { estado:'Sucre', 
       code:293, 
       cities : [
-        // {city:'Cariaco', code:6}, 
+        {city:'Cariaco', code:6}, 
       	{city:'Carúpano', code:1}, 
       	{city:'El Pilar', code:7}, 
       	{city:'Güiria', code:2},

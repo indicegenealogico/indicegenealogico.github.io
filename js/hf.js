@@ -1,4 +1,9 @@
 window.onload = function() {
+  //Cambiar fecha de actualizacion
+  var up_date = "Noviembre 26, 2021";
+  var fecha = document.getElementById('update');
+  fecha.innerHTML = up_date;
+
 //define column header menu as column visibility toggle
     var headerMenu = function(){
       var menu = [];
@@ -499,7 +504,7 @@ window.onload = function() {
       }
     })
 
-    ciudadSel.length = 1;
+    ciudadSel.length = 1;
     for (var j in localidades[a].cities) {
       ciudadSel.options[ciudadSel.options.length] = new Option(localidades[a].cities[j].city,localidades[a].cities[j].code, false, false)
       ciudadSel.onchange = function() {

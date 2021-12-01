@@ -108,6 +108,7 @@ window.onload = function() {
     columns: [ //Define Table Columns
       { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55, responsive:5, headerMenu:headerMenu, download:false},
       { title:"ID Ind",field: "Id", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"ID", headerFilter:"input", visible:false,  width:60, maxWidth:60, responsive:4, headerMenu:headerMenu, download:true},
+      { title:"img",field: "img", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"img", headerFilter:"input", visible:false,  width:60, maxWidth:60, responsive:4, headerMenu:headerMenu, download:true},
       { title:"ID Padres",field: "pid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Padres", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:true,
         cellClick:function(e, cell) {
           var celda = cell._cell.row.data;

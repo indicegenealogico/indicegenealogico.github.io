@@ -49,6 +49,7 @@ var recordset = [
   { id:'52', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ7', title: 'Guiria - Inmaculada Concepción 1893-1897', size: 147 },
   { id:'53', locat: '2104609', type: 'Bautizo', rmsID: 'M99Y-25H', title: 'San Jose de Aerocuar - San Jose 1893-1907', size: 0 },
   { id:'54', locat: '2115491', type: 'Matrimonio', rmsID: 'M9SM-SYL', title: 'Cariaco - San Felipe 1915-1950', size: 74 },
+  { id:'55', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJW', title: 'Guiria - Inmaculada Concepción 1897-1907', size: 389 },
 
 ];
 

@@ -1,6 +1,6 @@
 window.onload = function() {
   //Cambiar fecha de actualizacion
-  var up_date = "Diciembre 2, 2021";
+  var up_date = "Diciembre 5, 2021";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 

@@ -50,7 +50,7 @@ var recordset = [
   { id:'53', locat: '2104609', type: 'Bautizo', rmsID: 'M99Y-25H', title: 'San Jose de Aerocuar - San Jose 1893-1907', size: 0 },
   { id:'54', locat: '2115491', type: 'Matrimonio', rmsID: 'M9SM-SYL', title: 'Cariaco - San Felipe 1915-1950', size: 74 },
   { id:'55', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJW', title: 'Guiria - Inmaculada Concepción 1897-1907', size: 389 },
-
+  { id:'56', locat: '2109974', type: 'Bautizo', rmsID: 'M948-VC5', title: 'Guaraunos - Guarauno 1892-1895', size: 92 },
 ];
 
 var localidades = [ 
@@ -59,7 +59,8 @@ var localidades = [
       cities : [
         {city:'Cariaco', code:6}, 
       	{city:'Carúpano', code:1}, 
-      	{city:'El Pilar', code:7}, 
+      	{city:'El Pilar', code:7},
+        {city:'Guaraunos', code:22}, 
       	{city:'Güiria', code:2},
         {city:'Macuro', code:21},
         {city:'Río Caribe', code:3},

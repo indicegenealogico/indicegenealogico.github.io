@@ -17,6 +17,10 @@ div[tabulator-field='typ']:hover {
     text-decoration: underline;
     color: blue;
 }
+#historial {
+    max'height: 280px;
+
+}
 
 .modal-header {
     padding:16px 16px;
@@ -83,6 +87,7 @@ div[tabulator-field='typ']:hover {
 #example-table{
   margin-top: 5px;
   margin-bottom: 10px;
+  font-size: 11px;
 }
 .icon_img {
     padding-top: 4px;

@@ -123,7 +123,7 @@ window.onload = function() {
         }
       },
       { title:"ID Fam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false},
-      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", width:63, maxWidth:75, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
+      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", width:53, maxWidth:55, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
        		tooltip:function(cell){
             	switch (cell.getValue()){
             		case 'M': tipo = "Matrimonio";
@@ -314,10 +314,10 @@ window.onload = function() {
 	            $("#recordModal").modal(); 	           
           	}
   	   },
-      { title:"Nombres",field: "ns", sorter: "string", align: "left", headerFilterPlaceholder:"Nombre(s)", minWidth:120, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
-      { title:"Apellidos",field: "lns", bottomCalc: "count", sorter: "string", headerFilterPlaceholder:"Apellido(s)", minWidth:150, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
-      { title:"Sexo",field: "sex", sorter: "string", align: "center", editor:"select", headerFilterPlaceholder:"Sexo", headerFilter:"input", width:55, maxWidth:60, responsive:6, headerMenu:headerMenu },
-      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:85, headerMenu:headerMenu, download:false},
+      { title:"Nombres",field: "ns", sorter: "string", align: "left", headerFilterPlaceholder:"Nombre(s)", minWidth:100, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
+      { title:"Apellidos",field: "lns", bottomCalc: "count", sorter: "string", headerFilterPlaceholder:"Apellido(s)", minWidth:120, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
+      { title:"Sexo",field: "sex", sorter: "string", align: "center", editor:"select", headerFilterPlaceholder:"Sexo", headerFilter:"input", visible:false, width:55, maxWidth:60, responsive:6, headerMenu:headerMenu },
+      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:75, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
       { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:60, headerMenu:headerMenu },
       {formatter:viewIcon, width:40, hozAlign:"center", 
@@ -342,7 +342,7 @@ window.onload = function() {
               return  tipo; //return cells "field - value";
           },
       }, 
-      { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", visible:false, minWidth:50, headerMenu:headerMenu, responsive:4},
+      { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", minWidth:50, headerMenu:headerMenu, responsive:4},
       { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
       { title:"Estado",field: "st", sorter: "number", hozAlign:"center",  headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
     ],
@@ -418,15 +418,14 @@ window.onload = function() {
           table.showColumn("pid");
           table.showColumn("fid");
           table.showColumn("not");
-          table.hideColumn("sex");
+          table.showColumn("sex");
         }, 1000)
       } else {
           $this.removeClass('col-lg-12').addClass('col-lg-9');
           table.hideColumn("Id");
           table.hideColumn("pid");
           table.hideColumn("fid");
-          table.hideColumn("not");
-          table.showColumn("sex");
+          table.hideColumn("sex");
         }
     })
   });

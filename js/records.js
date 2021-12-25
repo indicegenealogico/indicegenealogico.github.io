@@ -51,6 +51,8 @@ var recordset = [
   { id:'54', locat: '2115491', type: 'Matrimonio', rmsID: 'M9SM-SYL', title: 'Cariaco - San Felipe 1915-1950', size: 74 },
   { id:'55', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJW', title: 'Guiria - Inmaculada Concepción 1897-1907', size: 389 },
   { id:'56', locat: '2109974', type: 'Bautizo', rmsID: 'M948-VC5', title: 'Guaraunos - Guarauno 1892-1895', size: 92 },
+  { id:'57', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ4', title: 'Guiria - Inmaculada Concepción 1907-1912', size: 193 },
+  { id:'58', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJH', title: 'Guiria - Inmaculada Concepción 1912-1917', size: 0 },
 ];
 
 var localidades = [ 
@@ -60,7 +62,7 @@ var localidades = [
         {city:'Cariaco', code:6}, 
       	{city:'Carúpano', code:1}, 
       	{city:'El Pilar', code:7},
-        {city:'Guaraunos', code:22}, 
+        //{city:'Guaraunos', code:22}, 
       	{city:'Güiria', code:2},
         {city:'Macuro', code:21},
         {city:'Río Caribe', code:3},

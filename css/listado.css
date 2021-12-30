@@ -47,10 +47,16 @@
                  -webkit-column-fill: auto;
                     -moz-column-fill: auto;
                          column-fill: auto;
-                 -webkit-column-rule: 1px solid #666;
-                    -moz-column-rule: 1px solid #666;
-                         column-rule: 1px solid #666;
+}
 
-
-
-        }
+@media only screen and (orientation: portrait) {
+    body {
+        height: 100vw;
+        transform: rotate(90deg);
+    }
+    .fourColumns{
+        -webkit-column-rule: 1px solid #666;
+           -moz-column-rule: 1px solid #666;
+                column-rule: 1px solid #666;
+    }
+}

@@ -1,6 +1,6 @@
 window.onload = function() {
   //Cambiar fecha de actualizacion
-  var up_date = "Diciembre 25, 2021";
+  var up_date = "Diciembre 29, 2021";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
@@ -108,7 +108,7 @@ window.onload = function() {
     columns: [ //Define Table Columns
       { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55, responsive:5, headerMenu:headerMenu, download:false},
       { title:"ID Ind",field: "Id", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"ID", headerFilter:"input", visible:false,  width:60, maxWidth:60, responsive:4, headerMenu:headerMenu, download:false},
-      { title:"ID Padres",field: "pid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Padres", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false,
+      { title:"IDPadres",field: "pid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Padres", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false,
         cellClick:function(e, cell) {
           var celda = cell._cell.row.data;
           fieldST.value = "";
@@ -122,7 +122,7 @@ window.onload = function() {
           table.setFilter("fid", "=", celda.pid);
         }
       },
-      { title:"ID Fam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false},
+      { title:"IDFam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false},
       { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", width:53, maxWidth:55, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
        		tooltip:function(cell){
             	switch (cell.getValue()){

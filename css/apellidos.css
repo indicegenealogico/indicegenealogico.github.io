@@ -1,4 +1,9 @@
-.container-letters {
+
+/* (A) WRONG ORIENTATION - SHOW MESSAGE HIDE CONTENT */
+@media only screen and (orientation:landscape) {
+  #turn { display:none; }
+  .container-fluid { display:block; }
+  .container-letters {
   overflow: hidden;
 }
 
@@ -41,22 +46,22 @@
                 -webkit-column-gap: 10px !important;
                    -moz-column-gap: 10px !important;
                         column-gap: 10px !important;
-                -webkit-column-count: 5 !important;
-                   -moz-column-count: 5 !important;
-                        column-count: 5 !important;
+                -webkit-column-count: 8 !important;
+                   -moz-column-count: 8 !important;
+                        column-count: 8 !important;
                  -webkit-column-fill: auto;
                     -moz-column-fill: auto;
                          column-fill: auto;
+                 -webkit-column-rule: 1px solid #666;
+                    -moz-column-rule: 1px solid #666;
+                         column-rule: 1px solid #666;
+}
+}
+ 
+/* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
+@media only screen and (orientation:portrait) {
+  .container-fluid { display:none; }
+  #turn { display:block; }
 }
 
-@media only screen and (orientation: portrait) {
-    body {
-        height: 100vw;
-        transform: rotate(90deg);
-    }
-    .fourColumns{
-        -webkit-column-rule: 1px solid #666;
-           -moz-column-rule: 1px solid #666;
-                column-rule: 1px solid #666;
-    }
-}
+

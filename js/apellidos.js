@@ -25,16 +25,16 @@ const groupNames = apellidos => {
 // };
 
 //Crea Lista de Apellidos desde un array
-var y=[];
-for (var i in apellidos) {
-    y.push(apellidos[i]);
-};
+// var y=[];
+// for (var i in apellidos) {
+//     y.push(apellidos[i]);
+// };
 
-var app=document.getElementById("apellidos");
-for (var z=0; z<y.length; z++) {
-  var op1 = y[z];
-  app.innerHTML +=op1
-};
+// var app=document.getElementById("apellidos");
+// for (var z=0; z<y.length; z++) {
+//   var op1 = y[z];
+//   app.innerHTML +=op1
+// };
 
 
 filterSelection("all");

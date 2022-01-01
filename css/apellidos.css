@@ -6,7 +6,9 @@
 #turn {
   padding: 10px 30px 30px;
 }
-
+.container-letters {
+  padding-bottom: 15px;
+}
 .filterDiv {
   /*float: left;*/
   /*background-color: #2196F3;*/
@@ -44,6 +46,9 @@
 }
 .container-letters {
   overflow: hidden;
+}
+ul {
+  padding-inline-start: 10px;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

@@ -1,6 +1,6 @@
 window.onload = function() {
   //Cambiar fecha de actualizacion
-  var up_date = "Diciembre 29, 2021";
+  var up_date = "Enero 1, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
@@ -97,14 +97,6 @@ window.onload = function() {
     clipboard:true,    
     placeholder:"Esperando por datos a ser cargados...",
     headerSortTristate:true,
-    //movableColumns:false,
-    
-    // persistence:{
-    //   sort:true,
-    //   filter:true,
-    //   columns:true,
-    // },
-    // persistenceID:"examplePerststance", 
     columns: [ //Define Table Columns
       { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55, responsive:5, headerMenu:headerMenu, download:false},
       { title:"ID Ind",field: "Id", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"ID", headerFilter:"input", visible:false,  width:60, maxWidth:60, responsive:4, headerMenu:headerMenu, download:false},
@@ -463,7 +455,7 @@ window.onload = function() {
   $("#file-load-trigger").click(function(){
       table.setDataFromLocalFile();
   });
-
+lnsFilter("Diaz");
   // Genera las lista de archivos disponibles
   // var str = '';
   // str = '<h4>Registros en Indice Genealógico</h4> ';
@@ -516,6 +508,35 @@ window.onload = function() {
 
 
 //******************************************************************
+getLns();
+function getLns() {
+  // (A) GET THE PARAMETERS
+  var params = new URLSearchParams(window.location.search),
+      lns = params.get("apellido");
+      if (lns != null) {
+        lnsFilter(lns);}
+      else { table.clearFilter();
+      };
+}
+
+
+  function lnsFilter(apellido){
+    // table.clearFilter();     
+    var lns = apellido;
+
+    table.setFilter("lns", "like", lns);
+  };
+
+
+
+
+
+
+
+
+
+
+
 
 //Trigger setFilter function with correct parameters by State
   function stateFilter(){
@@ -678,11 +699,9 @@ window.onload = function() {
   };
 
   //trigger download of data.csv file
-  document.getElementById("download-csv").addEventListener("click", function(){
+  $('#download-csv').bind('click', function() {
     table.download("csv", "data.csv");
-  });
-
-
+  })
 
 };
 

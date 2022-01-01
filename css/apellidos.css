@@ -18,6 +18,12 @@
   /*text-align: center;*/
   margin: 2px;
   display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.filterDiv:hover {
+  background-color: #ddd;
 }
 
 /* The "show" class is added to the filtered elements */

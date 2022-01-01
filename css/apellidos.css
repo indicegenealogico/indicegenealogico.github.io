@@ -1,3 +1,12 @@
+.myColumns {
+  -webkit-column-gap: 10px !important;
+  -moz-column-gap: 10px !important;
+  column-gap: 10px !important;
+}
+#turn {
+  padding: 10px 30px 30px;
+}
+
 .filterDiv {
   /*float: left;*/
   /*background-color: #2196F3;*/
@@ -39,9 +48,6 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .myColumns {
-    -webkit-column-gap: 10px !important;
-    -moz-column-gap: 10px !important;
-    column-gap: 10px !important;
     -webkit-column-count: 4 !important;
     -moz-column-count: 4 !important;
     column-count: 4 !important;
@@ -53,9 +59,6 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .myColumns {
-    -webkit-column-gap: 10px !important;
-    -moz-column-gap: 10px !important;
-    column-gap: 10px !important;
     -webkit-column-count: 5 !important;
     -moz-column-count: 5 !important;
     column-count: 5 !important;
@@ -67,9 +70,6 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .myColumns {
-    -webkit-column-gap: 10px !important;
-    -moz-column-gap: 10px !important;
-    column-gap: 10px !important;
     -webkit-column-count: 6 !important;
     -moz-column-count: 6 !important;
     column-count: 6 !important;

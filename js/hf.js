@@ -1,9 +1,4 @@
 window.onload = function() {
-  //Cambiar fecha de actualizacion
-  var up_date = "Enero 1, 2022";
-  var fecha = document.getElementById('update');
-  fecha.innerHTML = up_date;
-
 //define column header menu as column visibility toggle
     var headerMenu = function(){
       var menu = [];

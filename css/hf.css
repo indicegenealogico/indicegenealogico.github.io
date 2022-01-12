@@ -1,8 +1,11 @@
 
 body {background-color: #fcfcfc !important;}
 
-.jumbotron {
-    /*background-image: url('../img/indices.png');*/
+.jumbotron img {
+
+}
+.list-group-flush{
+    height: 500px;
 }
 .table td, .table th {
     padding-top: 2px;
@@ -129,7 +132,7 @@ h5 {
 }
 
 /*Color even rows*/
-    #example-table-theme .tabulator-tableHolder .tabulator-table .tabulator-row:nth-child(even) {
+#example-table-theme .tabulator-tableHolder .tabulator-table .tabulator-row:nth-child(even) {
     background-color: #444;
 }
 
@@ -316,4 +319,9 @@ h5 {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+}
+
+
+.list-group {
+ max-height: 300px;   
 }

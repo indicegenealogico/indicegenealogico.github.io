@@ -8,8 +8,8 @@ function go(g) {
 
   // (C) GO!
   var url = "index.html?" + params.toString();
-  location.href = url;
-  // window.open(url);
+  //location.href = url;
+  window.open(url);
 }
 filterSelection("all");
 function filterSelection(c) {

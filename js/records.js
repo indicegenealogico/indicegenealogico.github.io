@@ -53,6 +53,7 @@ var recordset = [
   { id:'56', locat: '2109974', type: 'Bautizo', rmsID: 'M948-VC5', title: 'Guaraunos - Guarauno 1892-1895', size: 92 },
   { id:'57', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ4', title: 'Guiria - Inmaculada Concepción 1907-1912', size: 193 },
   { id:'58', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJH', title: 'Guiria - Inmaculada Concepción 1912-1917', size: 0 },
+  { id:'59', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJC', title: 'Guiria - Inmaculada Concepción 1917-1920', size: 100 },
 ];
 
 var localidades = [ 
@@ -104,38 +105,20 @@ var localidades = [
     // }
  ];
 
-// var aside = [
-// 	{category: 'Matrimonios', 
-// 	items: [
-// 		{ alias: 'Cpno. 1874-96 Sta. Rosa*', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2115315&rmsId=M99Y-2PB&imageIndex=0' },
-//     	{ alias: 'Cpno. 1896-1913 Sta. Rosa', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2115315&rmsId=M99Y-2P1&imageIndex=0' }, 
-//     	{ alias: 'Cpno. 1920-46 Sta. Catalina*', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2115315&rmsId=M99B-7HW&imageIndex=0' },
-//     	{ alias: 'Guiria 1862-1907 Inma. Concepcion', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2423652&rmsId=M99Y-743&imageIndex=0'},
-//     	{ alias: 'Guiria 1916-44 Inma. Concepcion', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2423652&rmsId=M99Y-74Q&imageIndex=0' },
-//     	{ alias: 'Tucupita Reg. Civil 1938, 1950', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=442650&rmsId=TH-909-65256-140773-14&imageIndex=0'},
-//     	{ alias: 'Caicara 1895-1914 Sto. Domingo', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=5366&rmsId=M99T-852&imageIndex=0' }, 
-//   ]},
-// 	{category: 'Bautizos', 
-// 	items: [
-// 		{ alias: 'Cpno. 1890-92, 1908-12 Sta. Rosa ', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2115315&rmsId=TH-1951-23240-52713-77&imageIndex=0' },
-// 		{ alias: 'Cpno. 1925-28 Sta. Rosa', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2115315&rmsId=M99Y-2PK&imageIndex=0' }, 
-// 		{ alias: 'Cpno. 1920-23 Sta. Catalina', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2115315&rmsId=M99B-7H9&imageIndex=0' },
-// 		{ alias: 'Guiria 1835-45 Inma. Concepcion', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2423652&rmsId=M9SM-SN1&imageIndex=0' },
-//     { alias: 'Guiria 1881-98 Inma. Concepcion ', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2423652&rmsId=M9SM-SJ3&imageIndex=0'  },
-// 		{ alias: 'La Asuncion  1953 Nueva Esparta', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=1136041&rmsId=TH-909-83452-15137-1&imageIndex=0' },
-// 		{ alias: 'El Pilar 1832-36 - Ntra. Sra. del Pilar', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2118623&rmsId=M99T-ZY2&imageIndex=0' },
-// 		{ alias: 'La Horqueta Jul 1910', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=5355&rmsId=TH-1961-29382-15266-44&imageIndex=62&singleView=true' },
-// 		{ alias: 'Macareito Feb 1910', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=5355&rmsId=TH-1961-29382-15266-44&imageIndex=60&singleView=true' },
-// 		{ alias: 'Macareo Ene 1910 Ermita', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=5355&rmsId=TH-1961-29382-15266-44&imageIndex=53&singleView=true' },
-// 		{ alias: 'Pedernales 1907, 1910 San Isidro', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=5355&rmsId=TH-1961-29382-15266-44&imageIndex=18&singleView=true' },
-// 		{ alias: 'Tucupita 1906, 1908-1910 San Jose', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=445650&rmsId=TH-1961-29382-15266-44&imageIndex=2&singleView=true' },
-// 		{ alias: 'Tucupita Feb 1910 El Calvario', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=445650&rmsId=TH-1961-29382-15266-44&imageIndex=50&singleView=true' }, 
-// 	]},
-       
-//   {category: 'Defunciones', 
-//   items: [ 
-//     	{ alias: 'Cpno. 1920-38 Sta. Catalina', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=2115315&rmsId=M99B-7H4&imageIndex=0' }, 
-//     	{ alias: 'Caicara 1912-66 Sto. Domingo', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=5366&rmsId=M99T-85P&imageIndex=0' },
-//     	{ alias: 'Caicara 1980-2014 Sto. Domingo', link: 'https://www.familysearch.org/records/images/image-details?page=1&place=5366&rmsId=TH-909-60370-81718-24&imageIndex=0' },
-//   ]}
-// ]
+var updates = [
+  '<li class="list-group-item"><small>01/12/2022 | Agregados - Bautizos 1917-1920 Inmaculada Concepción - Guiria.</small></li>',
+  '<li class="list-group-item"><small>01/11/2022 | Agregados - Bautizos 1902-1904 Santa Rosa - Carupano.</small></li>',
+  '<li class="list-group-item"><small>01/03/2021 | Finalizado Tomo 10 de Guiria - Bautizos 1912-1914.</small></li>',
+  '<li class="list-group-item"><small>01/01/2022 | Agregada página con Lista de <a href="./apellidos.html">Apellidos</a> en Índice Genealógico.</small></li>',
+  '<li class="list-group-item"><small>12/25/2021 | Finalizado Tomo 9 de Guiria - Bautizos 1907-1912.</small></li>',
+  '<li class="list-group-item"><small>12/24/2021 | Primeros 10.000 índices cambiados de imágenes a registros.</small></li>',
+  '<li class="list-group-item"><small>12/13/2021 | Alcanzados los 50 mil índices.</small></li>',
+];
+
+
+
+var projects = [
+  '<tr><td>Sucre</td><td>Carúpano</td><td>Bautizos</td><td>1899-1907</td></tr>',
+  '<tr><td>     </td><td>        </td><td>Bautizos</td><td>1920-1925</td></tr>',
+  '<tr><td>     </td><td>Guiria  </td><td>Bautizos</td><td>1885-1893</td></tr>',
+];

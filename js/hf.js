@@ -500,8 +500,6 @@ lnsFilter("Diaz");
     }
   };
 
-
-
 //******************************************************************
 getLns();
 function getLns() {
@@ -514,23 +512,12 @@ function getLns() {
       };
 }
 
-
-  function lnsFilter(apellido){
+function lnsFilter(apellido){
     // table.clearFilter();     
     var lns = apellido;
 
     table.setFilter("lns", "like", lns);
   };
-
-
-
-
-
-
-
-
-
-
 
 
 //Trigger setFilter function with correct parameters by State
@@ -696,7 +683,25 @@ function getLns() {
   //trigger download of data.csv file
   $('#download-csv').bind('click', function() {
     table.download("csv", "data.csv");
-  })
+  });
+
+  
+// Crea y agrega <li> y <td> a elementos en index
+  var list = document.getElementById("lista");
+  var list1 = document.getElementById("progress");
+  var html = '';
+  var html1 = '';
+
+  updates.forEach(function (fechas) {
+    html += fechas;
+  });
+
+  projects.forEach(function (proyectos){
+    html1 += proyectos;
+  });
+
+  list.innerHTML = html;
+  list1.innerHTML = html1;
 
 };
 

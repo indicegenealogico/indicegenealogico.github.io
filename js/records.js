@@ -132,6 +132,6 @@ var projects = [
   '<li class="list-group-item"><small>12/25/2021 | Finalizado <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJ4&imageIndex=0&singleView=true">Tomo 9</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1907-1912.</small></li>',
   '<li class="list-group-item"><small>12/24/2021 | Primeros 10.000 índices cambiados de imágenes a registros.</small></li>',
   '<li class="list-group-item"><small>12/13/2021 | Alcanzados los 50 mil índices.</small></li>',
-  '<li class="list-group-item"><small>01/28/2021 | Se abre una página de <a href="https://www.facebook.com/IndiceGenealogico/">Facebook</a> para Índice Genealólico.</small></li>',
+  '<li class="list-group-item"><small>01/28/2021 | Se abre una página de <a href="https://www.facebook.com/IndiceGenealogico/">Facebook</a> para Índice Genealógico.</small></li>',
   '<li class="list-group-item"><small>10/25/2020 | Se da inicio al proyecto de Índice Genealógico.</small></li>', 
 ];

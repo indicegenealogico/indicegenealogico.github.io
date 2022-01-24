@@ -1,8 +1,9 @@
 
 body {background-color: #fcfcfc !important;}
 
-.jumbotron img {
-
+.jumbotron {
+  overflow: hidden;
+  position: relative;
 }
 .list-group-flush{
     height: 500px;
@@ -324,4 +325,17 @@ h5 {
 
 .list-group {
  max-height: 300px;   
+}
+
+.jumbo-bg {
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto; 
+}
+
+.jumbo {
+    position: relative;
 }

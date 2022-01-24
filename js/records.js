@@ -54,6 +54,7 @@ var recordset = [
   { id:'57', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ4', title: 'Guiria - Inmaculada Concepción 1907-1912', size: 193 },
   { id:'58', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJH', title: 'Guiria - Inmaculada Concepción 1912-1917', size: 0 },
   { id:'59', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJC', title: 'Guiria - Inmaculada Concepción 1917-1920', size: 100 },
+  { id:'60', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJZ', title: 'Guiria - Inmaculada Concepción 1920-1926', size: 203 },
 ];
 
 var localidades = [ 
@@ -105,20 +106,10 @@ var localidades = [
     // }
  ];
 
-var updates = [
-  '<li class="list-group-item"><small>01/12/2022 | Agregados - Bautizos 1917-1920 Inmaculada Concepción - Guiria.</small></li>',
-  '<li class="list-group-item"><small>01/11/2022 | Agregados - Bautizos 1902-1904 Santa Rosa - Carupano.</small></li>',
-  '<li class="list-group-item"><small>01/03/2021 | Finalizado Tomo 10 de Guiria - Bautizos 1912-1914.</small></li>',
-  '<li class="list-group-item"><small>01/01/2022 | Agregada página con Lista de <a href="./apellidos.html">Apellidos</a> en Índice Genealógico.</small></li>',
-  '<li class="list-group-item"><small>12/25/2021 | Finalizado Tomo 9 de Guiria - Bautizos 1907-1912.</small></li>',
-  '<li class="list-group-item"><small>12/24/2021 | Primeros 10.000 índices cambiados de imágenes a registros.</small></li>',
-  '<li class="list-group-item"><small>12/13/2021 | Alcanzados los 50 mil índices.</small></li>',
-];
-
 
 
 var projects = [
   '<tr><td>Sucre</td><td>Carúpano</td><td>Bautizos</td><td>1899-1907</td></tr>',
   '<tr><td>     </td><td>        </td><td>Bautizos</td><td>1920-1925</td></tr>',
-  '<tr><td>     </td><td>Guiria  </td><td>Bautizos</td><td>1885-1893</td></tr>',
+  '<tr><td>     </td><td>Guiria  </td><td>Bautizos</td><td>1926-1929</td></tr>',
 ];

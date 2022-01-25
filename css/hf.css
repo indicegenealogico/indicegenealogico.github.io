@@ -177,7 +177,7 @@ h5 {
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-father:hover {
     background: #ffffd6 !important
 }
-#facebook {
+#facebook, #load_file, #leyenda {
     display: none;     
 }
 
@@ -187,19 +187,19 @@ h5 {
 
     /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 20em) {
-         /*body {background-color: purple;}*/
+         body {background-color: purple;}
      
     }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (min-width : 36em) {
-        /*body {background-color: orange;}*/
+        body {background-color: orange;}
         
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 48em) {
-        /*body {background-color: red;}*/
+        body {background-color: red;}
         .twoColumns{
                 -webkit-column-gap: 20px !important;
                    -moz-column-gap: 20px !important;
@@ -215,7 +215,7 @@ h5 {
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 62em) {
         /*body {background-color: blue;}*/
-        #facebook {
+        #facebook, #load_file, #leyenda {
             display: block;     
         }
      

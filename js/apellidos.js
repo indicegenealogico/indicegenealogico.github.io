@@ -1,10 +1,17 @@
-function go(g) {
+function go(g, tipo) {
   // (A) VARIABLES TO PASS
-  var lns = g;
+  var field = g;
+  var campo ='';
+  var tipo = tipo;
+  if (tipo == 1) {
+    campo = "apellido";
+  } else {
+    campo = "nombre";
+  }
 
   // (B) URL PARAMETERS
   var params = new URLSearchParams();
-  params.append("apellido", lns);
+  params.append(campo, field);
 
   // (C) GO!
   var url = "index.html?" + params.toString();

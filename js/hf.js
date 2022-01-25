@@ -450,7 +450,7 @@ window.onload = function() {
   $("#file-load-trigger").click(function(){
       table.setDataFromLocalFile();
   });
-lnsFilter("Diaz");
+// lnsFilter("Diaz");
   // Genera las lista de archivos disponibles
   // var str = '';
   // str = '<h4>Registros en Indice Genealógico</h4> ';
@@ -506,17 +506,22 @@ function getLns() {
   // (A) GET THE PARAMETERS
   var params = new URLSearchParams(window.location.search),
       lns = params.get("apellido");
+      ns = params.get("nombre");
       if (lns != null) {
-        lnsFilter(lns);}
-      else { table.clearFilter();
-      };
+        var field = "lns";
+        lnsFilter(lns, field);}
+      else if (ns != null) {
+        var field = "ns";
+        lnsFilter(ns, field);
+      } else {table.clearFilter();}
+
 }
 
-function lnsFilter(apellido){
+function lnsFilter(record, field){
     // table.clearFilter();     
-    var lns = apellido;
+    var valor = record;
 
-    table.setFilter("lns", "like", lns);
+    table.setFilter(field, "like", valor);
   };
 
 

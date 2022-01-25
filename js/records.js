@@ -117,13 +117,14 @@ var projects = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Enero 23, 2022";
+  var up_date = "Enero 24, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
 
 
   var updates = [
+  '<li class="list-group-item"><small>01/24/2022 | Agregada página con Lista de <a href="./nombres.html">Nombres</a> en Índice Genealógico.</small></li>',
   '<li class="list-group-item"><small>01/23/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJZ&imageIndex=0&singleView=true">Tomo 12</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1920-1926 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/12/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJC&imageIndex=0&singleView=true">Tomo 11</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1917-1920 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/11/2022 | Agregados - Bautizos 1902-1904 Santa Rosa - Carupano.</small></li>',

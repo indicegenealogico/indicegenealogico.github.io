@@ -14,7 +14,7 @@ function go(g, tipo) {
   params.append(campo, field);
 
   // (C) GO!
-  var url = "index.html?" + params.toString();
+  var url = "../index.html?" + params.toString();
   //location.href = url;
   window.open(url);
 }

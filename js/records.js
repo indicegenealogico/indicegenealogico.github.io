@@ -125,7 +125,7 @@ var projects = [
 
 
   var updates = [
-  '<li class="list-group-item"><small>02/03/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJ8&imageIndex=0&singleView=true">Tomo 12</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1926-1929 Inmaculada Concepción.</small></li>',
+  '<li class="list-group-item"><small>02/03/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJ8&imageIndex=0&singleView=true">Tomo 13</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1926-1929 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/24/2022 | Agregada página con Lista de <a href="../nombres/">Nombres</a> en Índice Genealógico.</small></li>',
   '<li class="list-group-item"><small>01/23/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJZ&imageIndex=0&singleView=true">Tomo 12</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1920-1926 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/12/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJC&imageIndex=0&singleView=true">Tomo 11</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1917-1920 Inmaculada Concepción.</small></li>',

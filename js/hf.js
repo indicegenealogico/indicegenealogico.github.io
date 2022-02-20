@@ -330,6 +330,7 @@ window.onload = function() {
           },
       }, 
       { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", minWidth:50, headerMenu:headerMenu, responsive:4},
+      { title:"Pais",field: "cr", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
       { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
       { title:"Estado",field: "st", sorter: "number", hozAlign:"center",  headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
     ],
@@ -377,18 +378,6 @@ window.onload = function() {
 
   //FUNCIONES ADICIONALES
 
-  //Define variables for input elements
-  var fieldEl   = document.getElementById("filter-field");
-  var typeEl    = document.getElementById("filter-type");
-  var valueEl   = document.getElementById("filter-value");
-  var estadoSel = document.getElementById("filter-state");
-  var ciudadSel = document.getElementById("filter-city");
-  var valueST   = document.getElementById("filter-state");
-  var valueCT   = document.getElementById("filter-city");
-  var fieldST   = "st";
-  var fieldCT   = "cit"
-  var typeEl2   = "=" ;
-
 
   $("#title").click(function(){
     $("#filtro").toggle(500);
@@ -422,83 +411,131 @@ window.onload = function() {
     $("#exampleModal").modal();
   });
 
+     //Define variables for input elements
+  var fieldEl   = document.getElementById("filter-field");
+  var typeEl    = document.getElementById("filter-type");
+  var valueEl   = document.getElementById("filter-value");
+
+  var paisSel   = document.getElementById("filter-country");
+  var valueCR   = document.getElementById("filter-country");
+  var fieldCR   = "cr";
+
+  var estadoSel = document.getElementById("filter-state");
+  var valueST   = document.getElementById("filter-state");
+  var fieldST   = "st";
+
+  var ciudadSel = document.getElementById("filter-city");
+  var valueCT   = document.getElementById("filter-city");
+  var fieldCT   = "cit"
+
+  var typeEl2   = "=" ;
+
+  
   $("#filtro").hide();
-  $("#filter-field").change(updateFilter);
-  $("#filter-type").change(updateFilter);
-  $("#filter-value").keyup(updateFilter);
+  $("#filter-field").change(updateFilter); // Filtro oculto
+  $("#filter-type").change(updateFilter); // Filtro oculto
+  $("#filter-value").keyup(updateFilter);  // Filtro oculto
+
+  $("#cr_filter").change(countryFilter);
   $("#st_filter").change(stateFilter);
   $("#ct_filter").change(cityFilter);
 
+ 
   //Clear filters on "Clear Filters" button click
   $("#filter-clear").click(function(){
     fieldEl.value = "";
-    typeEl.value = "=";
+    typeEl.value  = "=";
     valueEl.value = "";
     table.clearFilter();
   });
 
   $("#filter-clear2").click(function(){
+      fieldCR.value = "";
+      valueCR.value = "";
       fieldST.value = "";
       valueST.value = "";
       fieldCT.value = "";
       valueCT.value = "";
+      $(ciudadSel).html('<option value="000"  selected="true" disabled>Primero, escoja un estado</option>');
+      $(estadoSel).html('<option value="000"  selected="true" disabled>Primero, seleccione un pais</option>');
+      $("#title").html("Registros Parroquiales y Civiles");
       table.clearFilter();
-      $("#title").html("Registros Parroquiales y Civiles de Venezuela");
     });
+
 
   //load a local file
   $("#file-load-trigger").click(function(){
       table.setDataFromLocalFile();
   });
-// lnsFilter("Diaz");
-  // Genera las lista de archivos disponibles
-  // var str = '';
-  // str = '<h4>Registros en Indice Genealógico</h4> ';
-  // str +='<p>Los registros que se muestran en la tabla, corresponden a los siguientes eventos:</p>';
 
-  // for ( i in aside) {
-  //   str += '<div class="p-2">';
-  //   str += '<h6 class="font-italic">';
-  //   str += aside[i].category;
-  //   str += '</h6>';
-  //   str += '<ol class="list-unstyled mb-0">';
-          
-  //   for (j in aside[i].items) {
-  //     str += '<li><a target="_blank" href="'+ aside[i].items[j].link +'">';
-  //     str += aside[i].items[j].alias + '</a></li>';
-  //   } str += '</ol></div>';
-  // };
+// *********************** Drop Down List  ***************
+  localidades.sort(GetSortOrder("pais"));//ordena localidades por estado
 
-  // $("#aside").html(str);
+//Pais
+$.each(localidades, function (index, value) {
+    $(paisSel).append('<option value="'+value.code+'">'+value.pais+'</option>');
+});
 
 
-  localidades.sort(GetSortOrder("estado"));//ordena localidades por estado
+$(paisSel).on('change', function(){
+    var paisChanged = paisSel.options[paisSel.selectedIndex].text;
+    $("#title").html("Registros de "+ paisChanged);
+    $(estadoSel).html('<option value="000" selected="true" disabled>-Escoja un Estado-</option>');
+    $(ciudadSel).html('<option value="000"  selected="true" disabled>Primero, escoja un estado</option>');
 
-  for (var i in localidades) {
-    estadoSel.options[estadoSel.options.length] = new Option(localidades[i].estado,localidades[i].code, i, false)
-  }
-
-  estadoSel.onchange = function() {
-    var estadoChanged = estadoSel.options[estadoSel.selectedIndex].text;
-    localidades.sort(GetSortOrder("city"));//ordena localidades por ciudades
-
-    $("#title").html("Registros del Estado "+ estadoChanged);
-
-    var a = localidades.findIndex((element, a) =>{
-      if (element.code == parseInt(estadoSel.value) ) {
-        return true
-      }
-    })
-
-    ciudadSel.length = 1;
-    for (var j in localidades[a].cities) {
-      ciudadSel.options[ciudadSel.options.length] = new Option(localidades[a].cities[j].city,localidades[a].cities[j].code, false, false)
-      ciudadSel.onchange = function() {
-        var ciudadChanged = ciudadSel.options[ciudadSel.selectedIndex].text;
-        $("#title").html("Registros de "+ ciudadChanged + ", Estado " + estadoChanged);      
+    for(var i = 0; i < localidades.length; i++){
+      if(localidades[i].code == $(this).val()){      
+         $.each(localidades[i].estados, function (index, value) {
+            $(estadoSel).append('<option value="'+value.code+'">'+value.name+'</option>');
+        });
       }
     }
-  };
+
+    $(estadoSel).on('change', function(){
+        console.log($(this).val());
+        localidades.sort(GetSortOrder("city"));//ordena localidades por estados
+        
+        var estadoChanged = estadoSel.options[estadoSel.selectedIndex].text;
+        $("#title").html("Registros de "+ estadoChanged + ", " + paisChanged); 
+
+        var cities = getCities();
+        $(ciudadSel).html('<option value="000"  selected="true" disabled>-Escoja una ciudad-</option>');
+        var stateId = $(this).val();
+        $.each(cities, function (index, value) {
+          if (value.stateId == stateId) {
+            $(ciudadSel).append('<option value="'+value.cityId +'">'+value.cityName+'</option>');
+          }
+        });
+
+        $(ciudadSel).on('change', function(){
+            console.log($(this).val());
+            var ciudadChanged = ciudadSel.options[ciudadSel.selectedIndex].text;
+                $("#title").html("Registros de "+ ciudadChanged + ", Estado " + estadoChanged + ", " + paisChanged);  
+        });
+    });
+});
+
+//Obtiene todas la ciudades y estados de localidades
+function getCities() {
+    var cities = [];
+    for(var i = 0; i < localidades.length; i++) {
+      var countries = localidades[i];
+      for(var j = 0; j < countries.estados.length; j++) {
+          var state = countries.estados[j];
+          for (var k = 0; k < state.ciudades.length; k++) {
+            var city = state.ciudades[k];
+            cities.push({
+                stateId: state.code,
+                stateName: state.name,
+                cityId: city.code,
+                cityName: city.name
+            });
+          }
+      }
+    }
+    return cities;
+}
+
 
 //******************************************************************
 getLns();
@@ -524,13 +561,32 @@ function lnsFilter(record, field){
     table.setFilter(field, "like", valor);
   };
 
+//Trigger setFilter function with correct parameters by Country
+  function countryFilter(field, value, level){
+
+    table.clearFilter();
+
+    var filterVal = fieldCR;
+    var typeVal   = typeEl2;  
+
+    var filter    = filterVal == "function" ? customFilter : filterVal;
+
+    if(filterVal == "function" ){
+      typeEl2.disabled = true;
+      valueCR.disabled = true;
+    }else{
+      typeEl2.disabled = false;
+      valueCR.disabled = false;
+    }
+
+    if(filterVal){
+      table.setFilter(filter,typeVal, valueCR.value);
+    }
+  };
+
 
 //Trigger setFilter function with correct parameters by State
   function stateFilter(){
-    table.clearFilter();
-    fieldCT.value = "";
-    valueCT.value = "";
-    document.getElementById("city-opt").innerHTML = "Escoja una ciudad";
     
     var filterVal = fieldST;
     var typeVal = typeEl2;
@@ -548,6 +604,28 @@ function lnsFilter(record, field){
     if(filterVal){
       //console.log(valueST.value);
       table.setFilter(filter,typeVal, valueST.value);
+    }
+  };
+
+  //Trigger setFilter function with correct parameters by City
+  function cityFilter(){
+
+    var filterVal = fieldCT;
+    var typeVal = typeEl2;
+
+    var filter = filterVal == "function" ? customFilter : filterVal;
+
+    if(filterVal == "function" ){
+      typeEl2.disabled = true;
+      valueCT.disabled = true;
+    }else{
+      typeEl2.disabled = false;
+      valueCT.disabled = false;
+    }
+   
+    if(filterVal){
+      console.log(valueCT.value);
+      table.setFilter(filter,typeVal, valueCT.value);
     }
   };
 
@@ -571,25 +649,7 @@ function lnsFilter(record, field){
     }
   };
 
-  //Trigger setFilter function with correct parameters by City
-  function cityFilter(){
-    var filterVal = fieldCT;
-    var typeVal = typeEl2;
 
-    var filter = filterVal == "function" ? customFilter : filterVal;
-
-    if(filterVal == "function" ){
-      typeEl2.disabled = true;
-      valueCT.disabled = true;
-    }else{
-      typeEl2.disabled = false;
-      valueCT.disabled = false;
-    }
-   
-    if(filterVal){
-      table.setFilter(filter,typeVal, valueCT.value);
-    }
-  };
 
   //Comparer Function    
   function GetSortOrder(prop) {    
@@ -603,6 +663,8 @@ function lnsFilter(record, field){
       return 0;    
     }    
   };
+
+
 
   function typRegister(cell){
     switch (cell){

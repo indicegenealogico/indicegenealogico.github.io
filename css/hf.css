@@ -4,7 +4,29 @@ body {background-color: #fcfcfc !important;}
 .jumbotron {
   overflow: hidden;
   position: relative;
+  background-image: url(../img/indices.jpg);
+  background-size: cover;
+  background-position: center;
+  -ms-interpolation-mode: bicubic; 
+  image-rendering: optimizeQuality;
+  vertical-align: middle;
+  border: 0;
 }
+.jumbotron::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(to bottom left, #FFF000 13%, #000FFF 65%, #CF1512 100%);
+    background: -moz-linear-gradient(to bottom left, #FFF000 13%, #000FFF 65%, #CF1512 100%);
+    background: linear-gradient(to bottom left, #FFF000 13%, #000FFF 65%, #CF1512 100%);
+    opacity: 0.7;
+    z-index: 10;
+}
+
 .list-group-flush{
     height: 500px;
 }
@@ -344,4 +366,5 @@ h5 {
 
 .jumbo {
     position: relative;
+    z-index: 99;
 }

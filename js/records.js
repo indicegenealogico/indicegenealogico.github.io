@@ -57,56 +57,10 @@ var recordset = [
   { id:'60', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJZ', title: 'Guiria - Inmaculada Concepción 1920-1926', size: 203 },
   { id:'61', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ8', title: 'Guiria - Inmaculada Concepción 1926-1929', size: 212 },
   { id:'62', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJD', title: 'Guiria - Inmaculada Concepción 1929-1936', size: 245 },
+  { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
 ];
 
-var localidades = [ 
-    { estado:'Sucre', 
-      code:293, 
-      cities : [
-        {city:'Cariaco', code:6}, 
-      	{city:'Carúpano', code:1}, 
-      	{city:'El Pilar', code:7},
-        //{city:'Guaraunos', code:22}, 
-      	{city:'Güiria', code:2},
-        {city:'Macuro', code:21},
-        {city:'Río Caribe', code:3},
-        {city:'San José de Areocuar', code:5},
-      ]
-  	},
-    { estado:'Delta Amacuro', 
-      code:287, 
-      cities : [
-        {city:'Amacuro', code:18},
-        {city:'Curiapo', code:13},
-        {city:'La Horqueta', code:15},
-        {city:'Macareito', code:14},
-        {city:'Macareo', code:17},
-        {city:'Pedernales', code:16},
-        {city:'Tucupita', code:8},
-        
-      ]
-  	},
-    { estado:'Monagas', 
-      code:291, 
-      cities : [
-        {city:'Caicara', code:9},
-      ]
-    },
-    { estado:'Nueva Esparta', 
-      code:295, 
-      cities : [
-        {city:'La Asunción', code:10},
-        {city:'Porlamar', code:12},
-        {city:'Punta de Piedras', code:19},
-      ]
-    },
-    // { estado:'Estado', 
-    //   code:Codigo, 
-    //   cities : [
-    //     { city:'Ciudad', code:codigo}
-    //   ]
-    // }
- ];
+
 
 
 
@@ -115,16 +69,68 @@ var projects = [
   '<tr><td>     </td><td>        </td><td>Bautizos</td><td>1920-1925</td></tr>',
 ];
 
+var localidades = [ 
+  { pais: 'Venezuela', code: 58,
+      estados: [
+        { name:'Sucre', code:293, 
+          ciudades : [
+            {name:'Cariaco', code:6}, 
+            {name:'Carúpano', code:1}, 
+            {name:'El Pilar', code:7},
+            {name:'Güiria', code:2},
+            {name:'Macuro', code:21},
+            {name:'Río Caribe', code:3},
+            {name:'San José de Areocuar', code:5},
+          ]
+        },
+        { name:'Delta Amacuro', code:287, 
+          ciudades : [
+            {name:'Amacuro', code:18},
+            {name:'Curiapo', code:13},
+            {name:'La Horqueta', code:15},
+            {name:'Macareito', code:14},
+            {name:'Macareo', code:17},
+            {name:'Pedernales', code:16},
+            {name:'Tucupita', code:8},
+            
+          ]
+        },
+        { name:'Monagas', code:291, 
+          ciudades : [
+            {name:'Caicara', code:9},
+          ]
+        },
+        { name:'Nueva Esparta', code:295, 
+          ciudades : [
+            {name:'La Asunción', code:10},
+            {name:'Porlamar', code:12},
+            {name:'Punta de Piedras', code:19},
+          ]
+        }
+      ]
+    },
+  { pais: 'Mexico', code: 52,
+      estados: [
+        { name: "San Luis Potosi", code: 444,
+          ciudades: [
+            {name:'Mexquitic de Carmona', code: 23}
+          ]
+        }
+      ]
+    }
+ ];
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Febrero 13, 2022";
+  var up_date = "Febrero 19, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
-
+// { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
 
   var updates = [
+  '<li class="list-group-item"><small>02/19/2022 | Agregado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2947673&rmsId=TH-1942-20420-25838-95&imageIndex=0&singleView=true">Libro de Imágenes</a> de <a href="https://www.familysearch.org/es/wiki/San_Luis_Potos%C3%AD,_M%C3%A9xico_-_Genealog%C3%ADa">Mexquitic</a> - Bautizos 1817-1821 San Miguel.</small></li>',
+  '<li class="list-group-item"><small>02/19/2022 | Incluido - México en Índice Genealógico',
   '<li class="list-group-item"><small>02/13/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJD&imageIndex=0&singleView=true">Tomo 14</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1929-1936 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/03/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJ8&imageIndex=0&singleView=true">Tomo 13</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1926-1929 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/24/2022 | Agregada página con Lista de <a href="../nombres/">Nombres</a> en Índice Genealógico.</small></li>',

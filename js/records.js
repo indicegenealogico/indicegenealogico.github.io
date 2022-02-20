@@ -130,7 +130,7 @@ var localidades = [
 
   var updates = [
   '<li class="list-group-item"><small>02/19/2022 | Agregado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2947673&rmsId=TH-1942-20420-25838-95&imageIndex=0&singleView=true">Libro de Imágenes</a> de <a href="https://www.familysearch.org/es/wiki/San_Luis_Potos%C3%AD,_M%C3%A9xico_-_Genealog%C3%ADa">Mexquitic</a> - Bautizos 1817-1821 San Miguel.</small></li>',
-  '<li class="list-group-item"><small>02/19/2022 | Incluido - México en Índice Genealógico',
+  '<li class="list-group-item"><small>02/19/2022 | Incluido - México en Índice Genealógico.</small></li>',
   '<li class="list-group-item"><small>02/13/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJD&imageIndex=0&singleView=true">Tomo 14</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1929-1936 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/03/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJ8&imageIndex=0&singleView=true">Tomo 13</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1926-1929 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/24/2022 | Agregada página con Lista de <a href="../nombres/">Nombres</a> en Índice Genealógico.</small></li>',

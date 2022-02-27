@@ -58,6 +58,7 @@ var recordset = [
   { id:'61', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ8', title: 'Guiria - Inmaculada Concepción 1926-1929', size: 212 },
   { id:'62', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJD', title: 'Guiria - Inmaculada Concepción 1929-1936', size: 245 },
   { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
+  { id:'64', locat: '2423652', type: 'Defuncion', rmsID: 'M99Y-747', title: 'Guiria - Inmaculada Concepción 1888-1941', size: 191 },
 ];
 
 
@@ -122,13 +123,14 @@ var localidades = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Febrero 19, 2022";
+  var up_date = "Febrero 28, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
 // { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
 
   var updates = [
+  '<li class="list-group-item"><small>02/28/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M99Y-747&imageIndex=0&singleView=true">Tomo 1</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Defunciones 1888-1941 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/19/2022 | Agregado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2947673&rmsId=TH-1942-20420-25838-95&imageIndex=0&singleView=true">Libro de Imágenes</a> de <a href="https://www.familysearch.org/es/wiki/San_Luis_Potos%C3%AD,_M%C3%A9xico_-_Genealog%C3%ADa">Mexquitic</a> - Bautizos 1817-1821 San Miguel.</small></li>',
   '<li class="list-group-item"><small>02/19/2022 | Incluido - México en Índice Genealógico.</small></li>',
   '<li class="list-group-item"><small>02/13/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M9SM-SJD&imageIndex=0&singleView=true">Tomo 14</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Bautizos 1929-1936 Inmaculada Concepción.</small></li>',

@@ -1,5 +1,12 @@
 
-body {background-color: #fcfcfc !important;}
+body {background-color: #f0f2f5 !important;}
+.blog-post{
+    background-color: #fcfcfc !important; 
+    padding: 10px; 
+    margin-left: -10px; 
+    margin-bottom: 1rem; 
+    border-radius: 8px;
+}
 
 .jumbotron {
   overflow: hidden;
@@ -34,7 +41,10 @@ body {background-color: #fcfcfc !important;}
     padding-top: 2px;
     padding-bottom: 2px;
 }
-
+[type=search] {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
 
 div[tabulator-field='typ'] {
     color: #007bff;
@@ -44,7 +54,7 @@ div[tabulator-field='typ']:hover {
     color: blue;
 }
 #historial {
-    max'height: 280px;
+    max-height: 350px;
 
 }
 

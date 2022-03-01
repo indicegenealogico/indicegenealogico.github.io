@@ -243,7 +243,8 @@ h5 {
 
 #facebook,
 #load_file,
-#leyenda {
+#leyenda,
+#fullscreen {
     display: none;
 }
 
@@ -330,14 +331,17 @@ h5 {
     z-index: 99;
 }
 
-
+.botones {
+    display:  flex;
+    justify-content: space-around;
+}
 
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 20em) {
     body {
-        background-color: purple;
+        color: purple;
     }
 
 }
@@ -345,7 +349,7 @@ h5 {
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 36em) {
     body {
-        background-color: orange;
+        color: orange;
     }
 
     .container-sm,
@@ -357,6 +361,7 @@ h5 {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 48em) {
+    /*body {color: red;}*/
 
     .container-md,
     .container-sm,
@@ -379,7 +384,8 @@ h5 {
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 62em) {
 
-    /*body {background-color: blue;}*/
+    /*body {color: pink;}*/
+
     .container-lg,
     .container-md,
     .container-sm,
@@ -389,20 +395,16 @@ h5 {
 
     #facebook,
     #load_file,
-    #leyenda {
+    #leyenda,
+    #fullscreen {
         display: block;
     }
-
-    #table-box:fullscreen{
-        padding: 3rem;
-    }
-
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 75em) {
 
-    /*body {background-color: green;}*/
+    /*body {color: green;}*/
     .container-xl,
     .container-lg,
     .container-md,
@@ -411,13 +413,9 @@ h5 {
         max-width: 1140px;
     }
 
-    #table-box:fullscreen{
-        padding: 3rem;
-    }
     #example-table {
         font-size: 16px;
     }
-
 }
 
 
@@ -434,10 +432,7 @@ h5 {
         max-width: 1600px;
     }
 
-    #table-box:fullscreen{
+   /* #table-box:fullscreen{
         padding: 5rem;
-    }
-    #example-table {
-        font-size: 18px;
-    }
+    }*/
 }

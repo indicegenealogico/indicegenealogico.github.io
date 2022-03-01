@@ -79,7 +79,7 @@ window.onload = function() {
     pagination:"local",
     paginationSize:100,
     paginationSizeSelector:[50, 100, 500, 1000, true],
-    height: "510px",
+    height: "70vh",
     data:data,
     dataTree:true,
     dataTreeFilter:true,
@@ -94,8 +94,8 @@ window.onload = function() {
     headerSortTristate:true,
     columns: [ //Define Table Columns
       { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55, responsive:5, headerMenu:headerMenu, download:false},
-      { title:"ID Ind",field: "Id", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"ID", headerFilter:"input", visible:false,  width:60, maxWidth:60, responsive:4, headerMenu:headerMenu, download:false},
-      { title:"IDPadres",field: "pid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Padres", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false,
+      { title:"ID Ind",field: "Id", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"ID", headerFilter:"input", visible:false,  minWidth:60, maxWidth:120, responsive:4, headerMenu:headerMenu, download:false},
+      { title:"IDPadres",field: "pid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Padres", headerFilter:"input", visible:false,  minWidth:75, maxWidth:120, responsive:4, headerMenu:headerMenu, download:false,
         cellClick:function(e, cell) {
           var celda = cell._cell.row.data;
           fieldST.value = "";
@@ -109,8 +109,8 @@ window.onload = function() {
           table.setFilter("fid", "=", celda.pid);
         }
       },
-      { title:"IDFam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  width:75, maxWidth:80, responsive:4, headerMenu:headerMenu, download:false},
-      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", width:53, maxWidth:55, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
+      { title:"IDFam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  minWidth:75, maxWidth:120, responsive:4, headerMenu:headerMenu, download:false},
+      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", minWidth:53, maxWidth:120, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
        		tooltip:function(cell){
             	switch (cell.getValue()){
             		case 'M': tipo = "Matrimonio";
@@ -301,12 +301,12 @@ window.onload = function() {
 	            $("#recordModal").modal(); 	           
           	}
   	   },
-      { title:"Nombres",field: "ns", sorter: "string", align: "left", headerFilterPlaceholder:"Nombre(s)", minWidth:100, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
-      { title:"Apellidos",field: "lns", bottomCalc: "count", sorter: "string", headerFilterPlaceholder:"Apellido(s)", minWidth:120, headerFilter: "input", widthGrow:1.5, headerMenu:headerMenu },
-      { title:"Sexo",field: "sex", sorter: "string", align: "center", editor:"select", headerFilterPlaceholder:"Sexo", headerFilter:"input", visible:false, width:55, maxWidth:60, responsive:6, headerMenu:headerMenu },
-      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:75, headerMenu:headerMenu, download:false},
+      { title:"Nombres",field: "ns", sorter: "string", align: "left", headerFilterPlaceholder:"Nombre(s)", minWidth:100, headerFilter: "input", widthGrow:1.4, headerMenu:headerMenu },
+      { title:"Apellidos",field: "lns", bottomCalc: "count", sorter: "string", headerFilterPlaceholder:"Apellido(s)", minWidth:120, headerFilter: "input", widthGrow:1.4, headerMenu:headerMenu },
+      { title:"Sexo",field: "sex", sorter: "string", align: "center", editor:"select", headerFilterPlaceholder:"Sexo", headerFilter:"input", visible:false, minWidth:55, maxWidth:100, responsive:6, headerMenu:headerMenu },
+      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:100, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
-      { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:60, headerMenu:headerMenu },
+      { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:100, headerMenu:headerMenu },
       {formatter:viewIcon, width:40, hozAlign:"center", 
         cellClick:function(e, cell){
           viewImage(cell);
@@ -378,9 +378,12 @@ window.onload = function() {
 
   //FUNCIONES ADICIONALES
 
+  $('#fullscreen').click(function() {
+    openFullscreen();
+  });
 
-  $("#title").click(function(){
-    $("#filtro").toggle(500);
+  $("#title").click(function() {
+      $("#filtro").toggle(500);
   });
 
   $('#secret').click(function() {
@@ -403,7 +406,7 @@ window.onload = function() {
           table.hideColumn("fid");
           table.hideColumn("sex");
         }
-    })
+    });
   });
 
 
@@ -536,10 +539,9 @@ function getCities() {
     return cities;
 }
 
-
 //******************************************************************
 getLns();
-function getLns() {
+  function getLns() {
   // (A) GET THE PARAMETERS
   var params = new URLSearchParams(window.location.search),
       lns = params.get("apellido");
@@ -551,10 +553,9 @@ function getLns() {
         var field = "ns";
         lnsFilter(ns, field);
       } else {table.clearFilter();}
+  };
 
-}
-
-function lnsFilter(record, field){
+  function lnsFilter(record, field){
     // table.clearFilter();     
     var valor = record;
 
@@ -649,8 +650,6 @@ function lnsFilter(record, field){
     }
   };
 
-
-
   //Comparer Function    
   function GetSortOrder(prop) {    
     return function(a, b) {    
@@ -663,7 +662,6 @@ function lnsFilter(record, field){
       return 0;    
     }    
   };
-
 
 
   function typRegister(cell){
@@ -701,7 +699,8 @@ function lnsFilter(record, field){
     }    
     return;
   };
-    function viewImage(cell){
+
+  function viewImage(cell){
     var datos = cell._cell.row.data;;
     var imagen = datos.img - 1;
     var rms = datos.rms;
@@ -747,6 +746,17 @@ function lnsFilter(record, field){
     $("#papa").html("Padre: <i>Información no disponible</i>" );
   };
 
+  function openFullscreen() {
+    let elem = document.getElementById("table-box");
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  };
+
   //trigger download of data.csv file
   $('#download-csv').bind('click', function() {
     table.download("csv", "data.csv");
@@ -769,6 +779,8 @@ function lnsFilter(record, field){
 
   list.innerHTML = html;
   list1.innerHTML = html1;
+
+
 
 };
 

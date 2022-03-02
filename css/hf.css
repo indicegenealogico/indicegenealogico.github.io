@@ -340,17 +340,13 @@ h5 {
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 20em) {
-    body {
-        color: purple;
-    }
+    /*body {color: purple;}*/
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 36em) {
-    body {
-        color: orange;
-    }
+    /*body {color: orange;}*/
 
     .container-sm,
     .container {

@@ -62,7 +62,7 @@ div[tabulator-field='typ']:hover {
 }
 
 #historial {
-    max-height: 350px;
+    height: 50vh;
 
 }
 
@@ -349,7 +349,8 @@ h5 {
     /*body {color: orange;}*/
 
     .container-sm,
-    .container {
+    .container,
+    footer-wrapper  {
         max-width: 540px;
     }
 
@@ -361,7 +362,8 @@ h5 {
 
     .container-md,
     .container-sm,
-    .container {
+    .container,
+    footer-wrapper  {
         max-width: 720px;
     }
 
@@ -385,7 +387,8 @@ h5 {
     .container-lg,
     .container-md,
     .container-sm,
-    .container {
+    .container,
+    footer-wrapper {
         max-width: 960px;
     }
 
@@ -405,7 +408,8 @@ h5 {
     .container-lg,
     .container-md,
     .container-sm,
-    .container {
+    .container,
+    footer-wrapper  {
         max-width: 1140px;
     }
 
@@ -424,11 +428,28 @@ h5 {
     .container-lg,
     .container-md,
     .container-sm,
-    .container {
+    .container,
+    footer-wrapper  {
         max-width: 1600px;
     }
 
    /* #table-box:fullscreen{
         padding: 5rem;
     }*/
+}
+.footer-wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.social img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+aside.blog-sidebar {
+    padding-right: 0;
 }

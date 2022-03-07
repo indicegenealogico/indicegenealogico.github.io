@@ -125,7 +125,7 @@ var localidades = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Febrero 28, 2022";
+  var up_date = "Marzo 6, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 

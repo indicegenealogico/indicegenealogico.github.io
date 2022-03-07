@@ -1,80 +1,99 @@
+<!DOCTYPE html>
 <html lang="es" data-livestyle-extension="available">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Indices de Registros Parroquiales y Civiles">
-    <meta name="keywords" content="indice, indices, parroquia, parroquiales, bautizos, defunciones, matrimonios, registros, civiles, ecleciasticos, genealogia, carupano, guiria, sucre">
+    <meta name="description" content="Ejemplo de las relaciones en forma de Arbol Genealogico que se puede encontrar con Índice Genealógico">
+    <meta name="keywords"
+    content="indice, indices, parroquia, parroquiales, bautizos, defunciones, matrimonios, registros, civiles, ecleciasticos, genealogia, carupano, guiria, sucre">
     <meta name="author" content="Henry Diaz">
     <!-- <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico"> -->
-    <title>IG - Arbol Familiar</title>
+    <title>Arbol | Índice Genealógico</title>
 
     <script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="../js/jquery.rotate.js"></script>
+    <script src="../js/jquery.classyleaves.min.js"></script>
+    <link rel="stylesheet" href="../css/jquery.classyleaves.min.css" /> -->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+    <link href="../css/hf.css" rel="stylesheet">
+  
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
 
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+      <!-- <script src="https://use.fontawesome.com/7e699c67db.js"></script> -->
+
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-
-
-
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
 
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-xxl">
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <div class="container arepas">
+                    <a class="navbar-brand" href="../index.html"><img src="../img/favicon/android-chrome-512x512.png" alt="Company Logo" style="width:40px;" class="rounded-pill"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <header class="blog-header py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4 pt-1">
-                    <!-- <a class="text-muted" href="#">Subscribe</a> -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio </span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="../nombres/index.html">Nombres </a></li>
+                            <li class="nav-item"><a class="nav-link" href="../apellidos/index.html">Apellidos </a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#">Arbol <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Centros HF
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.facebook.com/distrito.carupano.7" target="_blank">Carupano</a>
+                                <a class="dropdown-item disabled" href="#" target="_blank" aria-disabled="true">Nueva Esparta</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item  disabled" href="#" target="_blank" aria-disabled="true">San Luis Potosi</a>
+                                </div>                            
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li> -->
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="#">Indice Genealogico</a>
-                </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
-                    <!-- <a class="text-muted" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
-            </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a> -->
-                </div>
-            </div>
+            </nav>
         </header>
-        <div class="nav-scroller py-1 mb-2">
-        <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-muted" href="https://www.facebook.com/IndiceGenealogico">Encuentranos en Facebook</a>
-          <a class="p-2 text-muted" href="https://www.familysearch.org/es/">Family Search</a>
-          <a class="p-2 text-muted" href="https://www.facebook.com/distrito.carupano.7">CHF Dtto. Carúpano</a>
-          <a class="p-2 text-muted" href="../index.html">Volver a la tabla</a>       
-        </nav>
-        <div class="jumbotron p-3 p-md-6 text-white rounded bg-dark" style="background-image: url('../img/indices.png')">
-            <div class="col-md-6 px-0">
-                <h1 class="display-4 font-italic">Indice Genealógico... Uniendo Generaciones</h1>
-                <p class="lead my-3">El primer paso en genealogía, es conocer a nuestros antepasados. Para encontrarlos, Indice Genealógico te ofrece la manera más rápida y sencilla para hacerlo.</p>
-                <p class="lead mb-0"><a href="#title" class="text-white font-weight-bold">Compruébalo...</a></p>
-
-
+        <div class="jumbotron p-3 p-md-6 text-white rounded bg-dark">
+            <!-- <img class="jumbo-bg" src="../img/indices.jpg" alt="bandera" /> -->
+            <div class="col-md-6 px-0 jumbo">
+                <h1 class="display-4 font-italic">Índice Genealógico</h1>
+                <h2>... Uniendo Generaciones</h2>
+                <p class="lead my-3">
+                    El primer paso en genealogía, es conocer a nuestros antepasados.
+                    Para encontrarlos, Índice Genealógico te ofrece la manera más rápida
+                    y sencilla de hacerlo.
+                </p>
+                <p class="lead mb-0">
+                    <a href="#title" class="text-white font-weight-bold">Compruébalo...</a>
+                </p>
             </div>
         </div>
-
-    </div>
-            <h1 class="text-center">Familia Ordosgoitti Campo (OrCa)</h1>
-<p  class="text-center">Gumercindo y María Escolástica en 1886</p>
-</div>
-
-        <main role="main">
-
-
-
-<div id="tree"></div>
+        <h2 class="text-center">Familia Ordosgoitti Campo (OrCa)</h2>
+        <p  class="text-center">Gumercindo y María Escolástica en 1886</p>
+        <!-- </div> -->
+        <main role="main" class="container" style="background-color:white; height: 80vh ">
+            <div id="tree"></div>
         <script>
             window.onload = function() {
                 OrgChart.templates.family_template = Object.assign({}, OrgChart.templates.ana);
@@ -138,17 +157,28 @@
         ]);
             };
         </script>
-        </main><!-- /.container -->
-    <div class="bg-light text-center text-lg-start footer navbar-fixed-bottom">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2021 Copyright:
-            <a class="text-dark" href="#">Indice Genealógico</a>
+    </main>
+</div><!-- /.container -->
+<footer class="bg-dark text-center text-lg-start footer navbar-fixed-bottom">
+    <div class="footer-wrapper">
+        <div class="text-center p-3 text-light">
+            © 2020 - 2022 Copyright:
+            <a class="text-light" href="#">Índice Genealógico</a>
         </div>
-        <!-- Copyright -->
+        <div class="social">
+            <a href="https://www.facebook.com/IndiceGenealogico/" target="_blank"><img src="../img/social/facebook.png" alt="facebook-icon"></a>
+            <a href="mailto:indicegenealogico@gmail.com"><img src="../img/social/gmail.png" alt="gmail-icon"></a>
+        </div>
     </div>
-    <!-- Optional JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</footer>
+
+
+<!-- Optional JavaScript -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+crossorigin="anonymous"></script>
 
 </body>
 

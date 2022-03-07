@@ -21,6 +21,9 @@ body {
     vertical-align: middle;
     border: 0;
 }
+.slave {
+    background-image: url(../img/indices.png);
+}
 
 .jumbotron::after {
     content: "";
@@ -223,7 +226,6 @@ h5 {
     background: #b3daff !important
 }
 
-.tabulator .tabulator-header .tabulator-col .tabulator-header-filter {}
 
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-father {
     background: #e6e6e6 !important
@@ -335,6 +337,9 @@ h5 {
     display:  flex;
     justify-content: space-around;
 }
+div#tabla_Tab {
+    padding-right: 0 !important;
+}
 
 /*==========  Mobile First Method  ==========*/
 
@@ -346,7 +351,7 @@ h5 {
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 36em) {
-    /*body {color: orange;}*/
+    /* body {color: orange;} */
 
     .container-sm,
     .container,
@@ -453,3 +458,6 @@ h5 {
 aside.blog-sidebar {
     padding-right: 0;
 }
+ .jumbotron {
+    margin-top: 78px !important;
+ }

@@ -47,14 +47,14 @@
 }
 
 /* Add a dark background to the active button */
-.btn.active {
+.btn.activa {
   background-color: #666;
   color: white;
 }
 .container-letters {
   overflow: hidden;
 }
-ul {
+#myBtnContainer ul, .container-letters ul {
   padding-inline-start: 10px;
   font-family: "Georgia", serif;
 }

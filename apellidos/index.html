@@ -42,31 +42,41 @@
 
 <body>
     <div class="container-xxl">
-        <header class="blog-header py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4 pt-1">
-                    <!-- <a class="text-muted" href="#">Subscribe</a> -->
-                </div>
-                <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="../index.html">Índice Genealógico</a>
-                </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <div class="container arepas">
+                    <a class="navbar-brand" href="../index.html"><img src="../img/favicon/android-chrome-512x512.png" alt="Company Logo" style="width:40px;" class="rounded-pill"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../nombres/index.html">Nombres</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#">Apellidos <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="../tree/index.html">Arbol</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Centros HF
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.facebook.com/distrito.carupano.7" target="_blank">Carupano</a>
+                                <a class="dropdown-item disabled" href="#" target="_blank" aria-disabled="true">Nueva Esparta</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item  disabled" href="#" target="_blank" aria-disabled="true">San Luis Potosi</a>
+                                </div>                            
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li> -->
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </header>
-        <div class="nav-scroller py-1 mb-2">
-            <nav class="nav d-flex justify-content-between">
-                <a class="p-2 text-muted" href="https://www.facebook.com/IndiceGenealogico">Encuentranos en Facebook</a>
-                <a class="p-2 text-muted" href="../nombres/index.html">Nombres en IG</a>
-                <a class="p-2 text-muted" href="https://www.familysearch.org/es/">FamilySearch</a>
-                <a class="p-2 text-muted" href="https://www.familysearch.org/wiki/es/Indice_Geneal%C3%B3gico">Wiki</a>
-                <a class="p-2 text-muted" href="https://www.facebook.com/distrito.carupano.7">CHF Dtto. Carúpano</a>
-                <!-- <a class="p-2 text-muted" href="tree/index.html">Ejemplo de Arbol Familiar</a> -->
-
             </nav>
-        </div>
-        <div class="jumbotron p-3 p-md-6 text-white rounded bg-dark">
+        </header>
+        <div class="jumbotron slave p-3 p-md-6 text-white rounded bg-dark">
             <!-- <img class="jumbo-bg" src="../img/indices.jpg" alt="bandera" /> -->
             <div class="col-md-6 px-0 jumbo">
                 <h1 class="display-4 font-italic">Índice Genealógico</h1>
@@ -108,7 +118,7 @@
                     <!-- Control buttons -->
                     <div id="myBtnContainer">
                         <ul id="iniciales" class="d-flex justify-content-around">
-                            <li class="btn active" onclick="filterSelection('all')"> Todos</li>
+                            <li class="btn activa" onclick="filterSelection('all')"> Todos</li>
                             <li class="btn" onclick="filterSelection('aa')"> A</li>
                             <li class="btn" onclick="filterSelection('bb')"> B</li>
                             <li class="btn" onclick="filterSelection('cc')"> C</li>

@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 
     <link href="dist/css/tabulator.min.css" rel="stylesheet" title="Default" />
-
     <link href="css/hf.css" rel="stylesheet" />
 
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
@@ -54,33 +53,41 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="Q0m1fMna"></script>
 
     <div class="container-xxl">
-        <header class="blog-header py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4 pt-1">
-                    <!-- <a class="text-muted" href="#">Subscribe</a> -->
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <div class="container arepas">
+                    <a class="navbar-brand" href="#"><img src="./img/favicon/android-chrome-512x512.png" alt="Company Logo" style="width:40px;" class="rounded-pill"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active"><a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="./nombres/index.html">Nombres</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./apellidos/index.html">Apellidos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./tree/index.html">Arbol</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Centros HF
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.facebook.com/distrito.carupano.7" target="_blank">Carupano</a>
+                                <a class="dropdown-item disabled" href="#" target="_blank" aria-disabled="true">Nueva Esparta</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item  disabled" href="#" target="_blank" aria-disabled="true">San Luis Potosi</a>
+                                </div>                            
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li> -->
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="#">Índice Genealógico</a>
-                </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
-                    <!-- <a class="text-muted" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
-            </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a> -->
-                </div>
-            </div>
-        </header>
-        <div class="nav-scroller py-1 mb-2">
-            <nav class="nav d-flex justify-content-between">
-                <a class="p-2 text-muted" href="https://www.facebook.com/IndiceGenealogico">Encuentranos en Facebook</a>
-                <a class="p-2 text-muted" href="./nombres/index.html">Nombres en IG</a>
-                <a class="p-2 text-muted" href="./apellidos/index.html">Apellidos en IG</a>
-                <a class="p-2 text-muted" href="https://www.familysearch.org/es/">FamilySearch</a>
-                <a class="p-2 text-muted" href="https://www.familysearch.org/wiki/es/Indice_Geneal%C3%B3gico">Wiki</a>
-                <a class="p-2 text-muted" href="https://www.facebook.com/distrito.carupano.7">CHF Dtto. Carúpano</a>
-                <!-- <a class="p-2 text-muted" href="tree/index.html">Ejemplo de Arbol Familiar</a> -->
             </nav>
-        </div>
+        </header>
+
         <div class="jumbotron p-3 p-md-6 text-white rounded bg-dark">
             <!-- <img class="jumbo-bg" src="img/indices.jpg" alt="bandera" /> -->
             <div class="col-md-6 px-0 jumbo">
@@ -97,7 +104,6 @@
             </div>
         </div>
 
-        <!-- </div> -->
         <main role="main" class="container-fluid">
             <div class="row">
                 <div id="tabla_Tab" class="col-lg-9 blog-main">

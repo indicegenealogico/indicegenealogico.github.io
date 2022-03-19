@@ -59,6 +59,7 @@ var recordset = [
   { id:'62', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJD', title: 'Guiria - Inmaculada Concepción 1929-1936', size: 245 },
   { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
   { id:'64', locat: '2423652', type: 'Defuncion', rmsID: 'M99Y-747', title: 'Guiria - Inmaculada Concepción 1888-1941', size: 191 },
+  { id:'65', locat: '2423652', type: 'Defuncion', rmsID: 'M99Y-74W', title: 'Guiria - Inmaculada Concepción 1850-1862', size: 139 },
 ];
 
 
@@ -68,7 +69,6 @@ var recordset = [
 var projects = [
   '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1906-1907</td></tr>',
   '<tr><td>         </td><td>     </td><td>        </td><td>B</td><td>1920-1925</td></tr>',
-  '<tr><td>         </td><td>     </td><td>Guiria</td><td>D</td><td>1906-1907</td></tr>',
   '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
 
@@ -125,13 +125,14 @@ var localidades = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Marzo 6, 2022";
+  var up_date = "Marzo 19, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
 // { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
 
   var updates = [
+  '<li class="list-group-item"><small>03/19/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M99Y-74W&imageIndex=0&singleView=true">Tomo 2</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Defunciones 1850-1962 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/28/2022 | Agregada funcionalidad para ver tabla en pantalla completa.</small></li>',
   '<li class="list-group-item"><small>02/26/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M99Y-747&imageIndex=0&singleView=true">Tomo 1</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Defunciones 1888-1941 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/19/2022 | Agregado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2947673&rmsId=TH-1942-20420-25838-95&imageIndex=0&singleView=true">Libro de Imágenes</a> de <a href="https://www.familysearch.org/es/wiki/San_Luis_Potos%C3%AD,_M%C3%A9xico_-_Genealog%C3%ADa">Mexquitic</a> - Bautizos 1817-1821 San Miguel.</small></li>',

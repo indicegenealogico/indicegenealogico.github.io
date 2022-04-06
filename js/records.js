@@ -61,6 +61,7 @@ var recordset = [
   { id:'64', locat: '2423652', type: 'Defuncion', rmsID: 'M99Y-747', title: 'Guiria - Inmaculada Concepción 1888-1941', size: 191 },
   { id:'65', locat: '2423652', type: 'Defuncion', rmsID: 'M99Y-74W', title: 'Guiria - Inmaculada Concepción 1850-1862', size: 139 },
   { id:'66', locat: '2109974', type: 'Bautizo', rmsID: 'M948-VC5', title: 'Guaraunos - Guarauno 1892-1895', size: 92 },
+  { id:'67', locat: '6916037', type: 'Defuncion', rmsID: 'TH-1951-20446-38322', title: 'Bocas - San Geronimo 1804-1815', size: 136 },
 ];
 
 
@@ -69,8 +70,8 @@ var recordset = [
 
 var projects = [
   '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1906-1907</td></tr>',
-  '<tr><td>    </td><td>     </td><td>Tunapui </td><td>B</td><td>1894-1999</td></tr>',
-  '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
+  '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>B</td><td>1894-1999</td></tr>',
+  // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
 
 var localidades = [ 
@@ -118,7 +119,8 @@ var localidades = [
       estados: [
         { name: "San Luis Potosi", code: 444,
           ciudades: [
-            {name:'Mexquitic de Carmona', code: 23}
+            {name:'Bocas', code: 24},
+            {name:'Mexquitic de Carmona', code: 23},
           ]
         }
       ]
@@ -127,13 +129,13 @@ var localidades = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Marzo 28, 2022";
+  var up_date = "Abril 5, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
-// { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
 
   var updates = [
+  '<li class="list-group-item"><small>04/05/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?place=6916037&page=1&rmsId=TH-1951-20446-38322&imageIndex=2&singleView=true">Tomo #</a> de Bocas, San Luis Potosi, Mexico - Defunciones 1804-1815 Parroquia San Geronimo.</small></li>',
   '<li class="list-group-item"><small>03/28/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?place=2109974&page=1&rmsId=M948-VC5&imageIndex=2&singleView=true">Tomo 1</a> de Guaraunos, Sucre, Venezuela - Bautizos 1892-1895 Parroquia Guarauno.</small></li>',
   '<li class="list-group-item"><small>03/19/2022 | Finalizado - <a href="https://www.familysearch.org/records/images/image-details?page=2&place=2423652&rmsId=M99Y-74W&imageIndex=0&singleView=true">Tomo 2</a> de <a href="https://www.familysearch.org/wiki/es/G%C3%BCiria,_Sucre,_Venezuela_-_Genealog%C3%ADa">Guiria</a> - Defunciones 1850-1962 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/28/2022 | Agregada funcionalidad para ver tabla en pantalla completa.</small></li>',

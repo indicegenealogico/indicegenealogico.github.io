@@ -44,7 +44,7 @@ window.onload = function() {
         var celda = cell._cell.row.data;
         var ark = celda.ark;
         var tipo = celda.typ;
-        console.log(tipo);
+        // console.log(tipo);
         if (tipo == "N"){
           return "<i class='icon_img fa fa-ban'></i>";
          } else {
@@ -132,6 +132,7 @@ window.onload = function() {
 	            var celda = cell._cell.row.data;
 	            var imagen = celda.img - 1;
 	            var rms = celda.rms;
+              var pcode = celda.cr;
 	            var stcode = celda.st;
 	            var ctcode = celda.cit;
 	            var conyg = celda.fid;
@@ -240,8 +241,10 @@ window.onload = function() {
                           var myurl = urlpre + ark;
                         } else {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
-                        };                         
-	                      $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+                        };
+                        if( madre.ns+' '+madre.lns !== "del Valle Josefina Montilla Patiño de Garcia") {                        
+	                       $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+                       }
 	                    }                    
 	                  })
 	                }
@@ -277,26 +280,29 @@ window.onload = function() {
 	            $("#ns").html("Nombres: <i><b>" + celda.ns + "</b></i>");
 	            $("#lns").html("Apellidos: <i><b>" + celda.lns + "</b></i>");
 	            $("#sex").html("Sexo: <i> " + gender(celda.sex) + "</i>");
+
 	            $("#typ").html("Tipo de registro: <i> " + tipo + "</i>");
 	            $("#yy").html("Año: <i> " + celda.yy + "</i>");
 
-	            var x =[];
-	            for (var i in localidades) {
-	              for (var j in localidades[i].cities) {
-	                x.push(localidades[i].cities[j]);
-	              };
-	            };
-	            var stcity = x.map( function(city){
-	              if (city.code == ctcode){
-	                $("#ct").html("Ciudad: <i>" + city.city + "</i>");
+	            var x = getCities();
+
+              var stcity = x.map( function(city){
+	              if (city.cityId == ctcode){
+	                $("#ct").html("Ciudad: <i>" + city.cityName + "</i>");
 	              }
 	            });
 
-	            var stcode = localidades.map( function(st_rec){
-	              if (st_rec.code == stcode){
-	                $("#st").html("Estado: <i>" + st_rec.estado + "</i>");
+	            var stcode = x.map( function(state){
+	              if (state.stateId == stcode){
+	                $("#st").html("Estado: <i>" + state.stateName + "</i>");
 	              }
 	            });
+
+              var pzcode = x.map( function(country){
+                if (country.paisCode == pcode){
+                  $("#pz").html("Pais: <i>" + country.paisName + "</i>");
+                }
+              });
 
 	            $("#recordModal").modal(); 	           
           	}
@@ -495,7 +501,7 @@ $(paisSel).on('change', function(){
     }
 
     $(estadoSel).on('change', function(){
-        console.log($(this).val());
+        // console.log($(this).val());
         localidades.sort(GetSortOrder("city"));//ordena localidades por estados
         
         var estadoChanged = estadoSel.options[estadoSel.selectedIndex].text;
@@ -511,7 +517,7 @@ $(paisSel).on('change', function(){
         });
 
         $(ciudadSel).on('change', function(){
-            console.log($(this).val());
+            // console.log($(this).val());
             var ciudadChanged = ciudadSel.options[ciudadSel.selectedIndex].text;
                 $("#title").html("Registros de "+ ciudadChanged + ", Estado " + estadoChanged + ", " + paisChanged);  
         });
@@ -528,6 +534,8 @@ function getCities() {
           for (var k = 0; k < state.ciudades.length; k++) {
             var city = state.ciudades[k];
             cities.push({
+                paisName: countries.pais,
+                paisCode: countries.code,
                 stateId: state.code,
                 stateName: state.name,
                 cityId: city.code,
@@ -625,7 +633,7 @@ getLns();
     }
    
     if(filterVal){
-      console.log(valueCT.value);
+      // console.log(valueCT.value);
       table.setFilter(filter,typeVal, valueCT.value);
     }
   };

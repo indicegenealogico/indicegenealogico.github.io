@@ -195,8 +195,10 @@ window.onload = function() {
                           var myurl = urlpre + ark;
                         } else {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
-                        }; 
-                        $('#cy').html('Cónyugue: <i><a href=' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
+                        };
+                        // Alternar para aparecer o no el link de la imagen del conyugue
+                        // $('#cy').html('Cónyugue: <i><a href=' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
+                        $('#cy').html('Cónyugue: <i><b>'+ family.ns + ' ' + family.lns+ '</b></i>');
                       }
                     })
 	                };
@@ -221,7 +223,9 @@ window.onload = function() {
                         } else {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         }; 
-	                      $('#papa').html('Padre: <i><a href='+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
+                        // Alternar para aparecer o no el link de la imagen del papa
+	                      // $('#papa').html('Padre: <i><a href='+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
+                        $('#papa').html('Padre: <i>'+ padre.ns+' '+padre.lns + '</i>');
 	                    }                    
 	                  })              
 	                }
@@ -242,8 +246,10 @@ window.onload = function() {
                         } else {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         };
-                        if( madre.ns+' '+madre.lns !== "del Valle Josefina Montilla Patiño de Garcia") {                        
-	                       $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+                        if( madre.ns+' '+madre.lns !== "del Valle Josefina Montilla Patiño de Garcia") {
+                        // Alternar para aparecer o no el link de la imagen de la mama
+	                       // $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+                         $('#mama').html('Madre: <i>'+ madre.ns+' '+madre.lns + '</i>');
                        }
 	                    }                    
 	                  })
@@ -264,8 +270,10 @@ window.onload = function() {
                           var myurl = urlpre + ark;
                         } else {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
-                        };                             
-		                  	$('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href='+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
+                        };
+                        // Alternar para aparecer o no el link de la imagen de los hijos
+                        // $('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href='+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
+		                  	$('table tbody').append('<tr><td>' + hijo.typ + '</td><td>' + hijo.ns +' ('+hijo.ind +')'+'</td><td>' + hijo.not +'</td></tr>');
 		                  } 
 		                	})
 		                }                                
@@ -313,28 +321,28 @@ window.onload = function() {
       { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:100, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
       { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:100, headerMenu:headerMenu },
-      {formatter:viewIcon, width:40, hozAlign:"center", 
-        cellClick:function(e, cell){
-          viewImage(cell);
-            event.preventDefault();
-        },
-        tooltip:function(cell){
-            var celda = cell._cell.row.data;;
-            var ark = celda.ark;
-            var ty = celda.typ;
-            var tipo ="";
-            if (ty == "N") {
-              tipo = "Sin imagen para mostrar";
-            } else {
-              if (ark !== "") {
-                  tipo = "Ir al Registro";
-              } else{
-                tipo = "Ver Imagen del evento";
-              };
-            }
-              return  tipo; //return cells "field - value";
-          },
-      }, 
+      // {formatter:viewIcon, width:40, hozAlign:"center", 
+      //   cellClick:function(e, cell){
+      //     viewImage(cell);
+      //       event.preventDefault();
+      //   },
+      //   tooltip:function(cell){
+      //       var celda = cell._cell.row.data;;
+      //       var ark = celda.ark;
+      //       var ty = celda.typ;
+      //       var tipo ="";
+      //       if (ty == "N") {
+      //         tipo = "Sin imagen para mostrar";
+      //       } else {
+      //         if (ark !== "") {
+      //             tipo = "Ir al Registro";
+      //         } else{
+      //           tipo = "Ver Imagen del evento";
+      //         };
+      //       }
+      //         return  tipo; //return cells "field - value";
+      //     },
+      // }, 
       { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", minWidth:50, headerMenu:headerMenu, responsive:4},
       { title:"Pais",field: "cr", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
       { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},

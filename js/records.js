@@ -72,7 +72,7 @@ var recordset = [
 
 var projects = [
   '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1920-1925</td></tr>',
-  '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>B</td><td>1894-1999</td></tr>',
+  // '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>B</td><td>1894-1999</td></tr>',
   '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
@@ -90,7 +90,7 @@ var localidades = [
             {name:'Macuro', code:21},
             {name:'Río Caribe', code:3},
             {name:'San José de Areocuar', code:5},
-            // {name:'Tunapuy', code:4},
+            {name:'Tunapuy', code:4},
           ]
         },
 	      // { name:'Dtto. Federal', code:212, 
@@ -138,7 +138,7 @@ var localidades = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Mayo 14, 2022";
+  var up_date = "Mayo 15, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
@@ -169,25 +169,26 @@ var localidades = [
 // ];
 
 var updates = [
+  '<li class="list-group-item"><small>05/15/2022 | Agregado Tomo 19 de Tunapuy - Matrimonios 1894-1999 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>05/14/2022 | Removida funcionalidad de ver imagen del evento en FamilySearch.</small></li>',
-  '<li class="list-group-item"><small>04/09/2022 | Finalizado Tomo # de - Bautizos 1890-1912 Santa Rosa.</small></li>',
-  '<li class="list-group-item"><small>04/08/2022 | Agregado - Tomo 3 de - Matrimonios 1778-17811 San Miguel.</small></li>',  
+  '<li class="list-group-item"><small>04/09/2022 | Finalizado Tomo # de Carupano - Bautizos 1890-1912 Santa Rosa.</small></li>',
+  '<li class="list-group-item"><small>04/08/2022 | Agregado - Tomo 3 de Matrimonios 1778-17811 San Miguel.</small></li>',  
   '<li class="list-group-item"><small>04/05/2022 | Finalizado - Tomo # de Bocas, San Luis Potosi, Mexico - Defunciones 1804-1815 Parroquia San Geronimo.</small></li>',
   '<li class="list-group-item"><small>03/28/2022 | Finalizado - Tomo 1 de Guaraunos, Sucre, Venezuela - Bautizos 1892-1895 Parroquia Guarauno.</small></li>',
-  '<li class="list-group-item"><small>03/19/2022 | Finalizado - Tomo 2 de - Defunciones 1850-1962 Inmaculada Concepción.</small></li>',
+  '<li class="list-group-item"><small>03/19/2022 | Finalizado - Tomo 2 de Defunciones 1850-1962 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/28/2022 | Agregada funcionalidad para ver tabla en pantalla completa.</small></li>',
-  '<li class="list-group-item"><small>02/26/2022 | Finalizado - Tomo 1 de - Defunciones 1888-1941 Inmaculada Concepción.</small></li>',
+  '<li class="list-group-item"><small>02/26/2022 | Finalizado - Tomo 1 de Defunciones 1888-1941 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>02/19/2022 | Agregado - Libro de Imágenes - Bautizos 1817-1821 San Miguel.</small></li>',
   '<li class="list-group-item"><small>02/19/2022 | Incluido - México en Índice Genealógico.</small></li>',
-  '<li class="list-group-item"><small>02/13/2022 | Finalizado - Tomo 14 de - Bautizos 1929-1936 Inmaculada Concepción.</small></li>',
-  '<li class="list-group-item"><small>02/03/2022 | Finalizado - Tomo 13 de - Bautizos 1926-1929 Inmaculada Concepción.</small></li>',
+  '<li class="list-group-item"><small>02/13/2022 | Finalizado - Tomo 14 de Guiria - Bautizos 1929-1936 Inmaculada Concepción.</small></li>',
+  '<li class="list-group-item"><small>02/03/2022 | Finalizado - Tomo 13 de Guiria -  Bautizos 1926-1929 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/24/2022 | Agregada página con Lista de <a href="../nombres/">Nombres</a> en Índice Genealógico.</small></li>',
-  '<li class="list-group-item"><small>01/23/2022 | Finalizado - Tomo 12 de - Bautizos 1920-1926 Inmaculada Concepción.</small></li>',
-  '<li class="list-group-item"><small>01/12/2022 | Finalizado - Tomo 11 de - Bautizos 1917-1920 Inmaculada Concepción.</small></li>',
+  '<li class="list-group-item"><small>01/23/2022 | Finalizado - Tomo 12 de Guiria -  Bautizos 1920-1926 Inmaculada Concepción.</small></li>',
+  '<li class="list-group-item"><small>01/12/2022 | Finalizado - Tomo 11 de Guiria -  Bautizos 1917-1920 Inmaculada Concepción.</small></li>',
   '<li class="list-group-item"><small>01/11/2022 | Agregados - Bautizos 1902-1904 Santa Rosa - Carupano.</small></li>',
-  '<li class="list-group-item"><small>01/03/2021 | Finalizado Tomo 10 de - Bautizos 1912-1914.</small></li>',
+  '<li class="list-group-item"><small>01/03/2021 | Finalizado Tomo 10 de Bautizos 1912-1914.</small></li>',
   '<li class="list-group-item"><small>01/01/2022 | Agregada página con Lista de <a href="../apellidos/">Apellidos</a> en Índice Genealógico.</small></li>',
-  '<li class="list-group-item"><small>12/25/2021 | Finalizado Tomo 9 de - Bautizos 1907-1912.</small></li>',
+  '<li class="list-group-item"><small>12/25/2021 | Finalizado Tomo 9 de Bautizos 1907-1912.</small></li>',
   '<li class="list-group-item"><small>12/24/2021 | Primeros 10.000 índices cambiados de imágenes a registros.</small></li>',
   '<li class="list-group-item"><small>12/13/2021 | Alcanzados los 50 mil índices.</small></li>',
   '<li class="list-group-item"><small>01/28/2021 | Se abre una página de <a href="https://www.facebook.com/IndiceGenealogico/">Facebook</a> para Índice Genealógico.</small></li>',

@@ -66,6 +66,7 @@ var recordset = [
   { id:'68', locat: '2106125', type: 'Matrimonio', rmsID: 'M94D-BQP', title: 'Tunapuy - San Juan Bautista 1894-1999', size: 136 },
   { id:'69', locat: '2947673', type: 'Matrimonio', rmsID: 'TH-1951-20470-16583-63', title: 'Mexquitic de Carmona - San Miguel 1778-1781', size: 317 },
   { id:'70', locat: '2106125', type: 'Defuncion', rmsID: 'M94D-BQF', title: 'Tunapuy - San Juan Bautista 1847-1850', size: 22 },
+  { id:'71', locat: '2106125', type: 'Bautizo', rmsID: 'M94D-BQ2', title: 'Tunapuy - San Juan Bautista 1903-1918', size: 102 },
 ];
 
 
@@ -74,7 +75,7 @@ var recordset = [
 
 var projects = [
   '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1920-1925</td></tr>',
-  // '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>B</td><td>1894-1999</td></tr>',
+  '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>B</td><td>1895-1905</td></tr>',
   '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
@@ -140,7 +141,7 @@ var localidades = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Jun 18, 2022";
+  var up_date = "Jun 19, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
@@ -171,6 +172,7 @@ var localidades = [
 // ];
 
 var updates = [
+  '<li class="list-group-item"><small>06/19/2022 | Agregado Tomo 6 de Tunapuy - Bautizos 1903-1918 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>06/18/2022 | Agregado Tomo 2 de Tunapuy - Bautizos, Matrimonios y Defunciones 1847-1850 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>05/15/2022 | Agregado Tomo 19 de Tunapuy - Matrimonios 1894-1999 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>05/14/2022 | Removida funcionalidad de ver imagen del evento en FamilySearch.</small></li>',

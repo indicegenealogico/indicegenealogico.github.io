@@ -21,14 +21,14 @@ function go(g, tipo) {
 
 filterSelection("all");
 
-function filterSelection(c) {
+function filterSelection(campo) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
+  if (campo == "all") campo = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+    if (x[i].className.indexOf(campo) > -1) addClass(x[i], "show");
   };
 };
 

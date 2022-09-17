@@ -67,7 +67,8 @@ var recordset = [
   { id:'69', locat: '2947673', type: 'Matrimonio', rmsID: 'TH-1951-20470-16583-63', title: 'Mexquitic de Carmona - San Miguel 1778-1781', size: 317 },
   { id:'70', locat: '2106125', type: 'Defuncion', rmsID: 'M94D-BQF', title: 'Tunapuy - San Juan Bautista 1847-1850', size: 22 },
   { id:'71', locat: '2106125', type: 'Bautizo', rmsID: 'M94D-BQ2', title: 'Tunapuy - San Juan Bautista 1903-1918', size: 102 },
-  { id:'71', locat: '2106125', type: 'Bautizo', rmsID: 'M9C4-Q1Q', title: 'Tunapuy - San Juan Bautista 1895-1904', size: 154 },
+  { id:'72', locat: '2106125', type: 'Bautizo', rmsID: 'M9C4-Q1Q', title: 'Tunapuy - San Juan Bautista 1895-1904', size: 154 },
+  { id:'73', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DK9', title: 'Irapa - San Jose 1918-1939', size: 110 },
 ];
 
 
@@ -76,7 +77,7 @@ var recordset = [
 
 var projects = [
   '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1920-1925</td></tr>',
-  //'<tr><td>    </td><td>     </td><td>Tunapuy </td><td>M</td><td>1894-1994</td></tr>',
+  '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>M</td><td>1894-1994</td></tr>',
   '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
@@ -91,6 +92,7 @@ var localidades = [
             {name:'El Pilar', code:7},
             {name:'Guaraunos', code:22},
             {name:'Güiria', code:2},
+            {name:'Irapa', code:27},
             {name:'Macuro', code:21},
             {name:'Río Caribe', code:3},
             {name:'San José de Areocuar', code:5},
@@ -142,7 +144,7 @@ var localidades = [
 
 
   //Cambiar fecha de actualizacion
-  var up_date = "Ago 28, 2022";
+  var up_date = "Sep 16, 2022";
   var fecha = document.getElementById('update');
   fecha.innerHTML = up_date;
 
@@ -173,7 +175,7 @@ var localidades = [
 // ];
 
 var updates = [
-  '<li class="list-group-item"><small>08/28/2022 | Agregado Tomo ? de Tunapuy - Matrimonios 1847-1849 San Juan Bautista.</small></li>',
+  '<li class="list-group-item"><small>09/16/2022 | Agregado Tomo ? de Irapa - Bautizos 1918-1939 San José.</small></li>',
   '<li class="list-group-item"><small>07/28/2022 | Agregado Tomo 4 de Tunapuy - Bautizos 1895-1904 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>06/19/2022 | Agregado Tomo 6 de Tunapuy - Bautizos 1903-1918 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>06/18/2022 | Agregado Tomo 2 de Tunapuy - Bautizos, Matrimonios y Defunciones 1847-1850 San Juan Bautista.</small></li>',

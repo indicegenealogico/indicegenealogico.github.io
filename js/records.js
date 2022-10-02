@@ -75,7 +75,6 @@ var recordset = [
 
 
 
-
 var projects = [
   '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1920-1925</td></tr>',
   '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>B</td><td>1920-1937</td></tr>',
@@ -144,10 +143,10 @@ var localidades = [
  ];
 
 
-  //Cambiar fecha de actualizacion
-  var up_date = "Oct 1, 2022";
-  var fecha = document.getElementById('update');
-  fecha.innerHTML = up_date;
+//Cambiar fecha de actualizacion
+var up_date = "Oct 1, 2022";
+var fecha = document.getElementById('update');
+fecha.innerHTML = up_date;
 
 
 

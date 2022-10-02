@@ -89,7 +89,7 @@ window.onload = function() {
     dataTreeStartExpanded:[true, true],
     layout:"fitColumns",
     responsiveLayout:true,
-    clipboard:true,    
+    clipboard:true,
     placeholder:"Esperando por datos a ser cargados...",
     headerSortTristate:true,
     columns: [ //Define Table Columns
@@ -246,7 +246,7 @@ window.onload = function() {
                         } else {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         };
-                        if( madre.ns+' '+madre.lns !== "del Valle Josefina Montilla Patiño de Garcia") {
+                        if( madre.ns+' '+madre.lns !== "Del Valle Josefina Montilla Patiño de Garcia") {
                         // Alternar para aparecer o no el link de la imagen de la mama
 	                       // $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
                          $('#mama').html('Madre: <i>'+ madre.ns+' '+madre.lns + '</i>');
@@ -795,8 +795,6 @@ getLns();
 
   list.innerHTML = html;
   list1.innerHTML = html1;
-
-
 
 };
 

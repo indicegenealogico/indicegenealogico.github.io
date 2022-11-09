@@ -785,9 +785,9 @@ getLns();
   var html = '';
   var html1 = '';
 
-  updates.forEach(function (fechas) {
-    html += fechas;
-  });
+  // updates.forEach(function (fechas) {
+  //   html += fechas;
+  // });
 
   projects.forEach(function (proyectos){
     html1 += proyectos;

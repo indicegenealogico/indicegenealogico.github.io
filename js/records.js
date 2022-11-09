@@ -71,13 +71,13 @@ var recordset = [
   { id:'73', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DK9', title: 'Irapa - San Jose 1918-1939', size: 110 },
   { id:'74', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DVB', title: 'Irapa - San Jose 1909-1911', size: 133 },
   { id:'75', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXX', title: 'Tunapuy - San Juan Bautista 1918-1919', size: 0 },
+  { id:'76', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXF', title: 'Tunapuy - San Juan Bautista 1920-1937', size: 44 },
 ];
 
 
 
 var projects = [
   '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1920-1925</td></tr>',
-  '<tr><td>    </td><td>     </td><td>Tunapuy </td><td>B</td><td>1920-1937</td></tr>',
   '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
@@ -144,13 +144,14 @@ var localidades = [
 
 
 //Cambiar fecha de actualizacion
-var up_date = "Oct 1, 2022";
+var up_date = "Nov 8, 2022";
 var fecha = document.getElementById('update');
 fecha.innerHTML = up_date;
 
 
 
 var updates = [
+  '<li class="list-group-item"><small>11/08/2022 | Agregado Tomo 7 de Tunapuy - Bautizos 1920-1937 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>10/01/2022 | Agregado Tomo # de Irapa - Bautizos 1909-1911 San José.</small></li>',
   '<li class="list-group-item"><small>10/01/2022 | Agregado Tomo # de Tunapuy - Bautizos 1918-1919 San Juan Bautisna.</small></li>',
   '<li class="list-group-item"><small>09/16/2022 | Agregado Tomo ? de Irapa - Bautizos 1918-1939 San José.</small></li>',

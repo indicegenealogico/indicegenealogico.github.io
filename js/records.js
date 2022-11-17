@@ -144,16 +144,17 @@ var localidades = [
 
 
 //Cambiar fecha de actualizacion
-var up_date = "Nov 8, 2022";
+var up_date = "Nov 16, 2022";
 var fecha = document.getElementById('update');
 fecha.innerHTML = up_date;
 
 
 
 var updates = [
-  '<li class="list-group-item"><small>11/08/2022 | Agregado Tomo 7 de Tunapuy - Bautizos 1920-1937 San Juan Bautista.</small></li>',
+  '<li class="list-group-item"><small>11/16/2022 | Agregado Tomo 7 de Irapa - Bautizos 1911-1913 San Juan Bautista.</small></li>',
+  '<li class="list-group-item"><small>11/08/2022 | Agregado Tomo 7 de Tunapuy - Bautizos 1920-1937 San Jose.</small></li>',
   '<li class="list-group-item"><small>10/01/2022 | Agregado Tomo # de Irapa - Bautizos 1909-1911 San José.</small></li>',
-  '<li class="list-group-item"><small>10/01/2022 | Agregado Tomo # de Tunapuy - Bautizos 1918-1919 San Juan Bautisna.</small></li>',
+  '<li class="list-group-item"><small>10/01/2022 | Agregado Tomo # de Tunapuy - Bautizos 1918-1919 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>09/16/2022 | Agregado Tomo ? de Irapa - Bautizos 1918-1939 San José.</small></li>',
   '<li class="list-group-item"><small>07/28/2022 | Agregado Tomo 4 de Tunapuy - Bautizos 1895-1904 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>06/19/2022 | Agregado Tomo 6 de Tunapuy - Bautizos 1903-1918 San Juan Bautista.</small></li>',

@@ -72,6 +72,10 @@ var recordset = [
   { id:'74', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DVB', title: 'Irapa - San Jose 1909-1911', size: 133 },
   { id:'75', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXX', title: 'Tunapuy - San Juan Bautista 1918-1919', size: 0 },
   { id:'76', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXF', title: 'Tunapuy - San Juan Bautista 1920-1937', size: 44 },
+  { id:'77', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DV1', title: 'Irapa - San Jose 1911-1913', size: 94 },
+  { id:'78', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DVR', title: 'Irapa - San Jose 1905-1907', size: 79 },
+  // { id:'79', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DV5', title: 'Soro - San Jose 1899-1904', size: 35 },
+  // { id:'80', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DVT', title: 'Soro - San Jose 1905-1936', size: 79 },
 ];
 
 
@@ -144,13 +148,15 @@ var localidades = [
 
 
 //Cambiar fecha de actualizacion
-var up_date = "Nov 16, 2022";
+var up_date = "Nov 26, 2022";
 var fecha = document.getElementById('update');
 fecha.innerHTML = up_date;
 
 
 
 var updates = [
+  '<li class="list-group-item"><small>11/26/2022 | Agregado Tomo 7 de Irapa - Bautizos 1911-1913 San Juan Bautista.</small></li>',
+  '<li class="list-group-item"><small>11/26/2022 | Agregado Tomo 4 de Irapa - Bautizos 1905-1907 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>11/16/2022 | Agregado Tomo 7 de Irapa - Bautizos 1911-1913 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>11/08/2022 | Agregado Tomo 7 de Tunapuy - Bautizos 1920-1937 San Jose.</small></li>',
   '<li class="list-group-item"><small>10/01/2022 | Agregado Tomo # de Irapa - Bautizos 1909-1911 San José.</small></li>',

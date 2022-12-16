@@ -76,6 +76,7 @@ var recordset = [
   { id:'78', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DVR', title: 'Irapa - San Jose 1905-1907', size: 79 },
   // { id:'79', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DV5', title: 'Soro - San Jose 1899-1904', size: 35 },
   // { id:'80', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DVT', title: 'Soro - San Jose 1905-1936', size: 79 },
+  { id:'81', locat: '2106125', type: 'Defuncion', rmsID: 'M99T-ZYV', title: 'Tunapuy - San Juan Bautista 1893-1967', size: 120 },
 ];
 
 
@@ -148,13 +149,14 @@ var localidades = [
 
 
 //Cambiar fecha de actualizacion
-var up_date = "Nov 26, 2022";
+var up_date = "Dic 16, 2022";
 var fecha = document.getElementById('update');
 fecha.innerHTML = up_date;
 
 
 
 var updates = [
+  '<li class="list-group-item"><small>12/16/2022 | Agregado Tomo # de Tunapuy - Defunciones 1893 - 1967San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>11/26/2022 | Agregado Tomo 7 de Irapa - Bautizos 1911-1913 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>11/26/2022 | Agregado Tomo 4 de Irapa - Bautizos 1905-1907 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>11/16/2022 | Agregado Tomo 7 de Irapa - Bautizos 1911-1913 San Juan Bautista.</small></li>',

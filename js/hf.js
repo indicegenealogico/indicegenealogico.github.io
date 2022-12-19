@@ -248,7 +248,7 @@ window.onload = function() {
                         };
                         if( madre.ns+' '+madre.lns !== "Del Valle Josefina Montilla Patiño de Garcia") {
                         // Alternar para aparecer o no el link de la imagen de la mama
-	                       // $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+	                      //  $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
                          $('#mama').html('Madre: <i>'+ madre.ns+' '+madre.lns + '</i>');
                        }
 	                    }                    
@@ -324,7 +324,7 @@ window.onload = function() {
       // {formatter:viewIcon, width:40, hozAlign:"center", 
       //   cellClick:function(e, cell){
       //     viewImage(cell);
-      //       event.preventDefault();
+      //       e.preventDefault();
       //   },
       //   tooltip:function(cell){
       //       var celda = cell._cell.row.data;;
@@ -353,13 +353,13 @@ window.onload = function() {
     //Al hacer clic boton derecho, abre la imagen en familisearch
     rowContext:function(e, row){
       seeImage(row);
-      event.preventDefault();
+      e.preventDefault();
     }, //rowContext
       
       //Al tocar dos veces la fila. abre la imagen en familisearch
     rowDblTap:function(e, row){
       seeImage(row);
-      event.preventDefault();
+      e.preventDefault();
     }, //rowTapHold
 
     rowFormatter:function(row){
@@ -707,9 +707,9 @@ getLns();
 	    	if( record.id == rms){
 	        	var url = "https://www.familysearch.org/records/images/image-details?page=1&place=" + record.locat + "&rmsId=" + record.rmsID + "&imageIndex=" + imagen + "&singleView=true"
 	        	window.open(url);
-	        	// $("#btn_image").click( function(){
-	         //    	window.open(url);
-	        	// });
+	        	$("#btn_image").click( function(){
+	            	window.open(url);
+	        	});
       		}            
     	});
     }    
@@ -735,9 +735,9 @@ getLns();
             
             //console.log(url);
             window.open(url);
-            // $("#btn_image").click( function(){
-           //     window.open(url);
-            // });
+            $("#btn_image").click( function(){
+               window.open(url);
+            });
           }            
       });
     }    
@@ -785,9 +785,9 @@ getLns();
   var html = '';
   var html1 = '';
 
-  // updates.forEach(function (fechas) {
-  //   html += fechas;
-  // });
+  updates.forEach(function (fechas) {
+    html += fechas;
+  });
 
   projects.forEach(function (proyectos){
     html1 += proyectos;
@@ -797,6 +797,3 @@ getLns();
   list1.innerHTML = html1;
 
 };
-
-
-  

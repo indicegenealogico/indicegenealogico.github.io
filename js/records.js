@@ -2,19 +2,19 @@ var recordset = [
   { id:'1', locat: '2115315', type: 'Bautizo', rmsID: 'TH-1951-23240-52713-77', title: 'Carúpano - Santa Rosa 1890-91, 1908-12', size: 729 },
   { id:'2', locat: '2115315', type: 'Defuncion', rmsID: 'M99B-7H4', title: 'Carúpano - Santa Catalina 1920-1938', size: 33 },
   { id:'3', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ3', title: 'Guiria - Inmaculada Concepción 1881-1898', size: 0 },
-  { id:'4', locat: '2115315', type: 'Matrimonio', rmsID: 'M99Y-2P1', title: 'Carúpano - Santa Rosa 1896-1913', size: 101 },
-  { id:'5', locat: '2423652', type: 'Matrimonio', rmsID: 'M99Y-743', title: 'Guiria - Inmaculada Concepción 1862-1907', size: 0 },
+  { id:'4', locat: '2115315', type: 'Matrimonio', rmsID: 'M94X-9TY', title: 'Carúpano - Santa Rosa 1896-1913', size: 108 },
+  { id:'5', locat: '2423652', type: 'Matrimonio', rmsID: 'M9H9-9F8', title: 'Guiria - Inmaculada Concepción 1862-1907', size: 150 },
   { id:'6', locat: '2104138', type: 'Bautizo', rmsID: 'TH-1942-23241-36297-62', title: 'Río Caribe - San Miguel 1891-1927', size: 0 },
   { id:'7', locat: '2104138', type: 'Matrimonio', rmsID: 'M99B-QGN', title: 'Río Caribe - San Miguel 1907-1951', size: 0 },
-  { id:'8', locat: '2106125', type: 'Matrimonio', rmsID: 'M94D-BQF', title: 'Tunapuy - San Juan Bautista 1847-1849', size: 5 },
+  //{ id:'8', locat: '2106125', type: 'Matrimonio', rmsID: 'M94D-BQF', title: 'Tunapuy - San Juan Bautista 1847-1849', size: 5 },
   { id:'9', locat: '2118623', type: 'Bautizo', rmsID: 'M99T-ZY2', title: 'El Pilar - Nuestra Señora del Pilar 1832-1836', size: 0 },
   { id:'10', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2PK', title: 'Carúpano - Santa Rosa 1925-1928', size: 200 },
   { id:'11', locat: '2115315', type: 'Bautizo', rmsID: 'M99B-7H9', title: 'Carúpano - Santa Catalina 1920-1923', size: 145 },
-  { id:'12', locat: '2115315', type: 'Matrimonio', rmsID: 'M99Y-2PB', title: 'Carúpano - Santa Rosa 1874-1896', size: 149 },
-  { id:'13', locat: '2115315', type: 'Matrimonio', rmsID: 'M99B-7HW', title: 'Carúpano - Santa Catalina 1920-1946', size: 0 },
+  { id:'12', locat: '2115315', type: 'Matrimonio', rmsID: 'M94X-9TT', title: 'Carúpano - Santa Rosa 1874-1896', size: 149 },
+  { id:'13', locat: '2115315', type: 'Matrimonio', rmsID: 'M9HM-RMP', title: 'Carúpano - Santa Catalina 1920-1946', size: 138 },
   { id:'14', locat: '445650', type: 'Matrimonio', rmsID: 'TH-909-65256-140773-14', title: 'Tucupita - Registro Civil 1944-1950', size: 0 },
   { id:'15', locat: '5366', type: 'Defuncion', rmsID: 'M99T-85P', title: 'Caicara - Santo Domingo 1912-1966', size: 83 },
-  { id:'16', locat: '2423652', type: 'Matrimonio', rmsID: 'M99Y-74Q', title: 'Guiria - Inmaculada Concepción 1916-1944', size: 200 },
+  { id:'16', locat: '2423652', type: 'Matrimonio', rmsID: 'M9H9-9FD', title: 'Guiria - Inmaculada Concepción 1916-1944', size: 204 },
   { id:'17', locat: '2115315', type: 'Sin Imagen', rmsID: '', title: 'Carúpano - Todas las Parroquias ', size: 0 },
   { id:'18', locat: '2423652', type: 'Sin Imagen', rmsID: '', title: 'Guiria - Todas las Parroquias ', size: 0 },
   { id:'19', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SN1', title: 'Guiria - Inmaculada Concepción 1835-1845', size: 0 },
@@ -48,10 +48,10 @@ var recordset = [
   { id:'47', locat: '2115315', type: 'Bautizo', rmsID: 'M99Y-2PV', title: 'Carúpano - Santa Rosa 1920-1925', size: 180 },
   { id:'48', locat: '2115315', type: 'Matrimonio', rmsID: 'M9SF-PZL', title: 'Carúpano - Santa Rosa 1913-1940', size: 246 },
   { id:'49', locat: '2115315', type: 'Defuncion', rmsID: 'M9SM-W5G', title: 'Carúpano - Santa Rosa 1918-1954', size: 165 },
-  { id:'50', locat: '2104609', type: 'Bautizo', rmsID: 'M99Y-254', title: 'San Jose de Aerocuar - San Jose 1887-1893', size: 0 },
-  { id:'51', locat: '2104609', type: 'Defuncion', rmsID: 'M99Y-25K', title: 'San Jose de Aerocuar - San Jose 1909-1928', size: 61 },
+  { id:'50', locat: '2104609', type: 'Bautizo', rmsID: 'M9C4-749', title: 'San Jose de Aerocuar - San Jose 1887-1893', size: 149 },
+  { id:'51', locat: '2104609', type: 'Defuncion', rmsID: 'M9C4-746', title: 'San Jose de Aerocuar - San Jose 1909-1928', size: 22 },
   { id:'52', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ7', title: 'Guiria - Inmaculada Concepción 1893-1897', size: 147 },
-  { id:'53', locat: '2104609', type: 'Bautizo', rmsID: 'M99Y-25H', title: 'San Jose de Aerocuar - San Jose 1893-1907', size: 0 },
+  { id:'53', locat: '2104609', type: 'Bautizo', rmsID: 'M9C4-74S', title: 'San Jose de Aerocuar - San Jose 1893-1907', size: 147 },
   { id:'54', locat: '2115491', type: 'Matrimonio', rmsID: 'M9SM-SYL', title: 'Cariaco - San Felipe 1915-1950', size: 74 },
   { id:'55', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJW', title: 'Guiria - Inmaculada Concepción 1897-1907', size: 389 },
   { id:'56', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXH', title: 'Tunapuy - San Juan Bautista 1847-1850', size: 38 },
@@ -62,13 +62,13 @@ var recordset = [
   { id:'61', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ8', title: 'Guiria - Inmaculada Concepción 1926-1929', size: 212 },
   { id:'62', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJD', title: 'Guiria - Inmaculada Concepción 1929-1936', size: 245 },
   { id:'63', locat: '2947673', type: 'Bautizo', rmsID: 'TH-1942-20420-25838-95', title: 'Mexquitic de Carmona - San Miguel 1817-1821', size: 471 },
-  { id:'64', locat: '2423652', type: 'Defuncion', rmsID: 'M99Y-747', title: 'Guiria - Inmaculada Concepción 1888-1941', size: 191 },
-  { id:'65', locat: '2423652', type: 'Defuncion', rmsID: 'M99Y-74W', title: 'Guiria - Inmaculada Concepción 1850-1862', size: 139 },
+  { id:'64', locat: '2423652', type: 'Defuncion', rmsID: 'M9H9-9F6', title: 'Guiria - Inmaculada Concepción 1888-1941', size: 192 },
+  { id:'65', locat: '2423652', type: 'Defuncion', rmsID: 'M9H9-9FX', title: 'Guiria - Inmaculada Concepción 1850-1862', size: 140 },
   { id:'66', locat: '2109974', type: 'Bautizo', rmsID: 'M948-VC5', title: 'Guaraunos - Guarauno 1892-1895', size: 92 },
   { id:'67', locat: '6916037', type: 'Defuncion', rmsID: 'TH-1951-20446-38322', title: 'Bocas - San Geronimo 1804-1815', size: 136 },
-  { id:'68', locat: '2106125', type: 'Matrimonio', rmsID: 'M9CH-PXN', title: 'Tunapuy - San Juan Bautista 1894-1999', size: 136 },
+  { id:'68', locat: '2106125', type: 'Matrimonio', rmsID: 'M9CH-PXN', title: 'Tunapuy - San Juan Bautista 1894-1994', size: 136 },
   { id:'69', locat: '2947673', type: 'Matrimonio', rmsID: 'TH-1951-20470-16583-63', title: 'Mexquitic de Carmona - San Miguel 1778-1781', size: 317 },
-  { id:'70', locat: '2106125', type: 'Defuncion', rmsID: 'M94D-BQF', title: 'Tunapuy - San Juan Bautista 1847-1850', size: 22 },
+  //{ id:'70', locat: '2106125', type: 'Defuncion', rmsID: 'M94D-BQF', title: 'Tunapuy - San Juan Bautista 1847-1850', size: 22 },
   //{ id:'71', locat: '2106125', type: 'Bautizo', rmsID: 'M94D-BQ2', title: 'Tunapuy - San Juan Bautista 1903-1918', size: 102 },
   { id:'72', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXD', title: 'Tunapuy - San Juan Bautista 1895-1904', size: 154 },
   { id:'73', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DK9', title: 'Irapa - San Jose 1918-1939', size: 110 },
@@ -80,6 +80,9 @@ var recordset = [
   //{ id:'79', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DV5', title: 'Soro - San Jose 1899-1904', size: 35 },
   //{ id:'80', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DVT', title: 'Soro - San Jose 1905-1936', size: 79 },
   { id:'81', locat: '2106125', type: 'Defuncion', rmsID: 'M99T-ZYV', title: 'Tunapuy - San Juan Bautista 1893-1967', size: 122 },
+  { id:'82', locat: '5492', type: 'Defuncion', rmsID: 'M9M1-81V', title: 'Maroa - Registro Civil 1972', size: 12 },
+  { id:'83', locat: '5492', type: 'Matrimonio', rmsID: 'M9M1-64J', title: 'Maroa - Registro Civil 1975', size: 11 },
+  { id:'84', locat: '11582127', type: 'Matrimonio', rmsID: 'TH-909-87512-45273-60', title: 'El Valle - Nuestra Sra. del Valle 1978', size: 958 },
   ];
 
 var projects = [
@@ -110,6 +113,11 @@ var localidades = [
        //      {name:'Caracas', code:26},
        //    ]
        //  },
+       { name:'Amazonas', code:248, 
+          ciudades : [
+            {name:'Maroa', code:29},
+          ]
+        },
         { name:'Delta Amacuro', code:287, 
           ciudades : [
             {name:'Amacuro', code:18},
@@ -129,6 +137,7 @@ var localidades = [
         },
         { name:'Nueva Esparta', code:295, 
           ciudades : [
+            {name:'El Valle', code:30},
             {name:'La Asunción', code:10},
             {name:'Porlamar', code:12},
             {name:'Punta de Piedras', code:19},
@@ -150,13 +159,16 @@ var localidades = [
 
 
 //Cambiar fecha de actualizacion
-var up_date = "Dic 16, 2022";
+var up_date = "Dic 24, 2022";
 var fecha = document.getElementById('update');
 fecha.innerHTML = up_date;
 
 
 
 var updates = [
+  '<li class="list-group-item"><small>12/24/2022 | Agregado El Valle de Nueva Esparta - Matrimonios 1978 Ntra. Sra. del Valle</small></li>',
+  '<li class="list-group-item"><small>12/24/2022 | Agregado Maroa, Amazonas - Matrimonios 1975 Registro Civil.</small></li>',
+  '<li class="list-group-item"><small>12/24/2022 | Agregado Maroa, Amazonas - Defunciones 1972 Registro Civil.</small></li>',
   '<li class="list-group-item"><small>12/16/2022 | Agregado Tomo # de Tunapuy - Defunciones 1893 - 1967 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>11/26/2022 | Agregado Tomo 7 de Irapa - Bautizos 1911-1913 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>11/26/2022 | Agregado Tomo 4 de Irapa - Bautizos 1905-1907 San Juan Bautista.</small></li>',

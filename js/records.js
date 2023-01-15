@@ -81,6 +81,7 @@ var recordset = [
   { id:'82', locat: '5492', type: 'Defuncion', rmsID: 'M9M1-81V', title: 'Maroa - Registro Civil 1972', size: 12 },
   { id:'83', locat: '5492', type: 'Matrimonio', rmsID: 'M9M1-64J', title: 'Maroa - Registro Civil 1975', size: 11 },
   { id:'84', locat: '11582127', type: 'Matrimonio', rmsID: 'TH-909-87512-45273-60', title: 'El Valle - Nuestra Sra. del Valle 1978', size: 958 },
+  { id:'85', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXZ', title: 'Tunapuy - San Juan Bautista 1889-1892', size: 92 },
   ];
 
 var projects = [
@@ -158,13 +159,13 @@ var localidades = [
 
 
 //Cambiar fecha de actualizacion
-var up_date = "Dic 24, 2022";
+var up_date = "Ene 14, 2023";
 var fecha = document.getElementById('update');
 fecha.innerHTML = up_date;
 
 
-
 var updates = [
+  '<li class="list-group-item"><small>01/14/2023 | Agregado Tomo # de Tunapuy - Bautizos 1889-1892 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>12/24/2022 | Agregado El Valle de Nueva Esparta - Matrimonios 1978 Ntra. Sra. del Valle</small></li>',
   '<li class="list-group-item"><small>12/24/2022 | Agregado Maroa, Amazonas - Matrimonios 1975 Registro Civil.</small></li>',
   '<li class="list-group-item"><small>12/24/2022 | Agregado Maroa, Amazonas - Defunciones 1972 Registro Civil.</small></li>',

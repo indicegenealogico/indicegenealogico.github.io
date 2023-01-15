@@ -716,6 +716,7 @@ getLns();
     return;
   };
 
+
   function viewImage(cell){
     var datos = cell._cell.row.data;;
     var imagen = datos.img - 1;

@@ -159,9 +159,7 @@ var localidades = [
 
 
 //Cambiar fecha de actualizacion
-var up_date = "Ene 14, 2023";
-var fecha = document.getElementById('update');
-fecha.innerHTML = up_date;
+document.getElementById('update').innerHTML = "Feb 2, 2023";
 
 
 var updates = [

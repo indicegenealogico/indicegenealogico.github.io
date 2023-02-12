@@ -59,21 +59,6 @@ window.onload = function() {
     var urlpre = "https://www.familysearch.org/ark:/61903/1:1:";
     var urlprelong = "https://www.familysearch.org/records/images/image-details?page=1&place=";
 
-// **********************  Hojas  *************************
-    // var tree = new ClassyLeaves({
-    //   leaves: 20,
-    //   maxY: -10,
-    //   multiplyOnClick: true,
-    //   multiply: 2,
-    //   infinite: true,
-    //   speed: 4000
-    //     });
-    // $('body').on('click', '.addLeaf', function() {
-    //   console.log('8');
-    //   tree.add(8);
-    //   return false;
-    // });
-
 // **********************Tabla****************************
   var table = new Tabulator("#example-table", {
     pagination:"local",
@@ -321,28 +306,6 @@ window.onload = function() {
       { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:100, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
       { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:100, headerMenu:headerMenu },
-      // {formatter:viewIcon, width:40, hozAlign:"center", 
-      //   cellClick:function(e, cell){
-      //     viewImage(cell);
-      //       e.preventDefault();
-      //   },
-      //   tooltip:function(cell){
-      //       var celda = cell._cell.row.data;;
-      //       var ark = celda.ark;
-      //       var ty = celda.typ;
-      //       var tipo ="";
-      //       if (ty == "N") {
-      //         tipo = "Sin imagen para mostrar";
-      //       } else {
-      //         if (ark !== "") {
-      //             tipo = "Ir al Registro";
-      //         } else{
-      //           tipo = "Ver Imagen del evento";
-      //         };
-      //       }
-      //         return  tipo; //return cells "field - value";
-      //     },
-      // }, 
       { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", minWidth:50, headerMenu:headerMenu, responsive:4},
       { title:"Pais",field: "cr", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
       { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},

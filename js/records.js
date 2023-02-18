@@ -10,7 +10,7 @@ var recordset = [
   { id:'10', locat: '2115315', type: 'Bautizo', rmsID: 'M94X-9TN', title: 'Carúpano - Santa Rosa 1925-1928', size: 220 },
   { id:'11', locat: '2115315', type: 'Bautizo', rmsID: 'M9HM-RMV', title: 'Carúpano - Santa Catalina 1921-1923', size: 161 },
   { id:'12', locat: '2115315', type: 'Matrimonio', rmsID: 'M94X-9TT', title: 'Carúpano - Santa Rosa 1874-1896', size: 157 },
-  { id:'13', locat: '2115315', type: 'Matrimonio', rmsID: 'M99B-7HW', title: 'Carúpano - Santa Catalina 1920-1946', size: 138 },
+  { id:'13', locat: '2115315', type: 'Matrimonio', rmsID: 'M9HM-RMP', title: 'Carúpano - Santa Catalina 1920-1946', size: 138 },
   { id:'14', locat: '445650', type: 'Matrimonio', rmsID: 'TH-909-65256-140773-14', title: 'Tucupita - Registro Civil 1944-1950', size: 0 },
   { id:'15', locat: '5366', type: 'Defuncion', rmsID: 'M99T-85P', title: 'Caicara - Santo Domingo 1912-1966', size: 83 },
   { id:'16', locat: '2423652', type: 'Matrimonio', rmsID: 'M9H9-9FD', title: 'Guiria - Inmaculada Concepción 1916-1944', size: 204 },
@@ -67,6 +67,7 @@ var recordset = [
   { id:'67', locat: '6916037', type: 'Defuncion', rmsID: 'TH-1951-20446-38322', title: 'Bocas - San Geronimo 1804-1815', size: 136 },
   { id:'68', locat: '2106125', type: 'Matrimonio', rmsID: 'M9CH-PXN', title: 'Tunapuy - San Juan Bautista 1894-1994', size: 136 },
   { id:'69', locat: '2947673', type: 'Matrimonio', rmsID: 'TH-1951-20470-16583-63', title: 'Mexquitic de Carmona - San Miguel 1778-1781', size: 317 },
+  { id:'70', locat: '2106125', type: 'Defuncion', rmsID: 'M94D-BQF', title: 'Tunapuy - San Juan Bautista 1847-1850', size: 22 },
   { id:'71', locat: '442485', type: 'Bautizo', rmsID: 'M9CH-PX6', title: 'Guariquen - San Simon 1903-1918', size: 104 },
   { id:'72', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXD', title: 'Tunapuy - San Juan Bautista 1895-1904', size: 154 },
   { id:'73', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DK9', title: 'Irapa - San Jose 1918-1939', size: 110 },
@@ -77,7 +78,7 @@ var recordset = [
   { id:'78', locat: '2110398', type: 'Bautizo', rmsID: 'M9H7-DVR', title: 'Irapa - San Jose 1905-1907', size: 79 },
   { id:'79', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DV5', title: 'Soro - San Jose 1899-1904', size: 35 },
   { id:'80', locat: '2106575', type: 'Bautizo', rmsID: 'M9H7-DVT', title: 'Soro - San Jose 1905-1936', size: 79 },
-  { id:'81', locat: '2106125', type: 'Defuncion', rmsID: 'M99T-ZYV', title: 'Tunapuy - San Juan Bautista 1893-1967', size: 122 },
+  { id:'81', locat: '2106125', type: 'Bautizo', rmsID: 'M99T-ZYV', title: 'Tunapuy - San Juan Bautista 1893-1967', size: 122 },
   { id:'82', locat: '5492', type: 'Defuncion', rmsID: 'M9M1-81V', title: 'Maroa - Registro Civil 1972', size: 12 },
   { id:'83', locat: '5492', type: 'Matrimonio', rmsID: 'M9M1-64J', title: 'Maroa - Registro Civil 1975', size: 11 },
   { id:'84', locat: '11582127', type: 'Matrimonio', rmsID: 'TH-909-87512-45273-60', title: 'El Valle - Nuestra Sra. del Valle 1978', size: 958 },
@@ -85,10 +86,10 @@ var recordset = [
   { id:'86', locat: '2106125', type: 'Sin Imagen', rmsID: '', title: 'Tunapuy - Todas las Parroquias ', size: 0 },
   { id:'87', locat: '2104138', type: 'Sin Imagen', rmsID: '', title: 'Río Caribe - Todas las Parroquias ', size: 0 },
   { id:'88', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXC', title: 'Tunapuy - San Juan Bautista 1867-1889', size: 192 },
-  ];
+];
 
 var projects = [
-  '<tr><td>Vzla</td><td>Sucre</td><td>Carúpano</td><td>B</td><td>1920-1925</td></tr>',
+  '<tr><td>Vzla</td><td>Sucre</td><td>Soro</td><td>B</td><td>1905-1936</td></tr>',
   '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];

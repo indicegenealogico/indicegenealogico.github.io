@@ -86,6 +86,7 @@ var recordset = [
   { id:'86', locat: '2106125', type: 'Sin Imagen', rmsID: '', title: 'Tunapuy - Todas las Parroquias ', size: 0 },
   { id:'87', locat: '2104138', type: 'Sin Imagen', rmsID: '', title: 'Río Caribe - Todas las Parroquias ', size: 0 },
   { id:'88', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXC', title: 'Tunapuy - San Juan Bautista 1867-1889', size: 192 },
+  { id:'89', locat: '5366', type: 'Bautizo', rmsID: 'TH-909-57048-19138-53', title: 'Caicara - Santo Domingo 1915-1926', size: 751 },
 ];
 
 var projects = [
@@ -162,11 +163,17 @@ var localidades = [
  ];
 
 
-//Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Feb 18, 2023";
+// Cambiar fecha de actualizacion
+document.getElementById('update').innerHTML = "Feb 25, 2023";
+
+// Extrae el año actual y lo agrega al copyright
+const fechaActual = new Date();
+const actualYear = fechaActual.getFullYear();
+document.getElementById("copyright").textContent = "© 2020 - " + actualYear;
 
 
 var updates = [
+  '<li class="list-group-item"><small>02/25/2022 | Agregado Tomo # de Caicara - Bautizos 1915-1926 Santo Domingo.</small></li>',
   '<li class="list-group-item"><small>02/18/2022 | Agregado Tomo # de Tunapuy - Bautizos 1867-1889 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>02/11/2023 | Creacion de Padres de multiples hijos en Tunapuy y Guiria.</small></li>',
   '<li class="list-group-item"><small>01/14/2023 | Agregado Tomo # de Tunapuy - Bautizos 1889-1892 San Juan Bautista.</small></li>',

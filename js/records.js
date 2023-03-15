@@ -164,7 +164,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Feb 25, 2023";
+document.getElementById('update').innerHTML = "Mar 14, 2023";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();
@@ -173,6 +173,7 @@ document.getElementById("copyright").textContent = "© 2020 - " + actualYear;
 
 
 var updates = [
+  '<li class="list-group-item"><small>03/14/2022 | Agregado Tomo # de Soro - Bautizos 1899-1904 San Jose.</small></li>',
   '<li class="list-group-item"><small>02/25/2022 | Agregado Tomo # de Caicara - Bautizos 1915-1926 Santo Domingo.</small></li>',
   '<li class="list-group-item"><small>02/18/2022 | Agregado Tomo # de Tunapuy - Bautizos 1867-1889 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>02/11/2023 | Creacion de Padres de multiples hijos en Tunapuy y Guiria.</small></li>',

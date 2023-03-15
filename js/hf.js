@@ -59,6 +59,21 @@ window.onload = function() {
     var urlpre = "https://www.familysearch.org/ark:/61903/1:1:";
     var urlprelong = "https://www.familysearch.org/records/images/image-details?page=1&place=";
 
+// **********************  Hojas  *************************
+    // var tree = new ClassyLeaves({
+    //   leaves: 20,
+    //   maxY: -10,
+    //   multiplyOnClick: true,
+    //   multiply: 2,
+    //   infinite: true,
+    //   speed: 4000
+    //     });
+    // $('body').on('click', '.addLeaf', function() {
+    //   console.log('8');
+    //   tree.add(8);
+    //   return false;
+    // });
+
 // **********************Tabla****************************
   var table = new Tabulator("#example-table", {
     pagination:"local",
@@ -182,8 +197,8 @@ window.onload = function() {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         };
                         // Alternar para aparecer o no el link de la imagen del conyugue
-                        // $('#cy').html('Cónyugue: <i><a href=' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
-                        $('#cy').html('Cónyugue: <i><b>'+ family.ns + ' ' + family.lns+ '</b></i>');
+                        $('#cy').html('Cónyugue: <i><a href=' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
+                        // $('#cy').html('Cónyugue: <i><b>'+ family.ns + ' ' + family.lns+ '</b></i>');
                       }
                     })
 	                };
@@ -209,8 +224,8 @@ window.onload = function() {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         }; 
                         // Alternar para aparecer o no el link de la imagen del papa
-	                      // $('#papa').html('Padre: <i><a href='+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
-                        $('#papa').html('Padre: <i>'+ padre.ns+' '+padre.lns + '</i>');
+	                      $('#papa').html('Padre: <i><a href='+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
+                        // $('#papa').html('Padre: <i>'+ padre.ns+' '+padre.lns + '</i>');
 	                    }                    
 	                  })              
 	                }
@@ -233,8 +248,8 @@ window.onload = function() {
                         };
                         if( madre.ns+' '+madre.lns !== "Del Valle Josefina Montilla Patiño de Garcia") {
                         // Alternar para aparecer o no el link de la imagen de la mama
-	                      //  $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
-                         $('#mama').html('Madre: <i>'+ madre.ns+' '+madre.lns + '</i>');
+	                       $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+                        //  $('#mama').html('Madre: <i>'+ madre.ns+' '+madre.lns + '</i>');
                        }
 	                    }                    
 	                  })
@@ -257,8 +272,8 @@ window.onload = function() {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         };
                         // Alternar para aparecer o no el link de la imagen de los hijos
-                        // $('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href='+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
-		                  	$('table tbody').append('<tr><td>' + hijo.typ + '</td><td>' + hijo.ns +' ('+hijo.ind +')'+'</td><td>' + hijo.not +'</td></tr>');
+                        $('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href='+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
+		                  	// $('table tbody').append('<tr><td>' + hijo.typ + '</td><td>' + hijo.ns +' ('+hijo.ind +')'+'</td><td>' + hijo.not +'</td></tr>');
 		                  } 
 		                	})
 		                }                                
@@ -306,6 +321,28 @@ window.onload = function() {
       { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:100, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
       { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:100, headerMenu:headerMenu },
+      { title:"Ver",formatter:viewIcon, width:40, hozAlign:"center", visible:false, field:"view",
+        cellClick:function(e, cell){
+          viewImage(cell);
+            e.preventDefault();
+        },
+        tooltip:function(cell){
+            var celda = cell._cell.row.data;;
+            var ark = celda.ark;
+            var ty = celda.typ;
+            var tipo ="";
+            if (ty == "N") {
+              tipo = "Sin imagen para mostrar";
+            } else {
+              if (ark !== "") {
+                  tipo = "Ir al Registro";
+              } else{
+                tipo = "Ver Imagen del evento";
+              };
+            }
+              return  tipo; //return cells "field - value";
+          },
+      }, 
       { title:"Notas",field: "not", sorter: "string", align: "left" , headerFilterPlaceholder:"Notas",headerFilter:"input", minWidth:50, headerMenu:headerMenu, responsive:4},
       { title:"Pais",field: "cr", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
       { title:"Ciudad",field: "cit", sorter: "number", hozAlign:"center", headerFilter:"input", visible:false,  width:50, maxWidth:60, responsive:4, download:false},
@@ -371,6 +408,7 @@ window.onload = function() {
         setTimeout(function() {
           $this.removeClass('col-lg-9').addClass('col-lg-12');
           table.showColumn("Id");
+          table.showColumn("view");
           table.showColumn("pid");
           table.showColumn("fid");
           table.showColumn("not");
@@ -379,6 +417,7 @@ window.onload = function() {
       } else {
           $this.removeClass('col-lg-12').addClass('col-lg-9');
           table.hideColumn("Id");
+          table.hideColumn("view");
           table.hideColumn("pid");
           table.hideColumn("fid");
           table.hideColumn("sex");
@@ -566,13 +605,19 @@ getLns();
 
 
 //Trigger setFilter function with correct parameters by State
-  function stateFilter(){
-    
+  // Función para aplicar el filtro por estado
+  function stateFilter() {
+    // Obtiene el valor del campo de filtro de estado
     var filterVal = fieldST;
+    // Obtiene el valor del tipo de filtro
     var typeVal = typeEl2;
     
+    // Si el valor del campo de filtro es "function", usa la función de filtro personalizado
+    // de lo contrario, usa el valor del campo de filtro como filtro
     var filter = filterVal == "function" ? customFilter : filterVal;
 
+    // Si el valor del campo de filtro es "function", deshabilita el campo de tipo y el campo de valor
+    // de lo contrario, habilítalos
     if(filterVal == "function" ){
       typeEl2.disabled = true;
       valueST.disabled = true;
@@ -580,34 +625,39 @@ getLns();
       typeEl2.disabled = false;
       valueST.disabled = false;
     }
-
+    // Si hay un valor de filtro, aplícalo a la tabla
     if(filterVal){
-      //console.log(valueST.value);
       table.setFilter(filter,typeVal, valueST.value);
     }
   };
 
   //Trigger setFilter function with correct parameters by City
-  function cityFilter(){
-
+  // Función para aplicar el filtro por ciudad
+  function cityFilter() {
+    // Obtiene el valor del campo de filtro de ciudad
     var filterVal = fieldCT;
+    // Obtiene el valor del tipo de filtro
     var typeVal = typeEl2;
 
+    // Si el valor del campo de filtro es "function", usa la función de filtro personalizado
+    // de lo contrario, usa el valor del campo de filtro como filtro
     var filter = filterVal == "function" ? customFilter : filterVal;
 
-    if(filterVal == "function" ){
+    // Si el valor del campo de filtro es "function", deshabilita el campo de tipo y el campo de valor
+    // de lo contrario, habilítalos
+    if (filterVal == "function") {
       typeEl2.disabled = true;
       valueCT.disabled = true;
-    }else{
+    } else {
       typeEl2.disabled = false;
       valueCT.disabled = false;
     }
-   
-    if(filterVal){
-      // console.log(valueCT.value);
-      table.setFilter(filter,typeVal, valueCT.value);
+
+    // Si hay un valor de filtro, aplícalo a la tabla
+    if (filterVal) {
+      table.setFilter(filter, typeVal, valueCT.value);
     }
-  };
+  }
 
   //Trigger setFilter function with correct parameters
   function updateFilter(){

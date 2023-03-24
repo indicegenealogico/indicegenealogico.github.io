@@ -110,6 +110,7 @@ var localidades = [
             {name:'Macuro', code:21},
             {name:'Río Caribe', code:3},
             {name:'San José de Areocuar', code:5},
+            {name:'Soro', code:28},
             {name:'Tunapuy', code:4},
           ]
         },

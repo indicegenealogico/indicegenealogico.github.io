@@ -420,7 +420,7 @@ window.onload = function() {
           table.hideColumn("Id");
           table.hideColumn("view");
           table.hideColumn("pid");
-          table.hideColumn("pind");
+          table.hideColumn("ind");
           table.hideColumn("fid");
           table.hideColumn("sex");
         }
@@ -796,37 +796,21 @@ getLns();
 
   
 // Crea y agrega <li> y <td> a elementos en index
-  // var list = document.getElementById("lista");
-  // var list1 = document.getElementById("progress");
-  // var html = '';
-  // var html1 = '';
-
-  // updates.forEach(function (fechas) {
-  //   html += fechas;
-  // });
-
-  // projects.forEach(function (proyectos){
-  //   html1 += proyectos;
-  // });
-
-  // list.innerHTML = html;
-  // list1.innerHTML = html1;
-
   
-const list = document.getElementById("lista");
-const list1 = document.getElementById("progress");
-let html = '';
-let html1 = '';
+  const list = document.getElementById("lista");
+  const list1 = document.getElementById("progress");
+  let html = '';
+  let html1 = '';
 
-if (updates.length > 0) {
-  html = updates.map((fecha) => fecha).join('');
-}
+  if (updates.length > 0) {
+    html = updates.map((fecha) => fecha).join('');
+  }
 
-if (projects.length > 0) {
-  html1 = projects.map((proyecto) => proyecto).join('');
-}
+  if (projects.length > 0) {
+    html1 = projects.map((proyecto) => proyecto).join('');
+  }
 
-list.innerHTML = html;
-list1.innerHTML = html1;
+  list.innerHTML = html;
+  list1.innerHTML = html1;
 
 };

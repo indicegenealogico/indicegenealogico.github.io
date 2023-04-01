@@ -60,19 +60,19 @@ window.onload = function() {
     var urlprelong = "https://www.familysearch.org/records/images/image-details?page=1&place=";
 
 // **********************  Hojas  *************************
-    // var tree = new ClassyLeaves({
-    //   leaves: 20,
-    //   maxY: -10,
-    //   multiplyOnClick: true,
-    //   multiply: 2,
-    //   infinite: true,
-    //   speed: 4000
-    //     });
-    // $('body').on('click', '.addLeaf', function() {
-    //   console.log('8');
-    //   tree.add(8);
-    //   return false;
-    // });
+    var tree = new ClassyLeaves({
+      leaves: 20,
+      maxY: -10,
+      multiplyOnClick: true,
+      multiply: 2,
+      infinite: true,
+      speed: 4000
+        });
+    $('body').on('click', '.addLeaf', function() {
+      console.log('8');
+      tree.add(8);
+      return false;
+    });
 
 // **********************Tabla****************************
   var table = new Tabulator("#example-table", {
@@ -110,7 +110,7 @@ window.onload = function() {
         }
       },
       { title:"IDFam",field: "fid", sorter: "number", hozAlign:"center", headerFilterPlaceholder:"Familia", headerFilter:"input", visible:false,  minWidth:75, maxWidth:120, responsive:4, headerMenu:headerMenu, download:false},
-      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", minWidth:53, maxWidth:120, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
+      { title:"Tipo",field: "typ", sorter: "string", align: "center", headerFilterPlaceholder:"Tipo", headerFilter:"input", minWidth:45, maxWidth:100, responsive:3, headerMenu:headerMenu, titleDownload:"Record Type",
        		tooltip:function(cell){
             	switch (cell.getValue()){
             		case 'M': tipo = "Matrimonio";
@@ -197,8 +197,8 @@ window.onload = function() {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         };
                         // Alternar para aparecer o no el link de la imagen del conyugue
-                        $('#cy').html('Cónyugue: <i><a href=' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
-                        // $('#cy').html('Cónyugue: <i><b>'+ family.ns + ' ' + family.lns+ '</b></i>');
+                        // $('#cy').html('Cónyugue: <i><a href=' + myurl + '>' + family.ns + ' ' + family.lns + '</a></i>');
+                        $('#cy').html('Cónyugue: <i><b>'+ family.ns + ' ' + family.lns+ '</b></i>');
                       }
                     })
 	                };
@@ -224,8 +224,8 @@ window.onload = function() {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         }; 
                         // Alternar para aparecer o no el link de la imagen del papa
-	                      $('#papa').html('Padre: <i><a href='+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
-                        // $('#papa').html('Padre: <i>'+ padre.ns+' '+padre.lns + '</i>');
+	                      // $('#papa').html('Padre: <i><a href='+ myurl +'>' + padre.ns+' '+padre.lns + '</a></i>');
+                        $('#papa').html('Padre: <i>'+ padre.ns+' '+padre.lns + '</i>');
 	                    }                    
 	                  })              
 	                }
@@ -248,8 +248,8 @@ window.onload = function() {
                         };
                         if( madre.ns+' '+madre.lns !== "Del Valle Josefina Montilla Patiño de Garcia") {
                         // Alternar para aparecer o no el link de la imagen de la mama
-	                       $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
-                        //  $('#mama').html('Madre: <i>'+ madre.ns+' '+madre.lns + '</i>');
+	                      //  $('#mama').html('Madre: <i><a href='+ myurl +'>' + madre.ns+' '+madre.lns + '</a></i>');
+                         $('#mama').html('Madre: <i>'+ madre.ns+' '+madre.lns + '</i>');
                        }
 	                    }                    
 	                  })
@@ -272,8 +272,8 @@ window.onload = function() {
                             var myurl = '"' + urlprelong + record.locat + '&rmsId=' + record.rmsID + '&imageIndex=' + img + '&singleView=true", target="_blank"';        
                         };
                         // Alternar para aparecer o no el link de la imagen de los hijos
-                        $('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href='+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
-		                  	// $('table tbody').append('<tr><td>' + hijo.typ + '</td><td>' + hijo.ns +' ('+hijo.ind +')'+'</td><td>' + hijo.not +'</td></tr>');
+                        // $('table tbody').append('<tr><td>' + hijo.typ + '</td><td><a href='+ myurl +'>' + hijo.ns +' ('+hijo.ind +')'+'</a></td><td>' + hijo.not +'</td></tr>');
+		                  	$('table tbody').append('<tr><td>' + hijo.typ + '</td><td>' + hijo.ns +' ('+hijo.ind +')'+'</td><td>' + hijo.not +'</td></tr>');
 		                  } 
 		                	})
 		                }                                
@@ -318,7 +318,7 @@ window.onload = function() {
       { title:"Nombres",field: "ns", sorter: "string", align: "left", headerFilterPlaceholder:"Nombre(s)", minWidth:100, headerFilter: "input", widthGrow:1.4, headerMenu:headerMenu },
       { title:"Apellidos",field: "lns", bottomCalc: "count", sorter: "string", headerFilterPlaceholder:"Apellido(s)", minWidth:120, headerFilter: "input", widthGrow:1.4, headerMenu:headerMenu },
       { title:"Sexo",field: "sex", sorter: "string", align: "center", editor:"select", headerFilterPlaceholder:"Sexo", headerFilter:"input", visible:false, minWidth:55, maxWidth:100, responsive:6, headerMenu:headerMenu },
-      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:100, headerMenu:headerMenu, download:false},
+      { title:"Indice",field: "ind", sorter: "string", align: "left" , headerFilterPlaceholder:"Indice", headerFilter:"input", maxWidth:100, visible:false, headerMenu:headerMenu, download:false},
       { title:"Padres",field: "pad", sorter: "string", align: "left" , headerFilterPlaceholder:"Padres",headerFilter:"input", minWidth:50, widthGrow:1.25, headerMenu:headerMenu, responsive:4},
       { title:"Año",field: "yy", sorter: "number", align: "center", headerFilter:"input", headerFilterPlaceholder:"Año", headerFilterParams:{values:true}, minWidth:45, maxWidth:100, headerMenu:headerMenu },
       { title:"Ver",formatter:viewIcon, width:40, hozAlign:"center", visible:false, field:"view",
@@ -408,6 +408,7 @@ window.onload = function() {
         setTimeout(function() {
           $this.removeClass('col-lg-9').addClass('col-lg-12');
           table.showColumn("Id");
+          table.showColumn("ind");
           table.showColumn("view");
           table.showColumn("pid");
           table.showColumn("fid");
@@ -419,6 +420,7 @@ window.onload = function() {
           table.hideColumn("Id");
           table.hideColumn("view");
           table.hideColumn("pid");
+          table.hideColumn("pind");
           table.hideColumn("fid");
           table.hideColumn("sex");
         }
@@ -792,7 +794,8 @@ getLns();
     table.download("csv", "data.csv");
   });
 
-      // Crea y agrega <li> y <td> a elementos en index
+  
+// Crea y agrega <li> y <td> a elementos en index
   // var list = document.getElementById("lista");
   // var list1 = document.getElementById("progress");
   // var html = '';
@@ -808,5 +811,22 @@ getLns();
 
   // list.innerHTML = html;
   // list1.innerHTML = html1;
+
+  
+const list = document.getElementById("lista");
+const list1 = document.getElementById("progress");
+let html = '';
+let html1 = '';
+
+if (updates.length > 0) {
+  html = updates.map((fecha) => fecha).join('');
+}
+
+if (projects.length > 0) {
+  html1 = projects.map((proyecto) => proyecto).join('');
+}
+
+list.innerHTML = html;
+list1.innerHTML = html1;
 
 };

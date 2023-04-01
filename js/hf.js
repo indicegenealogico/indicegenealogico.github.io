@@ -792,22 +792,21 @@ getLns();
     table.download("csv", "data.csv");
   });
 
-  
-// Crea y agrega <li> y <td> a elementos en index
-  var list = document.getElementById("lista");
-  var list1 = document.getElementById("progress");
-  var html = '';
-  var html1 = '';
+      // Crea y agrega <li> y <td> a elementos en index
+  // var list = document.getElementById("lista");
+  // var list1 = document.getElementById("progress");
+  // var html = '';
+  // var html1 = '';
 
-  updates.forEach(function (fechas) {
-    html += fechas;
-  });
+  // updates.forEach(function (fechas) {
+  //   html += fechas;
+  // });
 
-  projects.forEach(function (proyectos){
-    html1 += proyectos;
-  });
+  // projects.forEach(function (proyectos){
+  //   html1 += proyectos;
+  // });
 
-  list.innerHTML = html;
-  list1.innerHTML = html1;
+  // list.innerHTML = html;
+  // list1.innerHTML = html1;
 
 };

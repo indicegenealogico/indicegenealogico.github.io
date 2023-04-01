@@ -218,3 +218,20 @@ var updates = [
   '<li class="list-group-item"><small>01/28/2021 | Se abre una página de <a href="https://www.facebook.com/IndiceGenealogico/">Facebook</a> para Índice Genealógico.</small></li>',
   '<li class="list-group-item"><small>10/25/2020 | Se da inicio al proyecto de Índice Genealógico.</small></li>', 
 ];
+
+
+const list = document.getElementById("lista");
+const list1 = document.getElementById("progress");
+let html = '';
+let html1 = '';
+
+if (updates.length > 0) {
+  html = updates.map((fecha) => fecha).join('');
+}
+
+if (projects.length > 0) {
+  html1 = projects.map((proyecto) => proyecto).join('');
+}
+
+list.innerHTML = html;
+list1.innerHTML = html1;

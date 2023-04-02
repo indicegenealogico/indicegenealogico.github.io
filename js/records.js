@@ -166,7 +166,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Mar 14, 2023";
+document.getElementById('update').innerHTML = "Abr 02, 2023";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();

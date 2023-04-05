@@ -90,9 +90,8 @@ var recordset = [
 ];
 
 var projects = [
-  '<tr><td>Vzla</td><td>Sucre</td><td>Yaguaraparo</td><td>M</td><td>1889-1957</td></tr>',
-  '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>',
-  '<tr><td>    </td><td>Carabobo</td><td>Valencia</td><td>M</td><td>1972</td></tr>',
+  '<tr><td>Vzla</td><td>Sucre</td><td>Soro</td><td>B</td><td>1905-1936</td></tr>',
+  '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
 
@@ -166,7 +165,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Abr 02, 2023";
+document.getElementById('update').innerHTML = "Abr 5, 2023";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();
@@ -175,9 +174,10 @@ document.getElementById("copyright").textContent = "© 2020 - " + actualYear;
 
 
 var updates = [
-  '<li class="list-group-item"><small>03/14/2022 | Agregado Tomo # de Soro - Bautizos 1899-1904 San Jose.</small></li>',
-  '<li class="list-group-item"><small>02/25/2022 | Agregado Tomo # de Caicara - Bautizos 1915-1926 Santo Domingo.</small></li>',
-  '<li class="list-group-item"><small>02/18/2022 | Agregado Tomo # de Tunapuy - Bautizos 1867-1889 San Juan Bautista.</small></li>',
+  '<li class="list-group-item"><small>04/05/2023 | Agregado hijos de Matrimonios de Tunapuy 1894-1999 San Juan Bautista.</small></li>',
+  '<li class="list-group-item"><small>03/14/2023 | Agregado Tomo # de Soro - Bautizos 1899-1904 San Jose.</small></li>',
+  '<li class="list-group-item"><small>02/25/2023 | Agregado Tomo # de Caicara - Bautizos 1915-1926 Santo Domingo.</small></li>',
+  '<li class="list-group-item"><small>02/18/2023 | Agregado Tomo # de Tunapuy - Bautizos 1867-1889 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>02/11/2023 | Creacion de Padres de multiples hijos en Tunapuy y Guiria.</small></li>',
   '<li class="list-group-item"><small>01/14/2023 | Agregado Tomo # de Tunapuy - Bautizos 1889-1892 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>12/24/2022 | Agregado El Valle de Nueva Esparta - Matrimonios 1978 Ntra. Sra. del Valle</small></li>',
@@ -219,20 +219,3 @@ var updates = [
   '<li class="list-group-item"><small>01/28/2021 | Se abre una página de <a href="https://www.facebook.com/IndiceGenealogico/">Facebook</a> para Índice Genealógico.</small></li>',
   '<li class="list-group-item"><small>10/25/2020 | Se da inicio al proyecto de Índice Genealógico.</small></li>', 
 ];
-
-
-const list = document.getElementById("lista");
-const list1 = document.getElementById("progress");
-let html = '';
-let html1 = '';
-
-if (updates.length > 0) {
-  html = updates.map((fecha) => fecha).join('');
-}
-
-if (projects.length > 0) {
-  html1 = projects.map((proyecto) => proyecto).join('');
-}
-
-list.innerHTML = html;
-list1.innerHTML = html1;

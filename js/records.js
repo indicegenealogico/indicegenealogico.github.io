@@ -87,6 +87,7 @@ var recordset = [
   { id:'87', locat: '2104138', type: 'Sin Imagen', rmsID: '', title: 'Río Caribe - Todas las Parroquias ', size: 0 },
   { id:'88', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXC', title: 'Tunapuy - San Juan Bautista 1867-1889', size: 192 },
   { id:'89', locat: '5366', type: 'Bautizo', rmsID: 'TH-909-57048-19138-53', title: 'Caicara - Santo Domingo 1915-1926', size: 751 },
+  { id:'90', locat: '7940320', type: 'Libros Historicos', rmsID: 'TH-909-63319-103765-90', title: 'Valencia - Luis Alberto Sucre 1972', size: 650 },
 ];
 
 var projects = [
@@ -122,6 +123,11 @@ var localidades = [
        { name:'Amazonas', code:248, 
           ciudades : [
             {name:'Maróa', code:29},
+          ]
+        },
+        { name:'Carabobo', code:241, 
+          ciudades : [
+            {name:'Valencia', code:32},
           ]
         },
         { name:'Delta Amacuro', code:287, 
@@ -165,7 +171,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Abr 5, 2023";
+document.getElementById('update').innerHTML = "Abr 8, 2023";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();
@@ -174,6 +180,7 @@ document.getElementById("copyright").textContent = "© 2020 - " + actualYear;
 
 
 var updates = [
+  '<li class="list-group-item"><small>04/08/2023 | Agregado Libro Historico de Apellidos de Valencia 1972.</small></li>',
   '<li class="list-group-item"><small>04/05/2023 | Agregado hijos de Matrimonios de Tunapuy 1894-1999 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>03/14/2023 | Agregado Tomo # de Soro - Bautizos 1899-1904 San Jose.</small></li>',
   '<li class="list-group-item"><small>02/25/2023 | Agregado Tomo # de Caicara - Bautizos 1915-1926 Santo Domingo.</small></li>',

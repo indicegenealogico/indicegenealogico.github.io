@@ -8,11 +8,6 @@
     width: 1px;
     white-space: nowrap;
 }
-.book {
-  background-image: url(../img/cover.png);
-  background-size: cover;
-  background-position: center;
-}
 
 .toc-list, .toc-list ol {
   list-style-type: none;

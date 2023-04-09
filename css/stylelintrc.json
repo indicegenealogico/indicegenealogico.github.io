@@ -1,0 +1,6 @@
+{
+  "extends": "%AppData%/Roaming/npm/stylelint-config-recommended",
+  "rules": {
+    "value-no-vendor-prefix": true
+  }
+}

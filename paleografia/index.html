@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+á<html lang="es" data-livestyle-extension="available">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Indices de Registros Parroquiales y Civiles">
+    <meta name="keywords"
+        content="indice, indices, parroquia, parroquiales, bautizos, defunciones, matrimonios, registros, civiles, ecleciasticos, genealogia, carupano, guiria, sucre">
+    <meta name="author" content="Henry Diaz">
+    <!-- <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico"> -->
+    <title>Práctica Paleográfica AGN | Índice Genealógico</title>
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link href="../dist/css/tabulator.min.css" rel="stylesheet" title="Default">
+    <link href="../css/hf.css" rel="stylesheet">
+    <link href="../css/content_table.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- <script type="text/javascript" src="indices/listado.js"></script> -->
+    <script src="https://use.fontawesome.com/7e699c67db.js"></script>
+
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+
+</head>
+
+<body>
+    <div class="container-xxl">
+        <header>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="../"><img src="../img/favicon/android-chrome-512x512.png"
+                            alt="Company Logo" style="width:40px;" class=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="../">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../nombres/">Nombres</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#">Apellidos <span
+                                        class="sr-only">(current)</span></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Centros HF
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="https://www.facebook.com/distrito.carupano.7"
+                                        target="_blank">Carúpano</a>
+                                    <a class="dropdown-item disabled" href="#" target="_blank"
+                                        aria-disabled="true">Nueva Esparta</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item  disabled" href="#" target="_blank" aria-disabled="true">San
+                                        Luis Potosi</a>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="jumbotron slave p-3 p-md-6 text-white rounded bg-dark">
+            <!-- <img class="jumbo-bg" src="../img/indices.jpg" alt="bandera" /> -->
+            <div class="col-md-6 px-0 jumbo">
+                <h1 class="display-4 font-italic">Índice Genealógico</h1>
+                <h2>... Uniendo Generaciones</h2>
+                <p class="lead my-3">
+                    El primer paso en genealogía, es conocer a nuestros antepasados.
+                    Para encontrarlos, Índice Genealógico te ofrece la manera más rápida
+                    y sencilla de hacerlo.
+                </p>
+                <p class="lead mb-0">
+                    <a href="#title" class="text-white font-weight-bold">Compruébalo...</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- </div> -->
+        <main role="main" class="container-fluid">
+            <div class="row">
+                <div id="tabla_Tab" class="col-lg-12 blog-main">
+                    <div class="blog-post">
+                        
+
+                        <div class="fb-like" data-href="https://www.facebook.com/IndiceGenealogico" data-width=""
+                            data-layout="standard" data-action="like" data-size="small" data-share="true">
+                        </div>
+                        <div id="title_div" class="card p-3 bg-light">
+                            <h3 id="title">Práctica Paleografica en Índice Genealógico</h3>
+                            <p title="Actualización más reciente">Última actualización: <b id="update"></b></p>
+                        </div>
+                        <p>El libro "Práctica Paleográfica" de Antonio González Antías, es un manual para la transcripción de documentos manuscritos del siglo XVI y XVII</p>
+
+                        <!-- <div id="example-table"></div> -->
+                        <div class="d-flex justify-content-between">
+                            <div class="fb-like" data-href="https://www.indicegenealogico.net" data-width=""
+                                data-layout="button" data-action="like" data-size="small" data-share="false"></div>
+                            <!-- <a href="#" id="download-csv" class="badge badge-link">Descargar archivo csv</a> -->
+                        </div>
+                        <!-- Control buttons -->
+                        <div id="myPDF" class="row">
+                            <div class="col-md-6">
+                                <a href="Paleografia_AGN_VE.pdf"><img src="/img/paleografia_cover.png" alt=""></a>
+                            </div  class="col-md-6">
+                            <div>
+                                <!-- role=list necessary because WebKit removes list semantic when list-style-type: none -->
+                                <ol class="toc-list" role="list">
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=3">
+                                            <span class="title">Prólogo<span class="leaders"
+                                                    aria-hidden="true"></span></span> <span data-href="Paleografia_AGN_VE.pdf#page=3"
+                                                class="page"><span class="visually-hidden">Page&nbsp;</span>5</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=4">
+                                            <span class="title">Introducción<span class="leaders"
+                                                    aria-hidden="true"></span></span> <span data-href="Paleografia_AGN_VE.pdf#page=4"
+                                                class="page"><span class="visually-hidden">Page&nbsp;</span>7</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=7">
+                                            <span class="title">1. La Transcripción Documental y sus Dificultades<span class="leaders"
+                                                    aria-hidden="true"></span></span> <span data-href="Paleografia_AGN_VE.pdf#page=7"
+                                                class="page"><span class="visually-hidden">Page&nbsp;</span>13</span>
+                                        </a>
+                                        <ol role="list">
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=8">
+                                                    <span class="title">Dificultades externas a la escritura<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=8" class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>14</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=9">
+                                                    <span class="title">Dificultades internas a la escritura<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=9" class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>16</span>
+                                                </a>
+                                            </li>                                            
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=17">
+                                            <span class="title">2. Pautas para la Solución de Problemas<span class="leaders"
+                                                    aria-hidden="true"></span></span>
+                                            <span data-href="Paleografia_AGN_VE.pdf#page=17" class="page"><span
+                                                    class="visually-hidden">Page&nbsp;</span>33</span>
+                                        </a>
+                                        <ol role="list">
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=18">
+                                                    <span class="title">Limpieza de la escritura<span class="leaders"
+                                                            aria-hidden="true"></span></span>
+                                                    <span data-href="Paleografia_AGN_VE.pdf#page=18"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>35</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=19">
+                                                    <span class="title">Formación de muestrario de letras<span
+                                                            class="leaders" aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=19"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>37</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=21">
+                                                    <span class="title">Solución de enlaces indebidos entre palabras<span class="leaders"
+                                                            aria-hidden="true"></span></span>
+                                                    <span data-href="Paleografia_AGN_VE.pdf#page=21"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>41</span>
+                                                </a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=23">
+                                            <span class="title">3. Tipos de Transcripción y Formas de Presentación<span class="leaders"
+                                                    aria-hidden="true"></span></span>
+                                            <span data-href="Paleografia_AGN_VE.pdf#page=23" class="page"><span
+                                                    class="visually-hidden">Page&nbsp;</span>45</span>
+                                        </a>
+                                        <ol role="list">
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=24">
+                                                    <span class="title">Tipos de Transcripción<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=24"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>46</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=26">
+                                                    <span class="title">Formas de presentación de la transcripción<span
+                                                            class="leaders" aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=26"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>51</span>
+                                                </a>
+                                            </li>
+
+
+
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=27">
+                                            <span class="title">4. Estudio de las Abreviaturas<span class="leaders"
+                                                    aria-hidden="true"></span></span>
+                                            <span data-href="Paleografia_AGN_VE.pdf#page=27" class="page"><span
+                                                    class="visually-hidden">Page&nbsp;</span>43</span>
+                                        </a>
+                                        <ol role="list">
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=31">
+                                                    <span class="title">Signos Abreviativos<span class="leaders"
+                                                            aria-hidden="true"></span></span>
+                                                    <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=31"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>51</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=32">
+                                                    <span class="title">Tipos de Abreviaturas<span
+                                                            class="leaders" aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=32"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>57</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=33">
+                                                    <span class="title">Letras Sobrepuestas<span class="leaders"
+                                                            aria-hidden="true"></span></span>
+                                                    <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=33"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>61</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=33">
+                                                    <span class="title">SIglas<span class="leaders"
+                                                            aria-hidden="true"></span></span>
+                                                    <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=33"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>65</span>
+                                                </a>
+                                            </li>
+
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=35">
+                                            <span class="title">5. La Escritura en Venezuela<span
+                                                    class="leaders" aria-hidden="true"></span></span>
+                                            <span data-href="Paleografia_AGN_VE.pdf#page=35" class="page"><span
+                                                    class="visually-hidden">Page&nbsp;</span>67</span>
+                                        </a>
+                                        <ol role="list">
+
+                                            <li>
+                                                <a
+                                                    href="Paleografia_AGN_VE.pdf#page=36">
+                                                    <span class="title">Abreviaturas usuales en los documentos historicos venezolanos (siglos XVI-XVIII)<span class="leaders"
+                                                            aria-hidden="true"></span></span>
+                                                    <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=36"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>69</span>
+                                                </a>
+                                            </li>
+
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=37">
+                                            <span class="title">Fuentes Consultadas<span class="leaders"
+                                                    aria-hidden="true"></span></span>
+                                            <span data-href="Paleografia_AGN_VE.pdf#page=37" class="page"><span
+                                                    class="visually-hidden">Page&nbsp;</span>73</span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="Paleografia_AGN_VE.pdf#page=38">
+                                            <span class="title">Anexos<span class="leaders"
+                                                    aria-hidden="true"></span></span>
+                                            <span data-href="Paleografia_AGN_VE.pdf#page=38" class="page"><span
+                                                    class="visually-hidden">Page&nbsp;</span>75</span>
+                                        </a>
+                                        <ol role="list">
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=39">
+                                                    <span class="title">Muestra de escrituras<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=39"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>76</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=45">
+                                                    <span class="title">Muestra de palabras abreviadas con letras exponentes<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=45"
+                                                        class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>88</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=47">
+                                                    <span class="title">Muestras de abreviaturas correspondientes a la actividad e instituciones ecleciasticas<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=47" class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>92</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=48">
+                                                    <span class="title">Abreviaturas usuales<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=48" class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>94</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=55">
+                                                    <span class="title">Normas para la transcripción de documentos<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=55" class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>109</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="Paleografia_AGN_VE.pdf#page=57">
+                                                    <span class="title">Firmas y Rúbricas<span class="leaders"
+                                                            aria-hidden="true"></span></span> <span
+                                                        data-href="Paleografia_AGN_VE.pdf#page=57" class="page"><span
+                                                            class="visually-hidden">Page&nbsp;</span>113</span>
+                                                </a>
+                                            </li>
+
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- /.blog-main -->
+
+            </div><!-- /.row -->
+        </main>
+    </div><!-- /.container -->
+    <footer class="bg-dark text-center text-lg-start footer navbar-fixed-bottom">
+        <div class="footer-wrapper">
+            <div class="text-center p-3 text-light">
+                Â© 2020 - 2023
+                <a class="text-light" href="#"> Índice Genealógico</a>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/IndiceGenealogico/" target="_blank"><img
+                        src="../img/social/facebook.png" alt="facebook-icon"></a>
+                <a href="mailto:indicegenealogico@gmail.com"><img src="../img/social/gmail.png" alt="gmail-icon"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="../dist/js/tabulator.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/records.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -88,6 +88,7 @@ var recordset = [
   { id:'88', locat: '2106125', type: 'Bautizo', rmsID: 'M9CH-PXC', title: 'Tunapuy - San Juan Bautista 1867-1889', size: 192 },
   { id:'89', locat: '5366', type: 'Bautizo', rmsID: 'TH-909-57048-19138-53', title: 'Caicara - Santo Domingo 1915-1926', size: 751 },
   { id:'90', locat: '7940320', type: 'Libros Historicos', rmsID: 'TH-909-63319-103765-90', title: 'Valencia - Luis Alberto Sucre 1972', size: 650 },
+  { id:'91', locat: '10990575', type: 'Matrimonio', rmsID: 'M9CH-PXQ', title: 'Yaguaraparo - San Juan Bautista 1889-1957', size: 117 },
 ];
 
 var projects = [
@@ -113,6 +114,7 @@ var localidades = [
             {name:'San José de Areocuar', code:5},
             {name:'Soro', code:28},
             {name:'Tunapuy', code:4},
+            {name:'Yaguaraparo', code:33},
           ]
         },
 	      // { name:'Dtto. Federal', code:212, 
@@ -171,7 +173,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Abr 9, 2023";
+document.getElementById('update').innerHTML = "May 20, 2023";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();
@@ -180,6 +182,7 @@ document.getElementById("copyright").textContent = "© 2020 - " + actualYear;
 
 
 var updates = [
+  '<li class="list-group-item"><small>04/05/2023 | Agregado  Matrimonios de Yaguaraparo 1889-1957 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>04/09/2023 | Se agrega libro de Paleografia a la Nueva Biblioteca de Libros.</small></li>',
   '<li class="list-group-item"><small>04/08/2023 | Agregado Libro Historico de Apellidos de Valencia 1972.</small></li>',
   '<li class="list-group-item"><small>04/05/2023 | Agregado hijos de Matrimonios de Tunapuy 1894-1999 San Juan Bautista.</small></li>',

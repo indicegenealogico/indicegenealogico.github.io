@@ -93,7 +93,7 @@ var recordset = [
 
 var projects = [
   // '<tr><td>Vzla</td><td>Sucre</td><td>Soro</td><td>B</td><td>1905-1936</td></tr>',
-  '<tr><td>    </td><td>Dtto Federal</td><td>Caracas</td><td>B</td><td>1596-1616</td></tr>'
+  '<tr><td>    </td><td>Sucre</td><td>Rio Caribe</td><td>B</td><td>1891-1927</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
 

@@ -93,7 +93,7 @@ var recordset = [
 
 var projects = [
   // '<tr><td>Vzla</td><td>Sucre</td><td>Soro</td><td>B</td><td>1905-1936</td></tr>',
-  '<tr><td>    </td><td>Sucre</td><td>Rio Caribe</td><td>B</td><td>1891-1927</td></tr>'
+  '<tr><td>    </td><td>Sucre</td><td>Rio Caribe</td><td>B</td><td>1895-1927</td></tr>'
   // '<tr><td>Méx</td><td>SL Potosi</td><td>Bocas</td><td>D</td><td>1804-1876</td></tr>',
 ];
 
@@ -173,7 +173,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Oct 01, 2023";
+document.getElementById('update').innerHTML = "Abr 27, 2024";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();
@@ -182,6 +182,7 @@ document.getElementById("copyright").textContent = "© 2020 - " + actualYear;
 
 
 var updates = [
+  '<li class="list-group-item"><small>04/27/2024 | Agregado  Bautizos de Rio Caribe 1891-1894 San Miguel Arcangel.</small></li>',
   '<li class="list-group-item"><small>10/01/2023 | Completado  Matrimonios de Rio Caribe 1907-1951 San Miguel Arcangel.</small></li>',
   '<li class="list-group-item"><small>04/05/2023 | Agregado  Matrimonios de Yaguaraparo 1889-1957 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>04/09/2023 | Se agrega libro de Paleografia a la Nueva Biblioteca de Libros.</small></li>',

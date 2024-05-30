@@ -144,6 +144,7 @@ window.onload = function() {
 	            var nombre = nombres[0] + " " + apellidos[0];
 	            var sexo = "";
               var ark = celda.ark;
+              var notas = celda.not;
 
 	            //console.log(type);
 
@@ -163,7 +164,6 @@ window.onload = function() {
 	            }
 	                      
 	            
-
 	            if (type == "N") {
 	              $("#btn_image").hide();
 	            } else {
@@ -292,25 +292,31 @@ window.onload = function() {
 	            $("#typ").html("Tipo de registro: <i> " + tipo + "</i>");
 	            $("#yy").html("Año: <i> " + celda.yy + "</i>");
 
-	            var x = getCities();
+	            var ciudades = getCities();
 
-              var stcity = x.map( function(city){
+              var stcity = ciudades.map( function(city){
 	              if (city.cityId == ctcode){
 	                $("#ct").html("Ciudad: <i>" + city.cityName + "</i>");
 	              }
 	            });
 
-	            var stcode = x.map( function(state){
+	            var stcode = ciudades.map( function(state){
 	              if (state.stateId == stcode){
 	                $("#st").html("Estado: <i>" + state.stateName + "</i>");
 	              }
 	            });
 
-              var pzcode = x.map( function(country){
+              var pzcode = ciudades.map( function(country){
                 if (country.paisCode == pcode){
                   $("#pz").html("Pais: <i>" + country.paisName + "</i>");
                 }
               });
+              if (notas !== '') {
+                $("#nt").html("Notas: <i> " + notas + "</i>");
+              } else {
+                $("#nt").hide();
+              }
+              
 
 	            $("#recordModal").modal(); 	           
           	}
@@ -812,5 +818,9 @@ getLns();
 
   list.innerHTML = html;
   list1.innerHTML = html1;
+
+  $('#recordModal').on('hidden.bs.modal', function () {
+    $(this).find('form').trigger('reset');
+})
 
 };

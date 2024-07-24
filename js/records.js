@@ -4,7 +4,7 @@ var recordset = [
   { id:'3', locat: '2423652', type: 'Bautizo', rmsID: 'M9SM-SJ3', title: 'Guiria - Inmaculada Concepción 1881-1898', size: 120 },
   { id:'4', locat: '2115315', type: 'Matrimonio', rmsID: 'M94X-9TY', title: 'Carúpano - Santa Rosa 1896-1913', size: 108 },
   { id:'5', locat: '2423652', type: 'Matrimonio', rmsID: 'M9H9-9F8', title: 'Guiria - Inmaculada Concepción 1862-1907', size: 150 },
-  { id:'6', locat: '2104138', type: 'Bautizo', rmsID: 'TH-1942-23241-36297-62', title: 'Río Caribe - San Miguel 1891-1927', size: 0 },
+  { id:'6', locat: '2104138', type: 'Bautizo', rmsID: 'TH-1942-23241-36297-62', title: 'Río Caribe - San Miguel 1891-1895', size: 0 },
   { id:'7', locat: '2104138', type: 'Matrimonio', rmsID: 'M94B-F7F', title: 'Río Caribe - San Miguel 1907-1951', size: 271 },
   { id:'9', locat: '2118623', type: 'Bautizo', rmsID: 'M99T-ZY2', title: 'El Pilar - Nuestra Señora del Pilar 1832-1836', size: 0 },
   { id:'10', locat: '2115315', type: 'Bautizo', rmsID: 'M94X-9TN', title: 'Carúpano - Santa Rosa 1925-1928', size: 220 },
@@ -173,7 +173,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Abr 27, 2024";
+document.getElementById('update').innerHTML = "Jul 24, 2024";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();
@@ -182,7 +182,7 @@ document.getElementById("copyright").textContent = "© 2020 - " + actualYear;
 
 
 var updates = [
-  '<li class="list-group-item"><small>04/27/2024 | Agregado  Bautizos de Rio Caribe 1891-1894 San Miguel Arcangel.</small></li>',
+  '<li class="list-group-item"><small>07/24/2024 | Agregado  Bautizos de Rio Caribe 1891-1895 San Miguel Arcangel.</small></li>',
   '<li class="list-group-item"><small>10/01/2023 | Completado  Matrimonios de Rio Caribe 1907-1951 San Miguel Arcangel.</small></li>',
   '<li class="list-group-item"><small>04/05/2023 | Agregado  Matrimonios de Yaguaraparo 1889-1957 San Juan Bautista.</small></li>',
   '<li class="list-group-item"><small>04/09/2023 | Se agrega libro de Paleografia a la Nueva Biblioteca de Libros.</small></li>',

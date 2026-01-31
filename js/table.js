@@ -27,6 +27,7 @@ new Tabulator("#table", {
   headerSortTristate: true,
 
 
+
   rowContext: function (e, row) {
     seeImage(row);
     e.preventDefault();
@@ -81,4 +82,27 @@ function seeImage(row) {
   $("#btn_image").click(function () {
     window.open(url);
   });
-}            
+}
+
+function generateColumns(data) {
+  return Object.keys(data[0]).map((key, index) => {
+    const col = {
+      title: key,
+      field: key,
+      headerFilter: true,
+      formatter: key === "href" ? "link" : undefined,
+      formatterParams:
+        key === "href" ? { label: "View", target: "_blank" } : undefined,
+    };
+
+    // 👉 Agregar bottomCalc SOLO a una columna
+    if (index === 2) {
+      col.bottomCalc = "count";
+      col.bottomCalcFormatter = function (cell) {
+        return `${cell.getValue()} registros`;
+      };
+    }
+
+    return col;
+  });
+}

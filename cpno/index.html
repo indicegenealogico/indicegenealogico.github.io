@@ -1,15 +1,15 @@
-<!-- /indicegenealogico.github.io/apellidos/index.html -->
+<!-- /indicegenealogico.github.io/nombres/index.html -->
 <!DOCTYPE html>
 <html lang="es" data-livestyle-extension="available">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Lista de Apellidos en Índice Genealógico">
+    <meta name="description" content="Lista de nombres en �ndice Geneal�gico">
     <meta name="keywords"
         content="indice, indices, parroquia, parroquiales, bautizos, defunciones, matrimonios, registros, civiles, ecleciasticos, genealogia, carupano, guiria, sucre">
     <meta name="author" content="Henry Diaz">
-    <title>Apellidos | Índice Genealógico</title>
+    <title>Imagenes | Índice Genealógico</title>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,19 +18,12 @@
     <link rel="stylesheet" href="../css/jquery.classyleaves.min.css" /> -->
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+    <link href="../dist/css/tabulator.min.css" rel="stylesheet" title="Default">
     <link href="../css/hf.css" rel="stylesheet">
-    <style>
-    .clickable-row { cursor: pointer; }
-    .clickable-row:hover { filter: brightness(0.97); }
-    .filter-input { width: 100%; padding: 2px 4px; }
-
-    td {
-      padding-top: 1px !important;
-      padding-bottom: 1px !important;
-    }
-  </style>
+    <link href="../css/listados.css" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
 
@@ -64,9 +57,9 @@
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href="../">Inicio</span></a></li>
                             <li class="nav-item"><a class="nav-link" href="../nombres/">Nombres</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="../apellidos/">Apellidos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../apellidos/">Apellidos</a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Recursos
                                 </a>
@@ -117,35 +110,39 @@
                 </p>
             </div>
         </div>
+
+        <div id="turn">
+            Por favor, gire su dispositivo horizontalmente para acceder al contenido de la pagina.
+        </div>
         <!-- </div> -->
         <main role="main" class="container-fluid">
             <div class="row">
-              <h4 class="mb-3">Registros Parroquiales – Carúpano</h4>
+                <div id="tabla_Tab" class="col-lg-12 blog-main">
+                    <div class="blog-post">
 
-  <div class="mb-2">
-    <input type="text" id="filter-input" class="form-control" placeholder="Filtrar por descripción o tipo...">
-  </div>
+                        <div class="fb-like" data-href="https://www.facebook.com/IndiceGenealogico" data-width=""
+                            data-layout="standard" data-action="like" data-size="small" data-share="true">
+                        </div>
+                        <div id="title_div" class="card p-3 bg-light">
+                            <h3 id="title">Lista de Imagenes del Estado Sucre</h3>
+                            <p title="Actualizaci�n más reciente">Última actualización: <b id="update"></b></p>
+                        </div>
 
-  <div class="table-responsive">
-    <table id="data-table" class="table table-sm table-hover table-striped align-middle mb-0">
-      <thead class="table-dark">
-        <tr>
-          <th style="width: 60px;">#</th>
-          <th>Periodo</th>
-          <th>Descripción</th>
-          <th>Tipo</th>
-          <th>Imágenes</th>
-          <th>Lugar</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
-                
+                        <!-- <div id="example-table"></div> -->
+                        <div class="d-flex justify-content-between">
+                            <div class="fb-like" data-href="https://www.indicegenealogico.net" data-width=""
+                                data-layout="button" data-action="like" data-size="small" data-share="false"></div>
+                            <!-- <a href="#" id="download-csv" class="badge badge-link">Descargar archivo csv</a> -->
+                        </div>
+                        <!-- Control buttons -->
+                        <div id="table"></div>
+
+
+                    </div>
+                </div><!-- /.blog-main -->
 
             </div><!-- /.row -->
         </main>
-
     </div><!-- /.container -->
     <footer class="bg-dark text-center text-lg-start footer navbar-fixed-bottom">
         <div class="footer-wrapper">
@@ -168,7 +165,8 @@
     <!-- <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/cpno.js"></script>
+    <script type="text/javascript" src="../js/records.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
     <script type="text/javascript" src="../js/table.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"

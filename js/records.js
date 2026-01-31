@@ -174,7 +174,7 @@ var localidades = [
 
 
 // Cambiar fecha de actualizacion
-document.getElementById('update').innerHTML = "Jul 24, 2024";
+document.getElementById('update').innerHTML = "Ene 30, 2026";
 
 // Extrae el año actual y lo agrega al copyright
 const fechaActual = new Date();

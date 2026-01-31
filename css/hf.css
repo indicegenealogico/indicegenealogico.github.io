@@ -1,3 +1,4 @@
+/* /indicegenealogico.github.io/css/hf.css */
 body {
     background-color: #f0f2f5 !important;
 }
@@ -239,6 +240,21 @@ h5 {
 
 .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.table-father:hover {
     background: #ffffd6 !important
+}
+.tabulator-row.table-success {
+    background-color: #d1e7dd !important;
+}
+
+.tabulator-row.table-primary {
+    background-color: #cfe2ff !important;
+}
+
+.tabulator-row.table-danger {
+    background-color: #f8d7da !important;
+}
+
+.tabulator-row.table-warning {
+    background-color: #fff3cd !important;
 }
 
 #facebook,

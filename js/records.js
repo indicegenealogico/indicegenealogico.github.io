@@ -1,3 +1,4 @@
+///indicegenealogico.github.io/js/records.js
 var recordset = [
   { id:'1', locat: '2115315', type: 'Bautizo', rmsID: 'TH-1951-23240-52713-77', title: 'Carúpano - Santa Rosa 1890-91, 1908-12', size: 2993 },
   { id:'2', locat: '2115315', type: 'Defuncion', rmsID: 'M9HM-RM5', title: 'Carúpano - Santa Catalina 1920-1938', size: 120 },

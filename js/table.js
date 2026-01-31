@@ -56,7 +56,7 @@ new Tabulator("#table", {
         break;
 
       case "Matrimonios":
-        el.classList.add("table-primary");
+        el.classList.add("table-warning");
         break;
 
       case "Defunciones":
@@ -68,7 +68,7 @@ new Tabulator("#table", {
         break;
 
       default:
-        el.classList.add("table-warning");
+        el.classList.add("table-primary");
     }
   }
 
@@ -99,7 +99,7 @@ function generateColumns(data) {
     if (index === 2) {
       col.bottomCalc = "count";
       col.bottomCalcFormatter = function (cell) {
-        return `${cell.getValue()} registros`;
+        return `${cell.getValue()} libros`;
       };
     }
 

@@ -626,183 +626,7 @@ const TABLE_DATA = [
     "Location": "Ayacucho, Sucre, Sucre, Venezuela",
     "href": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-C95B-3SHV-T?view=explore&groupId=TH-909-49443-59376-95&grid=on&lang=en"
   },
-  {
-    "Periodo": "1962-1968",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "501 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-V3D9-69DM-H?view=explore&groupId=M99R-5YQ&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1962-1968",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "123 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-69C2-7?view=explore&groupId=M99R-5Y7&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1968-1969",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "497 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-69CV-7?view=explore&groupId=M99R-574&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1968-1977",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "69 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-V3D9-698J-K?view=explore&groupId=M99R-57H&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1978-1985",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "502 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-6966-3?view=explore&groupId=M99R-57C&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1978-1985",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "85 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-V3D9-69FJ-G?view=explore&groupId=M99R-57Z&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1985-1990",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "468 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-69ZR-Z?view=explore&groupId=M99R-58Y&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1985-1990",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "61 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-V3D9-69DG-B?view=explore&groupId=M99R-58B&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1990-1992",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "319 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-69ZC-1?view=explore&groupId=M99R-5XT&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1990-1992",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "32 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-69ZH-Q?view=explore&groupId=M99R-5XY&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1992-1995",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "322 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-69ZM-4?view=explore&groupId=M99R-P1M&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1992-1995",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "27 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-69CG-5?view=explore&groupId=M99R-P19&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1998-2004",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "306 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-698W-V?view=explore&groupId=M99R-5S7&grid=on&lang=en"
-  },
-  {
-    "Periodo": "1998-2004",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "33 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-V3D9-696H-T?view=explore&groupId=M99R-5SW&grid=on&lang=en"
-  },
-  {
-    "Periodo": "2004-2007",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos",
-    "Tipo": "Bautismos",
-    "Images": "286 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J3D9-698R-4?view=explore&groupId=M99R-5S4&grid=on&lang=en"
-  },
-  {
-    "Periodo": "2004-2007",
-    "Descripción": "Parr. Santa Rosa de Lima - Caracas - Bautismos sólo índice",
-    "Tipo": "Bautismos",
-    "Images": "33 images",
-    "Ciudad": "Caracas",
-    "Municipio": "",
-    "Estado": "Dtto. Capital",
-    "Location": "Caracas, Dtto. Capital, Venezuela",
-    "href": "https://www.familysearch.org/ark:/61903/3:1:3QHV-V3D9-696K-F?view=explore&groupId=M99R-5SH&grid=on&lang=en"
-  },
-  {
+    {
     "Periodo": "1825-1829",
     "Descripción": "Parr. San Felipe Apóstol - Cariaco - Bautismos",
     "Tipo": "Bautismos",
@@ -2058,7 +1882,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1976—1978",
-    "Descripción": "Parr. Divina Misericordia - Canchunchú-Carúpano - Bautismos",
+    "Descripción": "Parr. Divina Misericordia - Canchunchú-Carúpano - Bautismos con indice",
     "Tipo": "Bautismos",
     "Images": "531 images",
     "Ciudad": "Carúpano",
@@ -2069,7 +1893,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1976-1981",
-    "Descripción": "Parr. Divina Misericordia - Canchunchú-Carúpano - Bautismos",
+    "Descripción": "Parr. Divina Misericordia - Canchunchú-Carúpano - Bautismos con indice",
     "Tipo": "Bautismos",
     "Images": "549 images",
     "Ciudad": "Carúpano",
@@ -2080,7 +1904,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1979—1984",
-    "Descripción": "Parr. Divina Misericordia - Canchunchú-Carúpano - Bautismos",
+    "Descripción": "Parr. Divina Misericordia - Canchunchú-Carúpano - Bautismos con indice",
     "Tipo": "Bautismos",
     "Images": "545 images",
     "Ciudad": "Carúpano",
@@ -2971,7 +2795,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1920-1923",
-    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos con indice",
+    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos",
     "Tipo": "Bautismos",
     "Images": "161 images",
     "Ciudad": "Carúpano",
@@ -2982,7 +2806,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1921-1925",
-    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos con indice",
+    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos",
     "Tipo": "Bautismos",
     "Images": "205 images",
     "Ciudad": "Carúpano",
@@ -2993,7 +2817,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1925-1928",
-    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos con indice",
+    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos",
     "Tipo": "Bautismos",
     "Images": "203 images",
     "Ciudad": "Carúpano",
@@ -3004,7 +2828,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1928-1931",
-    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos con indice",
+    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos",
     "Tipo": "Bautismos",
     "Images": "200 images",
     "Ciudad": "Carúpano",
@@ -3268,7 +3092,7 @@ const TABLE_DATA = [
   },
   {
     "Periodo": "1971—1973",
-    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos",
+    "Descripción": "Parr. Santa Catalina de Siena - Carúpano - Bautismos con índice",
     "Tipo": "Bautismos",
     "Images": "569 images",
     "Ciudad": "Carúpano",
